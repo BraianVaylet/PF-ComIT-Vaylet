@@ -16,8 +16,7 @@
                         <li class="nav_menu_ico"><a class="nav_menu_enlace"href="<?php echo RUTA; ?>/contenido_ayuda.php"><i class="material-icons">live_help</i></a></li>
                         <!-- Modal Trigger -->
                         <li class="nav_menu_ico"><a class="modal-trigger nav_menu_enlace" href="#modal_contacto_index"><i class="material-icons">email</i></a></li>
-          						</ul>
-                      
+          						</ul>                      
                   </div>
               </nav>
             </div>
