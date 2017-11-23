@@ -1,0 +1,139 @@
+  /* FORM */
+  /* ----------------------------------------------------------------------------- */
+  .contenedor {
+    background: #fff;
+    text-align: center;
+    font-family: $font_texto;
+    .titulo {
+      @extend %titulo;
+    }
+  }
+
+  .link_reg {
+    color: $color_principal_fondo;
+    font-size: 2.5em;
+    font-weight: 400;
+    opacity: 0.9;
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+
+  .back {
+    margin-top: 5em;
+    text-align: center;
+  }
+  .link_back {
+    color: $color_fuente_oscuro;
+    font-size: 1.5em;
+    opacity: 0.7;
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+
+  .box_mensaje_error {
+    margin-top: 1em;
+    font-size: 1em;
+    color: red;
+  }
+
+  .row {
+    margin-bottom: 2em;
+  }
+
+  .check {
+    text-align: left;
+    margin: 5em 0em;
+  }
+
+  .registro_check {
+    padding: 1em;
+    h4 {
+      margin-bottom: -2.5em;
+    }
+  }
+
+  .dos_campos,
+  .un_campo,
+  .tres_campos {
+    margin: 5em 0em;
+    text-align: center;
+  }
+
+  .pregunta {
+    text-align: center;
+    .titulo_pregunta {
+      font-size: 2em;
+    }
+    .titulo_monto {
+      font-size: 1.5em;
+    }
+  }
+
+  .texto_small {
+    font-size: 1.2em;
+    margin: 2em 0em;
+    text-align: center;
+  }
+
+  .mens {
+    .mensaje {
+      background: $color_oscuro_transparencia;
+      color: #fff;
+      padding: 1em;
+      margin: 1em;
+    }
+  }
+
+  .modal {
+    text-align: center;
+    .modal_box {
+      margin: 1em;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+      }
+      }
+   }
+
+
+     /* LABEL COLOR */
+     .input-field label,
+     .label_textarea {
+       color: $color_principal_fondo;
+       font-size: 1.5em;
+     }
+
+    .texto_error {
+      color: red;
+      font-size: 1em;
+    }
+
+    /* PLACEHOLDER COLOR */
+    *::-webkit-input-placeholder {
+      /* Google Chrome y Safari */
+      color: rgb(52, 52, 52);
+      font-size: 0.8em;
+    }
+    *:-moz-placeholder {
+        /* Firefox anterior a 19 */
+        color: rgb(52, 52, 52);
+        font-size: 0.8em;
+    }
+    *::-moz-placeholder {
+        /* Firefox 19 y superior */
+        color: rgb(52, 52, 52);
+        font-size: 0.8em;
+    }
+    *:-ms-input-placeholder {
+        /* Internet Explorer 10 y superior */
+        color: rgb(52, 52, 52);
+        font-size: 0.8em;
+    }
+     /* SELECT COLOR IMG */
+    .circle {
+      background: $color_principal_fondo;
+    }

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAE,UAAU;AACV,mFAAmF;AACnF,WAAY;EACV,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,MAAM;;AAGpB,IAAK;EACH,aAAa,EAAE,GAAG",
+"sources": ["estilos_form.scss"],
+"names": [],
+"file": "estilos_form.css"
+}

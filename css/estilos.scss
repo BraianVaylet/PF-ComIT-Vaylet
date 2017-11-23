@@ -1,0 +1,64 @@
+  /* VARIABLES */
+  /* ----------------------------------------------------------------------------- */
+  // COLORES:
+  $color_principal_fondo: rgb(47, 185, 168);
+  $color_secundario: #FFAB40;
+  $color_fondo_claro: rgb(239, 244, 246);
+  $color_oscuro_transparencia: rgba(19, 19, 19, 0.9);
+  $color_fuente_claro: #f2f2f2;
+  $color_fuente_oscuro: rgb(20, 20, 20);
+  $color_error: rgb(235, 59, 35);
+  $color_enlace_desativado: #6c6c6c;
+
+  // FUENTES:
+  $font_texto: 'Raleway', sans-serif;
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f2f2f2;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    max-width: 1000em;
+   }
+
+   main,
+   .div_main {
+     width: 100%;
+     flex: 1 0 auto;
+     margin: 0em auto;
+     padding: 1em;
+     background: #fff;
+     text-align: center;
+     font-family: $font_texto;
+     background: $color_fondo_claro;
+   }
+
+   .div_main_color {
+     width: 100%;
+     padding: 5em;
+   }
+
+   .contenedor {
+     padding: 2em 12em;
+   }
+
+   .mensaje_admin {
+     background: rgba(47, 185, 168, 0.5);
+     padding: 1em 0.8em;
+     text-align: center;
+
+   }
+
+   .enlace_muerto {
+     background: red;
+     text-decoration: line-through;
+     color: rgb(96, 96, 96);
+   }
+
+  @import "estilos_compartidos";
+  @import "estilos_principales";
+  @import "estilos_form";
+  @import "cadeterias";

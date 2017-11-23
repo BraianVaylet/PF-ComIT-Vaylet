@@ -1,0 +1,142 @@
+  .titulo_top {
+    text-align: center;
+    .titular_cadeterias_foto,
+    .titular_fletes_foto {
+      @extend %boxProp;
+      width: 100%;
+      height: auto;
+      padding: 0.5em 1em;
+      text-align: center;
+      animation: border_bottom_groove_color 5s ease infinite;
+      z-index: 100;
+      .titular {
+        font-family: $font_texto;
+        color: #fff;
+        font-size: 12em;
+        font-weight: 900;
+      }
+      .titular_cadeterias_fondo,
+      .titular_fletes_fondo {
+        @extend %boxProp;
+        width: 100%;
+        height: auto;
+        z-index: 200;
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+    .texto_cadeterias {
+      font-family: $font_texto;
+      color: $color_oscuro_transparencia;
+      font-size: 3em;
+      font-weight: 900;
+      margin-bottom: -0.24em;
+    }
+  }
+
+
+  .titular_cadeterias_foto {
+    background-image: url("../img/fondo_cadetes2.jpg");
+  }
+  .titular_fletes_foto {
+    background-image: url("../img/fondo_fletes2.jpg");
+  }
+
+
+  // PUBLICIDAD:
+  //-----------------------------------------------------------------------------
+  .carousel {
+    background: red;
+    vertical-align: middle;
+    max-height: 20em;
+  }
+
+  // BUSCADOR:
+  //-----------------------------------------------------------------------------
+  .sec_buscar {
+    background: #fff;
+
+  }
+
+  .sec_publicar {
+    background: #fff;
+
+  }
+
+  .boton_buscar {
+
+  }
+
+  // POST:
+  //-----------------------------------------------------------------------------
+  .box_post {
+    background: #fff;
+    .foto_post {
+        .img_post {
+          image-resolution:from-image;
+          max-width: 150px;
+          width: 150px;
+          max-height: 150px;
+          height: 150px;
+          height: auto;
+          margin: 1em;
+          border-radius: 1em 0em 1em 0em;
+        }
+        .btn_post {
+          max-width: 100%;
+          margin: 1em 0em;
+        }
+    }
+
+    .monto_post {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        color: $color_principal_fondo;
+        .text_monto_post {
+          font-size: 2em;
+
+       }
+    }
+  }
+
+  .paginacion ul {
+  	list-style: none;
+  }
+
+  .paginacion ul li {
+  	display: inline-block;
+  	margin-right: 10px;
+  }
+
+  .paginacion ul .active a {
+  	background: #ce7f08;
+  }
+
+  .paginacion ul .disabled {
+  	background: #c8c8c8;
+  	display: inline-block;
+  	font-family: "Oswald", Arial, helvetica, sans-serif;
+  	padding: 15px 25px;
+  	cursor:not-allowed; //aparece un icono e impide el click
+  	color:#fff;
+  	text-decoration: none;
+  }
+
+  .paginacion ul li a {
+  	display: inline-block;
+  	font-family: "Oswald", Arial, helvetica, sans-serif;
+  	padding: 15px 25px;
+  	background: #424242;
+  	color:#fff;
+  	text-decoration: none;
+  }
+
+  .paginacion ul li a:hover {
+  	text-decoration: none;
+  	background: #dab223;
+  }
+
+  .face_post {
+    max-height: 500px;
+    height: 650px;
+  }

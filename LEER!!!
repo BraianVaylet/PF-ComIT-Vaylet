@@ -1,0 +1,19 @@
+COSAS PARA ACOMODAR:
+
+Ayuda:
+# terminar contacto_info.view.php
+
+Perfil:
+# terminar perfil
+# crear perfil q solo sea visto por clientes
+# crear tabla en BD para clientes
+
+Registro: !!!!!
+# mensajes cuando campos en registro estan vacios... usar js para colorear los campos o algo por el estilo.
+# acomodar con js q se muestre o no el monto dependiendo de el servicio q se elijio.
+
+Base de Datos:
+# ordenar tablas por dni.
+# como solucion agregue un nuevo campo ID. no funca, acomodar los archivos con los foreach y while
+
+#hacer responsiva la pagina.
