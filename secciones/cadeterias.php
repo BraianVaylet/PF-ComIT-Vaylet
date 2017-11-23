@@ -4,6 +4,7 @@
     $enviado = '';
     require '../funciones.php';
 
+
     // CONEXION CON LA BASE DE DATOS. (PDO)
 		$conexion = conexion_pdo($BaseDatos_config);
 		if (!$conexion) {
@@ -12,7 +13,7 @@
 		else {
 
       // TABLA USUARIOS:
-      $res_usuarios = $conexion->prepare('SELECT * FROM usuarios WHERE soy_cadete = "1"');
+      $res_usuarios = $conexion->prepare('SELECT * FROM usuarios');
       $res_usuarios->execute();
 
       // TABLA SERVICIOS:
@@ -24,7 +25,7 @@
       $res_montos->execute();
       }
 
-      
+
 
     require 'views/cadeterias.view.php';
    ?>

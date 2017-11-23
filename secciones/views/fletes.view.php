@@ -50,29 +50,32 @@
 
             <!-- OPCION#2 -->
             <?php
-              while ($row_u = $res_usuarios->fetch() and $row_s = $res_servicios->fetch() and $row_m = $res_montos->fetch() ) {
-                $id = $row_u[0];
-                $usuario = $row_u[1];
-                $foto_perfil = $row_u[8];
-                $ciudad = $row_u[9];
-                $calificacion = $row_u[10];
-                $vidas = $row_u[11];
-                $soy_cadete = $row_u[12];
-                $soy_flete = $row_u[13];
+            while ($row_u = $res_usuarios->fetch() and $row_s = $res_servicios->fetch() and $row_m = $res_montos->fetch()) {
+              $id = $row_u[0];
+              $usuario = $row_u[1];
+              $foto_perfil = $row_u[8];
+              $ciudad = $row_u[9];
+              $calificacion = $row_u[10];
+              $vidas = $row_u[11];
+              $soy_cadete = $row_u[12];
+              $soy_flete = $row_u[13];
+              $fecha_ingreso = $row_u[14];
 
-                $am = $row_s[5];
-                $pm = $row_s[6];
+              $am = $row_s[5];
+              $pm = $row_s[6];
 
-                $modo_monto_cadete = $row_m[1];
-                $modo_monto_flete = $row_m[2];
-                $monto_cadeterias = $row_m[3];
-                $monto_fletes = $row_m[4];
-                $extracto = $row_m[5];
+              $modo_monto_cadete = $row_m[1];
+              $modo_monto_flete = $row_m[2];
+              $monto_cadeterias = $row_m[3];
+              $monto_fletes = $row_m[4];
+              $extracto = $row_m[5];
+
+              $fecha_ingreso = fecha($fecha_ingreso);
 
                 //defino la url en una variable para poder pasar el id
                 $url = "http://localhost/PF-ComIT-Vaylet/contenido_cliente.php?id_del_usuario=" .$id;
 
-                if ($vidas > 0) {
+                if ($vidas > 0 and $soy_flete == 1) {
             ?>
 
             <div class="row z-depth-3 box_post">
@@ -103,8 +106,8 @@
                 </div>
 
                 <div class="col s12 m12 l3 monto_post">
-                      <h4 class="text_monto_post">$<?php echo $monto_cadeterias; ?></h4>
-                      <p> <?php echo $modo_monto_cadete; ?></p>
+                      <h4 class="text_monto_post">$<?php echo $monto_fletes; ?></h4>
+                      <p> <?php echo $modo_monto_flete; ?></p>
                 </div>
 
                 <div class="col s12 m12 l12">

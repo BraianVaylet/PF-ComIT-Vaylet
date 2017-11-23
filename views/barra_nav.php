@@ -16,7 +16,7 @@
                         <li class="nav_menu_ico"><a class="nav_menu_enlace"href="<?php echo RUTA; ?>/contenido_ayuda.php"><i class="material-icons">live_help</i></a></li>
                         <!-- Modal Trigger -->
                         <li class="nav_menu_ico"><a class="modal-trigger nav_menu_enlace" href="#modal_contacto_index"><i class="material-icons">email</i></a></li>
-          						</ul>                      
+          						</ul>
                   </div>
               </nav>
             </div>
@@ -48,7 +48,7 @@
             <div id="modal_contacto_index" class="modal">
               <div class="modal-content">
                 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formulario" name="contacto">
-                  <div class="pregunta">
+                  <div class="pregunta_contac">
                       <h4 class="titulo_pregunta">Contacto:</h4>
                   </div>
 

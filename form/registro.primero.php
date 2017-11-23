@@ -23,6 +23,7 @@
 
       // TRABAJO LOS CHECK ===================================================================================
       if (isset($_POST['whatsapp'])) {$whatsapp = 1;} else {$whatsapp = 0;}
+      
       if (isset($_POST['soy_cadete'])) {
         $soy_cadete = 1;
       } else {

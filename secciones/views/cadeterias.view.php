@@ -43,10 +43,12 @@
 
         <!-- CONTENIDO PRINCIPAL =============================================================================== -->
         <div class="col s12 m9 l9 prueba">
-            <div class="row">
 
               <!-- BUSCADORES =============================================================================== -->
               <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\buscar_cadete.php'; ?>
+              <!-- ORDENADORES =============================================================================== -->
+
+
 
             <!-- OPCION#2 -->
             <?php
@@ -75,7 +77,7 @@
                 //defino la url en una variable para poder pasar el id
                 $url = "http://localhost/PF-ComIT-Vaylet/contenido_cliente.php?id_del_usuario=" .$id;
 
-                if ($vidas > 0) {
+                if ($vidas > 0 and $soy_cadete == 1) {
             ?>
 
             <div class="row z-depth-3 box_post">
