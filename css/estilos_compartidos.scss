@@ -1,3 +1,6 @@
+  // CLASES Y ANIMACIONES
+  // ====================
+
   /* CLASES SASS */
   /* ----------------------------------------------------------------------------- */
   %boxHW {
@@ -39,15 +42,6 @@
     font-weight: 300;
     color: $color_fuente_claro;
   }
-
-  %enlace_desactivado {
-    font-family: $font_texto;
-    text-rendering:optimizeLegibility;
-    font-weight: 300;
-    color: $color_enlace_desativado;
-    text-decoration: line-through;
-  }
-
 
   /* ANIMACIONES */
   /* ----------------------------------------------------------------------------- */
@@ -179,12 +173,4 @@
     75%{border-top: 0.4em solid rgba(47, 155, 168, 0.6);}
     87.5%{border-top: 0.4em solid rgba(47, 170, 168, 0.7);}
     100%{border-top: 0.4em solid rgba(47, 185, 168, 0.8);}
-  }
-
-  @keyframes vidas { //ACOMODAR UN POCO
-    0%{color: rgb(236, 52, 40);}
-    25%{color: red;}
-    50%{color: rgb(236, 52, 40);}
-    75%{color: red;}
-    100%{color: rgb(236, 52, 40);}
   }

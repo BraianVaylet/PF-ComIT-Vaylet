@@ -29,6 +29,17 @@
         //---------------------------------------------------------------------------------------------
         $('select').material_select();
 
+        //MOSTRAR-OCULTAR:
+        //---------------------------------------------------------------------------------------------
+        //MAIL EN ACERCA DE:
+        $(function(){
+          $("#acerca_de_mail").css({"display":"none"});
+
+          $("#acerca_de_mostrar_mail").on("click", function(){
+              $("#acerca_de_mail").slideToggle(500);
+          });
+        });
+
 
 
 

@@ -14,7 +14,6 @@
                         <!-- LIMITES ==============================================================================-->
                         <div class="pregunta">
                             <h4 class="titulo_pregunta">¿Qué límites poseen tus servicios?</h4>
-
                         </div>
 
                         <div class="row tres_campos">
@@ -22,19 +21,27 @@
                                 <label class="label_textarea" for="dist_min">Distancia mínima, en Km *</label>
                                 <input type="text" name="dist_min" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese solo el número correspondiente a la Distancia Mínima que Usted realiza en [Km]" value="<?php if(!$enviado && isset($dist_min)) { echo $dist_min; }?>">
                                 <!-- ERROR -->
-						                    <p class="texto_error" id="error_dist_min"></p>
+                                <?php if(!empty($error_dist_min)): ?>
+						                      <p class="texto_error" id="error_dist_min"><?php echo $error_dist_min; ?></p>
+						                    <?php endif; ?>
                             </div>
+
                             <div class="input-field col s4">
                                 <label class="label_textarea" for="dist_max">Distancia máxima, en Km *</label>
                                 <input type="text" name="dist_max" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese solo el número correspondiente a la Distancia Máxima que Usted realiza, en [Km]" value="<?php if(!$enviado && isset($dist_max)) { echo $dist_max; }?>">
                                 <!-- ERROR -->
-						                    <p class="texto_error" id="error_dist_max"></p>
+                                <?php if(!empty($error_dist_max)): ?>
+						                      <p class="texto_error" id="error_dist_max"><?php echo $error_dist_max; ?></p>
+						                    <?php endif; ?>
                             </div>
+
                             <div class="input-field col s4">
                                 <label class="label_textarea" for="peso_max">Peso máximo, en Kg *</label>
                                 <input type="text" name="peso_max" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese solo el número correspondiente a el Peso Máximo que Usted con el que Usted Trabaja, en [Kg]" value="<?php if(!$enviado && isset($peso_max)) { echo $peso_max; }?>">
                                 <!-- ERROR -->
-						                    <p class="texto_error" id="error_peso_max"></p>
+                                <?php if(!empty($error_peso_max)): ?>
+						                      <p class="texto_error" id="error_peso_max"><?php echo $error_peso_max; ?></p>
+						                    <?php endif; ?>
                             </div>
                         </div>
 
@@ -75,7 +82,9 @@
                                   <label for="pm">de tarde</label>
                               </div>
                               <!-- ERROR -->
-                              <p class="texto_error" id="error_checkbox_horario"></p>
+                              <?php if(!empty($error_checkbox_horario)): ?>
+                                <p class="texto_error" id="error_checkbox_horario"><?php echo $error_checkbox_horario; ?></p>
+                              <?php endif; ?>
                           </div>
                         </div>
 
@@ -89,19 +98,27 @@
                               <h4 class="label_textarea">Su vehículo *</h4>
                               <textarea name="tipo" placeholder="bici, moto, auto, camión, etc."class="materialize-textarea tooltipped" data-position="bottom" data-delay="50" data-tooltip="Describa su vehiculo: tipo (bici, moto, auto, camioneta, camión, etc)" id="tipo" rows="8" cols="80" data-length="1500" value="<?php if(!$enviado && isset($tipo)) { echo $tipo; }?>"></textarea>
                               <!-- ERROR -->
-                              <p class="texto_error" id="error_tipo"></p>
+                              <?php if(!empty($error_tipo)): ?>
+                                <p class="texto_error" id="error_tipo"><?php echo $error_tipo; ?></p>
+                              <?php endif; ?>
                             </div>
+
                             <div class="input-field col s4">
                               <h4 class="label_textarea">La capacidad o espacio físico *</h4>
                               <textarea name="capacidad" placeholder="bolsos, mochila, baúl, caja, carro, acoplado, etc."class="materialize-textarea tooltipped" data-position="bottom" data-delay="50" data-tooltip="Describa su capacidad (mochila, bolso, caja, carro, etc)" id="capacidad" rows="8" cols="80" data-length="1500" value="<?php if(!$enviado && isset($capacidad)) { echo $capacidad; }?>"></textarea>
                               <!-- ERROR -->
-                              <p class="texto_error" id="error_capacidad"></p>
+                              <?php if(!empty($error_capacidad)): ?>
+                                <p class="texto_error" id="error_capacidad"><?php echo $error_capacidad; ?></p>
+                              <?php endif; ?>
                             </div>
+
                             <div class="input-field col s4">
                               <h4 class="label_textarea">Ejemplos de trabajos que realiza *</h4>
                               <textarea name="trabajos" placeholder="pagos de servicios, trámites bancarios, mudanzas, etc."class="materialize-textarea tooltipped" data-position="bottom" data-delay="50" data-tooltip="Describa con sus palabras los trabajos que realiza" id="trabajos" rows="8" cols="80" data-length="1500" value="<?php if(!$enviado && isset($trabajos)) { echo $trabajos; }?>"></textarea>
                               <!-- ERROR -->
-                              <p class="texto_error" id="error_trabajos"></p>
+                              <?php if(!empty($error_trabajos)): ?>
+                                <p class="texto_error" id="error_trabajos"><?php echo $error_trabajos; ?></p>
+                              <?php endif; ?>                              
                             </div>
                         </div>
 
@@ -123,6 +140,7 @@
       </main>
   <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\footer.php'; ?>
   <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\script.php'; ?>
-  <script src="<?php echo RUTA; ?>/js/misArchivos/registro_segundo.js" charset="utf-8"></script>
+  <!-- Se hizo con PHP la validacion del registro -->
+  <!-- <script src="<?php echo RUTA; ?>/js/misArchivos/registro_segundo.js" charset="utf-8"></script> -->
   </body>
   </html>

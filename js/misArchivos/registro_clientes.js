@@ -1,6 +1,7 @@
   $(document).ready(function() {
 
     /* VALIDACION DEL FORMULARIO: */
+    // LAS VALIDACIONES DE PASSWORD Y PASSWORD2 ESTAN HECHAS CON PHP.
 
     var formulario = document.getElementById('formulario'),
         usuario_cliente = formulario.usuario_cliente,

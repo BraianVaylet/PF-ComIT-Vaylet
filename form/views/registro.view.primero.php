@@ -17,28 +17,38 @@
 																<label class="label_textarea" for="usuario">¿Cuál es tu nombre y apellido? *</label>
 																<input type="text" name="usuario" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese su nombre y luego separado por un espacio su apellido" id="usuario" value="<?php if(!$enviado && isset($usuario)) { echo $usuario; }?>">
 																<!-- ERROR -->
-						                    <p class="texto_error" id="error_usuario"></p>
+																<?php if(!empty($error_usuario)): ?>
+						                      <p class="texto_error" id="error_usuario"><?php echo $error_usuario; ?></p>
+						                    <?php endif; ?>
 														</div>
+
 														<div class="input-field col s6">
 																<label class="label_textarea" for="correo">¿Cuál es su correo electrónico? *</label>
 																<input type="email" name="correo" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese su casilla de correos para poder ser contactado" id="correo" value="<?php if(!$enviado && isset($correo)) { echo $correo; }?>">
 																<!-- ERROR -->
-						                    <p class="texto_error" id="error_correo"></p>
+																<?php if(!empty($error_correo)): ?>
+						                      <p class="texto_error" id="error_correo"><?php echo $error_correo; ?></p>
+						                    <?php endif; ?>
 														</div>
 												</div>
 
 												<div class="row dos_campos">
 														<div class="input-field col s6">
 																<label class="label_textarea" for="password">Ingrese una contraseña *</label>
-																<input type="password" name="password" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese una contraseña para su cuenta" id="password">
+																<input type="password" name="password" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese una contraseña para su cuenta" id="password" placeholder="mínimo 6 caracteres con letras y números.">
 																<!-- ERROR -->
-						                    <p class="texto_error" id="error_password"></p>
+																<?php if(!empty($error_password)): ?>
+						                      <p class="texto_error" id="error_password"><?php echo $error_password; ?></p>
+						                    <?php endif; ?>
 														</div>
+
 														<div class="input-field col s6">
 																<label class="label_textarea" for="password2">Verificar contraseña *</label>
 																<input type="password" name="password2" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Solo para verificar, vuelva a ingresar la contraseña" id="password2">
 																<!-- ERROR -->
-						                    <p class="texto_error" id="error_password2"></p>
+																<?php if(!empty($error_password2)): ?>
+						                      <p class="texto_error" id="error_password2"><?php echo $error_password2; ?></p>
+						                    <?php endif; ?>
 														</div>
 												</div>
 
@@ -47,8 +57,11 @@
 																<label class="label_textarea" for="telefono">¿Cuál es su número de teléfono? *</label>
 																<input type="text" name="telefono" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese su numero de teléfono para poder ser contactado por los usuarios" value="<?php if(!$enviado && isset($telefono)) { echo $telefono; }?>">
 																<!-- ERROR -->
-						                    <p class="texto_error" id="error_telefono"></p>
+																<?php if(!empty($error_telefono)): ?>
+						                      <p class="texto_error" id="error_telefono"><?php echo $error_telefono; ?></p>
+						                    <?php endif; ?>
 														</div>
+
 														<div class="col s2">
 																<input type="checkbox" name="whatsapp" class="" id="whatsapp">
 																<label class="label_textarea campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Seleccione esta casilla si utiliza whatsapp para comunicarse con sus clientes" for="whatsapp">usas whatsapp?</label>
@@ -57,7 +70,9 @@
 																<label class="label_textarea" for="dni">¿Cuál es su número de documento? *</label>
 																<input type="text" name="dni" class="campo tooltipped" id="dni" data-position="bottom" data-delay="50" data-tooltip="Ingrese su numero de DNI" value="<?php if(!$enviado && isset($dni)) { echo $dni; }?>">
 																<!-- ERROR -->
-						                    <p class="texto_error" id="error_dni"></p>
+																<?php if(!empty($error_dni)): ?>
+						                      <p class="texto_error" id="error_dni"><?php echo $error_dni; ?></p>
+						                    <?php endif; ?>
 														</div>
 												</div>
 
@@ -66,7 +81,9 @@
 																<h4 class="label_textarea">¿En qué fecha naciste? *</h4>
 																<input type="text" name="fecha_nacimiento" class="datepicker campo tooltipped" data-position="right" data-delay="50" data-tooltip="Ingrese su fecha de nacimiento" id="fecha_nacimiento" value="<?php if(!$enviado && isset($fecha_nacimiento)) { echo $fecha_nacimiento; }?>">
 																<!-- ERROR -->
-						                    <p class="texto_error" id="error_fecha_nacimiento"></p>
+																<?php if(!empty($error_fecha_nacimiento)): ?>
+						                      <p class="texto_error" id="error_fecha_nacimiento"><?php echo $error_fecha_nacimiento; ?></p>
+						                    <?php endif; ?>
 														</div>
 												</div>
 
@@ -101,7 +118,9 @@
 																		<option value="Monte Hermosos">Monte Hermosos</option>
 					                      </select>
 																<!-- ERROR -->
-						                    <p class="texto_error" id="error_ciudad"></p>
+																<?php if(!empty($error_ciudad)): ?>
+						                      <p class="texto_error" id="error_ciudad"><?php echo $error_ciudad; ?></p>
+						                    <?php endif; ?>
 				                      </div>
 				                  </div>
 													<div class="col s6">
@@ -128,7 +147,9 @@
 																	<label for="soy_flete">Servicios de fletes</label>
 															</div>
 															<!-- ERROR -->
-															<p class="texto_error" id="error_checkbox"></p>
+															<?php if(!empty($error_checkbox)): ?>
+																<p class="texto_error" id="error_checkbox"><?php echo $error_checkbox; ?></p>
+															<?php endif; ?>
 													</div>
 												</div>
 
@@ -156,6 +177,7 @@
 			</main>
 	<?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\footer.php'; ?>
 	<?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\script.php'; ?>
-	<script src="<?php echo RUTA; ?>/js/misArchivos/registro_primero.js" charset="utf-8"></script>
+	<!-- Se hizo con PHP la validacion del registro -->
+	<!-- <script src="<?php echo RUTA; ?>/js/misArchivos/registro_primero.js" charset="utf-8"></script> -->
 	</body>
 	</html>

@@ -1,14 +1,14 @@
   <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\head.php'; ?>
   <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\barra_nav.php'; ?>
 
-          <!-- CONTENIDO-CAJAS -->
+          <!-- CONTENIDO-PAGINA PRINCIPAL-->
           <div class="box" id="box">
               <div class="contenido_img">
-               <div class="contenido">
-                 <h1 class="titulo_principal">WololoW</h1>
-                 <p class="texto_principal">Servicios de Cadeterías y Fletes</p>
-                 <p class="texto_principal"> todos en un mismo lugar</p>
-               </div>
+                <div class="contenido">
+                   <h1 class="titulo_principal">WololoW</h1>
+                   <p class="texto_principal">Servicios de Cadeterías y Fletes</p>
+                   <p class="texto_principal">todos en un mismo lugar</p>
+                </div>
               </div>
           </div>
 

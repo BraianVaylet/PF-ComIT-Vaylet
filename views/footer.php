@@ -19,9 +19,9 @@
         </div>
       </div>
       <div class="footer-copyright">
-        <div class="container">
-        © 2017 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#!">BDV</a>
-        </div>
+          <div class="container">
+          © 2017 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">Braian D. Vaylet</a>
+          </div>
       </div>
   </footer>

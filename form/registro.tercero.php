@@ -1,8 +1,17 @@
   <?php
 
   session_start();
+
+  //INICIO VARIABLES.
   $errores = '';
   $enviado = '';
+  $error_monto_cadeterias = '';
+  $error_modo_monto_cadete = '';
+  $error_monto_fletes = '';
+  $error_modo_monto_flete = '';
+  $error_extracto = '';
+  $error_checkbox_tyc_uso = '';
+
   require '../funciones.php';
 
   $dni = $_SESSION['dni'];
@@ -36,7 +45,10 @@
       // LEVANTO VALORES DEL FORM.
       if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           $extracto = limpiarDatos(filter_var($_POST['extracto']),FILTER_SANITIZE_STRING);
-          if (empty($extracto)) {$errores .= '<li>Por favor rellena el campo Extracto sobre mí</li>';}
+          if (empty($extracto)) {
+            $error_extracto .= 'Por favor rellena el campo EXTRACTO';
+            $errores = 'error';
+          }
 
           //Para CADETERIAS:
           //=========================
@@ -45,7 +57,8 @@
 
               // COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS ===================================================================================
               if (empty($monto_cadeterias)) {
-                $errores .= '<li>Por favor rellena el campo MONTO-CADETERIAS, si no necesita este campo ingrese como valor "0"</li>';
+                $error_monto_cadeterias .= 'Por favor rellena el campo MONTO-CADETERIAS';
+                $errores = 'error';
               }
 
               // TRABAJO LOS SELECT ===================================================================================
@@ -55,7 +68,8 @@
                     $modo_monto_cadete = $modo_monto_cadete[$i];
                 }
               } else {
-                $errores .= '<li>disculpe, pero es necesario q llene todos los campos de monto-servicios-cadete</li>';
+                $error_modo_monto_cadete .= 'disculpe, pero es necesario que llene el campo MODALIDAD para cadeterias';
+                $errores = 'error';
               }
           } else {
               $monto_cadeterias = 0;
@@ -69,7 +83,8 @@
 
             // COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS ===================================================================================
             if (empty($monto_fletes)) {
-              $errores .= '<li>Por favor rellena el campo MONTO-FLETES, si no necesita este campo ingrese como valor "0"</li>';
+              $error_monto_fletes .= 'Por favor rellena el campo MONTO-FLETES';
+              $errores = 'error';
             }
 
             // TRABAJO LOS SELECT ===================================================================================
@@ -79,7 +94,8 @@
                   $modo_monto_flete = $modo_monto_flete[$i];
               }
             } else {
-              $errores .= '<li>disculpe, pero es necesario q llene todos los campos de monto-servicios-fletes</li>';
+              $error_modo_monto_flete .= 'disculpe, pero es necesario que llene el campo MODALIDAD para fletes';
+              $errores = 'error';
             }
           } else {
             $monto_fletes = 0;
@@ -89,7 +105,10 @@
           // TRABAJO LOS CHECK ===================================================================================
           /* terminos y condiciones */
           if (isset($_POST['tyc_uso'])) {$tyc_uso = 1;} else {$tyc_uso = 0;}
-          if ($tyc_uso == 0) {$errores .= '<li>Por favor acepte los términos y condiciones de uso de la página para poder continuar</li>';}
+          if ($tyc_uso == 0) {
+            $errores .= 'Por favor acepte los términos y condiciones de uso de la página para poder continuar';
+            $errores = 'error';
+          }
 
 
             // INSERTAMOS LOS DATOS EN LA BASE DE DATOS: (PDO) ===================================================================================

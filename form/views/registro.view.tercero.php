@@ -31,8 +31,11 @@
                             <h4 class="label_textarea">Monto en $:</h4>
                             <input type="text" name="monto_cadeterias" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese solo el valor del servicio" id="monto_cadeterias" value="<?php if(!$enviado && isset($monto_cadeterias)) { echo $monto_cadeterias; }?>">
                             <!-- ERROR -->
-                            <p class="texto_error" id="error_monto_cadeterias"></p>
+                            <?php if(!empty($error_monto_cadeterias)): ?>
+                              <p class="texto_error" id="error_monto_cadeterias"><?php echo $error_monto_cadeterias; ?></p>
+                            <?php endif; ?>
                           </div>
+
                           <div class="col s4">
                             <h4 class="label_textarea">Modalidad:</h4>
                             <div class="campo tooltipped" data-position="top" data-delay="50" data-tooltip="Seleccione la modalidad de cobro de tu servicio">
@@ -40,9 +43,12 @@
                                   <option value="" disabled selected></option>
                                   <option value="Por Hora">Por Hora</option>
                                   <option value="Por todo el Servicio">Por todo el Servicio</option>
+                                  <option value="Por todo el Servicio">Por Kilometro</option>
                               </select>
                               <!-- ERROR -->
-                              <p class="texto_error" id="error_modo_monto_cadete"></p>
+                              <?php if(!empty($error_modo_monto_cadete)): ?>
+                                <p class="texto_error" id="error_modo_monto_cadete"><?php echo $error_modo_monto_cadete; ?></p>
+                              <?php endif; ?>
                             </div>
                           </div>
                         </div>
@@ -64,8 +70,11 @@
                              <h4 class="label_textarea">Monto en $:</h4>
                              <input type="text" name="monto_fletes" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese solo el valor del servicio" id="monto_fletes" value="<?php if(!$enviado && isset($monto_fletes)) { echo $monto_fletes; }?>">
                              <!-- ERROR -->
-                             <p class="texto_error" id="error_monto_fletes"></p>
+                             <?php if(!empty($error_monto_fletes)): ?>
+                               <p class="texto_error" id="error_monto_fletes"><?php echo $error_monto_fletes; ?></p>
+                             <?php endif; ?>
                            </div>
+
                            <div class="col s4">
                              <h4 class="label_textarea">Modalidad:</h4>
                              <div class="campo tooltipped" data-position="top" data-delay="50" data-tooltip="Seleccione la modalidad de cobro de tu servicio">
@@ -75,7 +84,9 @@
                                    <option value="Por todo el Servicio">Por todo el Servicio</option>
                                </select>
                                <!-- ERROR -->
-                               <p class="texto_error" id="error_modo_monto_flete"></p>
+                               <?php if(!empty($error_modo_monto_flete)): ?>
+                                 <p class="texto_error" id="error_modo_monto_flete"><?php echo $error_modo_monto_flete; ?></p>
+                               <?php endif; ?>
                              </div>
                            </div>
                          </div>
@@ -92,7 +103,9 @@
                         <h4 class="label_textarea">Extracto sobre mí:</h4>
                         <textarea name="extracto" class="materialize-textarea tooltipped" data-position="bottom" data-delay="50" data-tooltip="ingrese un pequeño extracto contando acerca de usted, esto será visto por todos los usuarios, sea cuidadoso al redactarlo" id="extracto$extracto" rows="8" cols="80" data-length="1500" value="<?php if(!$enviado && isset($extracto)) { echo $extracto; }?>"></textarea>
                         <!-- ERROR -->
-                        <p class="texto_error" id="error_extracto"></p>
+                        <?php if(!empty($error_extracto)): ?>
+                          <p class="texto_error" id="error_extracto"><?php echo $error_extracto; ?></p>
+                        <?php endif; ?>
                       </div>
                     </div>
 
@@ -102,7 +115,9 @@
                           <input type="checkbox" name="tyc_uso" class="" id="tyc_uso">
                           <label class="label_textarea campo tooltipped" data-position="right" data-delay="50" data-tooltip="Acepta los Terminos y Condiciones de uso de la página?" for="tyc_uso"><a class="modal-trigger" href="#modal_registro">Términos y Condiciones de uso</a></label>
                           <!-- ERROR -->
-                          <p class="texto_error" id="error_checkbox_tyc_uso"></p>
+                          <?php if(!empty($error_checkbox_tyc_uso)): ?>
+                            <p class="texto_error" id="error_checkbox_tyc_uso"><?php echo $error_checkbox_tyc_uso; ?></p>
+                          <?php endif; ?>
                       </div>
                     </div>
 

@@ -16,7 +16,14 @@
     opacity: 0.9;
     &:hover {
       cursor: pointer;
+      color: $color_secundario;
       opacity: 1;
+    }
+  }
+
+  .link_reg_2 {
+    &:hover{
+      text-decoration: underline;
     }
   }
 
@@ -24,6 +31,7 @@
     margin-top: 5em;
     text-align: center;
   }
+
   .link_back {
     color: $color_fuente_oscuro;
     font-size: 1.5em;
@@ -32,12 +40,6 @@
       cursor: pointer;
       opacity: 1;
     }
-  }
-
-  .box_mensaje_error {
-    margin-top: 1em;
-    font-size: 1em;
-    color: red;
   }
 
   .row {
@@ -95,22 +97,37 @@
       opacity: 0.8;
       &:hover {
         opacity: 1;
+
       }
+      .btn {
+        &:focus {
+          background: $color_secundario;
+        }
       }
-   }
-
-
-     /* LABEL COLOR */
-     .input-field label,
-     .label_textarea {
-       color: $color_principal_fondo;
-       font-size: 1.5em;
-     }
-
-    .texto_error {
-      color: red;
-      font-size: 1em;
     }
+  }
+
+  //ERRORES:
+  .box_mensaje_error {
+    margin-top: 1em;
+    font-size: 1em;
+    color: $color_error;
+  }
+
+  .texto_error {
+    color: $color_error;
+    font-size: 1em;
+  }
+
+
+  /* LABEL COLOR */
+  .input-field label,
+  .label_textarea {
+    color: $color_principal_fondo;
+    font-size: 1.5em;
+  }
+
+
 
     /* PLACEHOLDER COLOR */
     *::-webkit-input-placeholder {

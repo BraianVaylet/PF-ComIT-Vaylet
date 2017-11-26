@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$font_texto".
-        on line 15 of C:\wamp64\www\PF-ComIT-Vaylet\css\estilos_compartidos.scss
+        on line 18 of C:\wamp64\www\PF-ComIT-Vaylet\css\estilos_compartidos.scss
 
-10:     display: table;
-11:     background-attachment: fixed;
-12:   }
-13: 
-14:   %tituloPrincipal {
-15:     font-family: $font_texto;
-16:     text-rendering:optimizeLegibility;
-17:     font-weight: 900;
-18:     color: $color_fuente_claro;
-19:   }
-20: 
+13:     display: table;
+14:     background-attachment: fixed;
+15:   }
+16: 
+17:   %tituloPrincipal {
+18:     font-family: $font_texto;
+19:     text-rendering:optimizeLegibility;
+20:     font-weight: 900;
+21:     color: $color_fuente_claro;
+22:   }
+23: 
 
 Backtrace:
-C:\wamp64\www\PF-ComIT-Vaylet\css\estilos_compartidos.scss:15
+C:\wamp64\www\PF-ComIT-Vaylet\css\estilos_compartidos.scss:18
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -62,4 +62,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$font_texto\".\A         on line 15 of C:\wamp64\www\PF-ComIT-Vaylet\css\estilos_compartidos.scss\A \A 10:     display: table;\A 11:     background-attachment: fixed;\A 12:   }\A 13: \A 14:   %tituloPrincipal {\A 15:     font-family: $font_texto;\A 16:     text-rendering:optimizeLegibility;\A 17:     font-weight: 900;\A 18:     color: $color_fuente_claro;\A 19:   }\A 20: "; }
+  content: "Error: Undefined variable: \"$font_texto\".\A         on line 18 of C:\wamp64\www\PF-ComIT-Vaylet\css\estilos_compartidos.scss\A \A 13:     display: table;\A 14:     background-attachment: fixed;\A 15:   }\A 16: \A 17:   %tituloPrincipal {\A 18:     font-family: $font_texto;\A 19:     text-rendering:optimizeLegibility;\A 20:     font-weight: 900;\A 21:     color: $color_fuente_claro;\A 22:   }\A 23: "; }

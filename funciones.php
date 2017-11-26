@@ -74,6 +74,33 @@
   		return $fecha;
   	}
 
+    //VALIDAR CONTRASEÑA.
+    function validar_clave($password,&$error_password){
+       if(strlen($password) < 6){
+          $error_password = "La clave debe tener al menos 6 caracteres";
+          return false;
+       }
+       if(strlen($password) > 16){
+          $error_password = "La clave no puede tener más de 16 caracteres";
+          return false;
+       }
+       if (!preg_match('`[0-9]`',$password)){
+          $error_password = "La clave debe tener al menos un caracter numérico";
+          return false;
+       }
+       //opcionales:
+       // if (!preg_match('`[a-z]`',$password)){
+       //    $error_password = "La clave debe tener al menos una letra minúscula";
+       //    return false;
+       // }
+       // if (!preg_match('`[A-Z]`',$password)){
+       //    $error_password = "La clave debe tener al menos una letra mayúscula";
+       //    return false;
+       // }
+       $error_password = "";
+       return true;
+    }
+
 
 
   ?>

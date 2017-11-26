@@ -1,19 +1,21 @@
 /*
 Error: Undefined variable: "$color_oscuro_transparencia".
-        on line 4 of C:\wamp64\www\PF-ComIT-Vaylet\css\estilos_principales.scss
+        on line 6 of C:\wamp64\www\PF-ComIT-Vaylet\css\estilos_principales.scss
 
 1:       /* NAV *\/
 2:       /* ----------------------------------------------------------------------------- *\/
-3:       .nav_menu {
-4:         background: $color_oscuro_transparencia;
-5:         animation: border_bottom_color 5s ease infinite;
-6:         padding: 0 1em;
-7:         &:hover {
-8:           background: $color_fuente_oscuro;
-9:         }
+3: 
+4:       //barra-iconos-enlaces.
+5:       .nav_menu {
+6:         background: $color_oscuro_transparencia;
+7:         animation: border_bottom_color 5s ease infinite;
+8:         padding: 0 1em;
+9:         &:hover {
+10:           background: $color_fuente_oscuro;
+11:         }
 
 Backtrace:
-C:\wamp64\www\PF-ComIT-Vaylet\css\estilos_principales.scss:4
+C:\wamp64\www\PF-ComIT-Vaylet\css\estilos_principales.scss:6
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -60,4 +62,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color_oscuro_transparencia\".\A         on line 4 of C:\wamp64\www\PF-ComIT-Vaylet\css\estilos_principales.scss\A \A 1:       /* NAV */\A 2:       /* ----------------------------------------------------------------------------- */\A 3:       .nav_menu {\A 4:         background: $color_oscuro_transparencia;\A 5:         animation: border_bottom_color 5s ease infinite;\A 6:         padding: 0 1em;\A 7:         &:hover {\A 8:           background: $color_fuente_oscuro;\A 9:         }"; }
+  content: "Error: Undefined variable: \"$color_oscuro_transparencia\".\A         on line 6 of C:\wamp64\www\PF-ComIT-Vaylet\css\estilos_principales.scss\A \A 1:       /* NAV */\A 2:       /* ----------------------------------------------------------------------------- */\A 3: \A 4:       //barra-iconos-enlaces.\A 5:       .nav_menu {\A 6:         background: $color_oscuro_transparencia;\A 7:         animation: border_bottom_color 5s ease infinite;\A 8:         padding: 0 1em;\A 9:         &:hover {\A 10:           background: $color_fuente_oscuro;\A 11:         }"; }

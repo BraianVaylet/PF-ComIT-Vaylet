@@ -1,66 +1,75 @@
 	<?php
 
-	session_start();
-	$errores = '';
-	$enviado = '';
-	require '../funciones.php';
+			session_start();
+			$errores = '';
+			$enviado = '';
+			$error_correo = '';
+			$error_password = '';
 
-	// COMPROBAMOS QUE EL USUARIO NO TENGA UNA SESION INICIADA.
-	if (session()) {
-		header('Location: ../contenido.php');
-	} else {
+			require '../funciones.php';
 
-	// LEVANTO VALORES DEL FORM.
-	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-			$correo = limpiarDatos(filter_var($_POST['correo']),FILTER_VALIDATE_EMAIL);
-			$password = limpiarDatos(filter_var($_POST['password']),FILTER_SANITIZE_STRING);
-			//$password = campo_seguro($password);
-
-
-			// COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS.
-			if (empty($correo) or empty($password)) {
-					$errores .= '<li>Por favor rellena todos los campos correctamente</li>';
+			// COMPROBAMOS QUE EL USUARIO NO TENGA UNA SESION INICIADA.
+			if (session()) {
+				header('Location: ../contenido.php');
 			} else {
 
-					// CONEXION CON LA BASE DE DATOS.
-				  $conexion = conexion_pdo($BaseDatos_config);
+				// LEVANTO VALORES DEL FORM.
+				if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+						$correo = limpiarDatos(filter_var($_POST['correo']),FILTER_VALIDATE_EMAIL);
+						$password = limpiarDatos(filter_var($_POST['password']),FILTER_SANITIZE_STRING);
 
-					if (!$conexion) {
-						header('Location: ../error_conexion.php');
-					}
+						//SACO LA ENCRIPTACION DE LA CONTRASEÑA.
+						//$password = campo_seguro($password);
 
-					// VERIFICO LA EXISTENCIA DEL USUARIO EN LA BD.
-					$statement_usuarios = $conexion->prepare('SELECT * FROM usuarios WHERE correo = :correo AND password = :password');
-					$statement_usuarios->execute(array(
-						':correo' => $correo,
-						':password' => $password
-					));
-					$resultado_usuarios = $statement_usuarios->fetch(); // fetch devuelve el resultado.
+						//VALIDO EL LOGIN.
+						if (empty($correo)) { $error_correo .= 'Por favor rellena el campo CORREO';	}
+						if (empty($password)) { $error_password .= 'Por favor rellena el campo PASSWORD';	}
 
-					$statement_clientes = $conexion->prepare('SELECT * FROM clientes WHERE correo = :correo AND password = :password');
-					$statement_clientes->execute(array(
-						':correo' => $correo,
-						':password' => $password
-					));
-					$resultado_clientes = $statement_clientes->fetch(); // fetch devuelve el resultado.
+						// COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS.
+						if (!empty($correo) or !empty($password)) {
 
-					if ($resultado_usuarios !== false) {
-						$_SESSION['correo'] = $correo; // creamos una sesion.
-						header('Location: ../contenido.php');
-					} else {
-						$errores .= '<li>Corre Incorrecto</li>';
-					}
+								// CONEXION CON LA BASE DE DATOS.
+							  $conexion = conexion_pdo($BaseDatos_config);
 
-					if ($resultado_clientes !== false) {
-						$_SESSION['correo'] = $correo; // creamos una sesion.
-						header('Location: ../contenido.php');
-					} else {
-						$errores .= '<li>Contraseña Incorrecta</li>';
-					}
-			}
-	 }
- }
+								if (!$conexion) {
+									header('Location: ../error_conexion.php');
+								}
 
-	require 'views/login.view.php';
+								// VERIFICO LA EXISTENCIA EN LA BD.
+								// DEL USUARIO.
+								$statement_usuarios = $conexion->prepare('SELECT * FROM usuarios WHERE correo = :correo AND password = :password');
+								$statement_usuarios->execute(array(
+									':correo' => $correo,
+									':password' => $password
+								));
+								$resultado_usuarios = $statement_usuarios->fetch(); // fetch devuelve el resultado.
+
+								if ($resultado_usuarios !== false) {
+									$_SESSION['correo'] = $correo; // creamos una sesion.
+									header('Location: ../contenido.php');
+								} else {
+									$errores .= '<li>No existe usuario registrado con este correo, <a class="modal-trigger link_reg_2" href="#modal_registro">REGISTRATE AQUI</a></li>';
+								}
+
+
+								// DEL CLIENTE.
+								$statement_clientes = $conexion->prepare('SELECT * FROM clientes WHERE correo = :correo AND password = :password');
+								$statement_clientes->execute(array(
+									':correo' => $correo,
+									':password' => $password
+								));
+								$resultado_clientes = $statement_clientes->fetch(); // fetch devuelve el resultado.
+
+								if ($resultado_clientes !== false) {
+									$_SESSION['correo'] = $correo; // creamos una sesion.
+									header('Location: ../contenido.php');
+								} else {
+									$errores .= '<li>Contraseña Incorrecta</li>';
+								}
+						}
+				 }
+		 }
+
+			require 'views/login.view.php';
 
 	?>

@@ -1,8 +1,20 @@
   <?php
 
   session_start();
+
+  //inicio variables.
   $errores = '';
   $enviado = '';
+  $error_usuario = '';
+  $error_correo = '';
+  $error_password = '';
+  $error_password2 = '';
+  $error_telefono = '';
+  $error_dni = '';
+  $error_fecha_nacimiento = '';
+  $error_ciudad = '';
+  $error_checkbox = '';
+
   require '../funciones.php';
 
   // COMPROBAMOS QUE EL USUARIO NO TENGA UNA SESION INICIADA. (USAR LA FUNCION).
@@ -23,7 +35,7 @@
 
       // TRABAJO LOS CHECK ===================================================================================
       if (isset($_POST['whatsapp'])) {$whatsapp = 1;} else {$whatsapp = 0;}
-      
+
       if (isset($_POST['soy_cadete'])) {
         $soy_cadete = 1;
       } else {
@@ -37,40 +49,84 @@
       }
 
 
-      // TRABAJO LOS SELECT ===================================================================================
+      // TRABAJO LOS SELECT
       if (isset($_POST['ciudad'])) {
         $ciudad = $_POST['ciudad'];
         for ($i = 0; $i < count($ciudad); $i++) {
             $ciudad = $ciudad[$i];
         }
       } else {
-        $errores .= '<li>ingrese un valor para el campo ciudad</li>';
+        //Valido campo ciudad.
+        $error_ciudad .= 'Ingrese un valor para el campo ciudad';
+        $errores = 'error';
       }
 
-      // ENCRIPTAMOS LA CONTRASEÑA ===================================================================================
+      // ENCRIPTAMOS LA CONTRASEÑA
       // $password = campo_seguro($password);
       // $password2 = campo_seguro($password2);
 
-      // COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS ===================================================================================
-      //ACOMODAR!!!
-			if (empty($usuario)) {$errores .= '<li>Por favor rellena el campo USUARIO</li>';}
-			if (empty($correo)) {$errores .= '<li>Por favor rellena el campo CORREO</li>';}
-			if (empty($password)) {$errores .= '<li>Por favor rellena el campo PASSWORD</li>';}
-			if (empty($password2)) {$errores .= '<li>Por favor rellena el campo  VERIFICACION DE CORREO</li>';}
-			if (empty($telefono)) {$errores .= '<li>Por favor rellena el campo TELEFONO</li>';}
-			if (empty($dni)) {$errores .= '<li>Por favor rellena el campo NÚMERO DE DOCUMENTO</li>';}
-			if (empty($fecha_nacimiento)) {$errores .= '<li>Por favor rellena el campo EDAD</li>';}
+      // VALIDACION DEL FORMULARIO
+    	if (empty($usuario)) {
+        $error_usuario .= 'Por favor rellena el campo USUARIO';
+        $errores = 'error';
+      }
 
-      if ($password !== $password2) {$errores .= '<li>Las contraseñas no coinciden</li>';}
+			if (empty($correo)) {
+        $error_correo .= 'Por favor rellena el campo CORREO';
+        $errores = 'error';
+      }
 
-      // CONEXION CON LA BASE DE DATOS. (PDO) ===================================================================================
+			if (empty($password)) {
+        $error_password .= 'Por favor rellena el campo PASSWORD';
+        $errores = 'error';
+      } else {
+        // Validacion del password.
+        if (validar_clave($password, $error_encontrado)){
+          $error_password = '';
+        }else{
+          $error_password = $error_encontrado;
+          $errores = 'error';
+        }
+      }
+
+			if (empty($password2)) {
+        $error_password2 .= 'Por favor rellena el campo  VERIFICACION DE CORREO';
+        $errores = 'error';
+      }
+
+			if (empty($telefono)) {
+        $error_telefono .= 'Por favor rellena el campo TELEFONO';
+        $errores = 'error';
+      }
+
+			if (empty($dni)) {
+        $error_dni .= 'Por favor rellena el campo NÚMERO DE DOCUMENTO';
+        $errores = 'error';
+      }
+
+			if (empty($fecha_nacimiento)) {
+        $error_fecha_nacimiento .= 'Por favor rellena el campo EDAD';
+        $errores = 'error';
+      }
+
+      if ($password !== $password2) {
+        $error_password2 .= 'Las contraseñas no coinciden';
+        $errores = 'error';
+      }
+
+      if ($soy_cadete == 0 and $soy_flete == 0) {
+        $error_checkbox .= 'Es necesario escojer alguno de los servicios';
+        $errores = 'error';
+      }
+
+      // CONEXION CON LA BASE DE DATOS. (PDO)
       $conexion = conexion_pdo($BaseDatos_config);
       if (!$conexion) {
       	header('Location: ../error_conexion.php');
       } else {
 
       			// CONSULTAS SQL EN LA BD. (PDO)
-      			// #CASO EN Q EXISTA EL USUARIO ===================================================================================
+      			// #CASO EN Q EXISTA EL USUARIO
       			$statement = $conexion->prepare('SELECT * FROM usuarios WHERE usuario = :usuario LIMIT 1');
       			$statement->execute(array(':usuario' => $usuario));
       			$resultado_usuario = $statement->fetch();
@@ -78,7 +134,7 @@
       				$errores .= '<li>El nombre de usuario ya existe</li>';
       			}
 
-      			// #CASO EN Q EXISTA EL CORREO ===================================================================================
+      			// #CASO EN Q EXISTA EL CORREO
       			$statement = $conexion->prepare('SELECT * FROM usuarios WHERE correo = :correo LIMIT 1');
       			$statement->execute(array(':correo' => $correo));
       			$resultado_correo = $statement->fetch();
@@ -86,17 +142,17 @@
       				$errores .= '<li>ya existe una cuenta asociada a este correo</li>';
       			}
 
-      			// SUBIMOS LA FOTO ===================================================================================
+      			// SUBIMOS LA FOTO
       			$carpeta = '../fotos_perfiles';
       			$foto = 'foto_perfil';
       			subir_foto($foto, $carpeta);
       			$foto_subida = $_FILES['foto_perfil']['name'];
-      			// CASO DE NO SUBIR IMAGEN, USO AVATAR ===================================================================================
+      			// CASO DE NO SUBIR IMAGEN, USO AVATAR
       			if ($foto_subida == null) {
       					$foto_subida = 'no_borrar/avatar.png';
       			}
 
-      			// INSERTAMOS LOS DATOS EN LA BASE DE DATOS: (PDO) ===================================================================================
+      			// INSERTAMOS LOS DATOS EN LA BASE DE DATOS: (PDO)
       			if ($errores == '') {
       					$statement = $conexion->prepare('INSERT INTO usuarios (id, usuario, correo, password, telefono, whatsapp, dni, fecha_nacimiento, foto_perfil, ciudad, calificacion, vidas, soy_cadete, soy_flete) VALUES (null, :usuario, :correo, :password, :telefono, :whatsapp, :dni, :fecha_nacimiento, :foto_perfil, :ciudad, :calificacion, :vidas, :soy_cadete, :soy_flete)');
       					$statement->execute(array(
