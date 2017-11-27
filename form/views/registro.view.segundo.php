@@ -118,7 +118,7 @@
                               <!-- ERROR -->
                               <?php if(!empty($error_trabajos)): ?>
                                 <p class="texto_error" id="error_trabajos"><?php echo $error_trabajos; ?></p>
-                              <?php endif; ?>                              
+                              <?php endif; ?>
                             </div>
                         </div>
 

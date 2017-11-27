@@ -16,7 +16,6 @@
 
   $dni = $_SESSION['dni'];
 
-
   // COMPROBAMOS QUE EL USUARIO NO TENGA UNA SESION INICIADA. (USAR LA FUNCION).
   if (session()) {
     header('Location: ../index.php');
@@ -110,36 +109,35 @@
             $errores = 'error';
           }
 
+          // INSERTAMOS LOS DATOS EN LA BASE DE DATOS: (PDO) ===================================================================================
+          if ($errores == '') {
+              $statement3 = $conexion->prepare('INSERT INTO montos (dni, modo_monto_cadete, modo_monto_flete, monto_cadeterias, monto_fletes, extracto) VALUES (:dni, :modo_monto_cadete, :modo_monto_flete, :monto_cadeterias, :monto_fletes, :extracto)');
+              $statement3->execute(array(
+                  ':dni' => $dni,
+                  ':modo_monto_cadete' => $modo_monto_cadete,
+                  ':modo_monto_flete' => $modo_monto_flete,
+                  ':monto_cadeterias' => $monto_cadeterias,
+                  ':monto_fletes' => $monto_fletes,
+                  ':extracto' => $extracto
+              ));
 
-            // INSERTAMOS LOS DATOS EN LA BASE DE DATOS: (PDO) ===================================================================================
-            if ($errores == '') {
-                $statement3 = $conexion->prepare('INSERT INTO montos (dni, modo_monto_cadete, modo_monto_flete, monto_cadeterias, monto_fletes, extracto) VALUES (:dni, :modo_monto_cadete, :modo_monto_flete, :monto_cadeterias, :monto_fletes, :extracto)');
-                $statement3->execute(array(
-                    ':dni' => $dni,
-                    ':modo_monto_cadete' => $modo_monto_cadete,
-                    ':modo_monto_flete' => $modo_monto_flete,
-                    ':monto_cadeterias' => $monto_cadeterias,
-                    ':monto_fletes' => $monto_fletes,
-                    ':extracto' => $extracto
-                ));
+            $filas = $statement3->rowCount();
 
-                $filas = $statement3->rowCount();
+            if ($filas == 0) {
+              header('Location: ../error_conexion.php');
+            } else {
+              session_destroy();
+              session_start();
 
-                if ($filas == 0) {
-                  header('Location: ../error_conexion.php');
-                } else {
-                  session_destroy();
-                  session_start();
-
-                  // CREAMOS NUEVA SESION ===================================================================================
-                      $_SESSION['correo'] = $correo; // creamos una sesion.
-                      header('Location: ../contenido_info.php');
-                  }
-                }
-              }
+            // CREAMOS NUEVA SESION ===================================================================================
+                $_SESSION['correo'] = $correo; // creamos una sesion.
+                header('Location: ../contenido_info.php');
+            }
           }
         }
       }
+    }
+  }
 
   require 'views/registro.view.tercero.php';
 

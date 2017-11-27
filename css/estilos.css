@@ -684,6 +684,12 @@ footer .redes-sociales li a {
 .sec_publicar {
   background: #fff; }
 
+.buscador {
+  margin: 0.5em auto;
+  text-align: left;
+  font-size: 1.2em;
+  padding: 0.5em; }
+
 .box_post {
   background: #fff; }
   .box_post .foto_post .img_post {

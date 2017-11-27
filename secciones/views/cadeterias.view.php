@@ -44,44 +44,70 @@
         <!-- CONTENIDO PRINCIPAL =============================================================================== -->
         <div class="col s12 m9 l9 prueba">
 
-              <!-- BUSCADORES =============================================================================== -->
-              <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\buscar_cadete.php'; ?>
-              <!-- ORDENADORES =============================================================================== -->
+
+          <!-- BUSCADOR VIEWS =============================================================================== -->
+          <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\buscar_ciudad.view.php'; ?>
+
+          <!-- ORDENAR =============================================================================== -->
+          <!-- proximamente -->
 
 
 
-            <!-- OPCION#2 -->
-            <?php
-              while ($row_u = $res_usuarios->fetch() and $row_s = $res_servicios->fetch() and $row_m = $res_montos->fetch() ) {
-                $id = $row_u[0];
-                $usuario = $row_u[1];
-                $foto_perfil = $row_u[8];
-                $ciudad = $row_u[9];
-                $calificacion = $row_u[10];
-                $vidas = $row_u[11];
-                $soy_cadete = $row_u[12];
-                $soy_flete = $row_u[13];
-                $fecha_ingreso = $row_u[14];
+          <?php
+          while ($row_u = $res_usuarios->fetch() and $row_s = $res_servicios->fetch() and $row_m = $res_montos->fetch()) {
+            $id = $row_u[0];
+            $usuario = $row_u[1];
+            $foto_perfil = $row_u[8];
+            $ciudad = $row_u[9];
+            $calificacion = $row_u[10];
+            $vidas = $row_u[11];
+            $soy_cadete = $row_u[12];
+            $soy_flete = $row_u[13];
+            $fecha_ingreso = $row_u[14];
 
-                $am = $row_s[5];
-                $pm = $row_s[6];
+            $am = $row_s[5];
+            $pm = $row_s[6];
 
-                $modo_monto_cadete = $row_m[1];
-                $modo_monto_flete = $row_m[2];
-                $monto_cadeterias = $row_m[3];
-                $monto_fletes = $row_m[4];
-                $extracto = $row_m[5];
+            $modo_monto_cadete = $row_m[1];
+            $modo_monto_flete = $row_m[2];
+            $monto_cadeterias = $row_m[3];
+            $monto_fletes = $row_m[4];
+            $extracto = $row_m[5];
 
-                $fecha_ingreso = fecha($fecha_ingreso);
+            // Ayuda para ver si funca...
+            // echo 'USARIO: =========' .'<br>';
+            // echo $id . '<br>';
+            // echo $usuario . '<br>';
+            // echo $foto_perfil . '<br>';
+            // echo $ciudad . '<br>';
+            // echo $calificacion . '<br>';
+            // echo $vidas . '<br>';
+            // echo $soy_cadete . '<br>';
+            // echo $soy_flete . '<br>';
+            // echo $fecha_ingreso . '<br>';
+            // echo $am . '<br>';
+            // echo $pm . '<br>';
+            // echo $modo_monto_cadete . '<br>';
+            // echo $modo_monto_flete . '<br>';
+            // echo $monto_cadeterias . '<br>';
+            // echo $monto_fletes . '<br>';
+            // echo $extracto . '<br>';
+            // echo "=====================" . '<br>';
 
-                //defino la url en una variable para poder pasar el id
-                $url = "http://localhost/PF-ComIT-Vaylet/contenido_cliente.php?id_del_usuario=" .$id;
+            // Muestro la fecha de ingreso en un formato mas piola.
+            $fecha_ingreso = fecha($fecha_ingreso);
 
-                if ($vidas > 0 and $soy_cadete == 1) {
-            ?>
+            //BUSCAR POR CIUDAD ===============================================================================
+            require 'C:\wamp64\www\PF-ComIT-Vaylet\buscar_ciudad.php';
+
+            //defino la url en una variable para poder pasar el id por medio de la url.
+            $url = "http://localhost/PF-ComIT-Vaylet/contenido_cliente.php?id_del_usuario=" .$id;
+
+            // ELIJO QUE MOSTRAR: (DEFINO MIS CONDICIONES)
+            if ($vidas > 0 and $soy_cadete == 1 and $ciudad == $ciudad_buscada ) {
+          ?>
 
             <div class="row z-depth-3 box_post">
-
               <div class="col s12 m12 l3 foto_post">
                   <div class="">
                       <img src="<?php echo RUTA; ?>/fotos_perfiles/<?php echo $foto_perfil; ?>" alt="" class="responsive-img img_post">
@@ -136,7 +162,7 @@
                         </li>
 
                         <li>
-                          <div class="collapsible-header"><i class="material-icons">place</i><?php echo $ciudad ?></div>
+                          <div id="ciudad_usuario" class="collapsible-header"><i class="material-icons">place</i><?php echo $ciudad ?></div>
                         </li>
                       </ul>
                   </div>

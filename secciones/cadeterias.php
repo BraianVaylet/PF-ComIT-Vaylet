@@ -1,16 +1,15 @@
   <?php
     session_start();
     $errores = '';
-    $enviado = '';
+    $enviado = '';    
     require '../funciones.php';
 
-
     // CONEXION CON LA BASE DE DATOS. (PDO)
-		$conexion = conexion_pdo($BaseDatos_config);
-		if (!$conexion) {
-			header('Location: error_conexion.php');
-		}
-		else {
+    $conexion = conexion_pdo($BaseDatos_config);
+    if (!$conexion) {
+      header('Location: error_conexion.php');
+    }
+    else {
 
       // TABLA USUARIOS:
       $res_usuarios = $conexion->prepare('SELECT * FROM usuarios');
@@ -23,9 +22,7 @@
       // TABLA MONTOS:
       $res_montos = $conexion->prepare('SELECT * FROM montos');
       $res_montos->execute();
-      }
-
-
+   }
 
     require 'views/cadeterias.view.php';
    ?>

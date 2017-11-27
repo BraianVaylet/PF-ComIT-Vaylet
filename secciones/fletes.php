@@ -11,7 +11,7 @@
     }
     else {
 
-      // TABLA USUARIOS:WHERE soy_flete = "1"
+      // TABLA USUARIOS:
       $res_usuarios = $conexion->prepare('SELECT * FROM usuarios');
       $res_usuarios->execute();
 
@@ -22,8 +22,7 @@
       // TABLA MONTOS:
       $res_montos = $conexion->prepare('SELECT * FROM montos');
       $res_montos->execute();
-      }
-
+   }
 
     require 'views/fletes.view.php';
    ?>

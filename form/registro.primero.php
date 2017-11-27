@@ -48,7 +48,6 @@
         $soy_flete = 0;
       }
 
-
       // TRABAJO LOS SELECT
       if (isset($_POST['ciudad'])) {
         $ciudad = $_POST['ciudad'];
@@ -66,6 +65,7 @@
       // $password2 = campo_seguro($password2);
 
       // VALIDACION DEL FORMULARIO
+      // COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS
     	if (empty($usuario)) {
         $error_usuario .= 'Por favor rellena el campo USUARIO';
         $errores = 'error';
@@ -89,8 +89,11 @@
         }
       }
 
-			if (empty($password2)) {
+      if (empty($password2)) {
         $error_password2 .= 'Por favor rellena el campo  VERIFICACION DE CORREO';
+        $errores = 'error';
+      } elseif ($password2 != $password) {
+        $error_password2 .= 'Las contraseñas no coinsiden';
         $errores = 'error';
       }
 
@@ -106,11 +109,6 @@
 
 			if (empty($fecha_nacimiento)) {
         $error_fecha_nacimiento .= 'Por favor rellena el campo EDAD';
-        $errores = 'error';
-      }
-
-      if ($password !== $password2) {
-        $error_password2 .= 'Las contraseñas no coinciden';
         $errores = 'error';
       }
 

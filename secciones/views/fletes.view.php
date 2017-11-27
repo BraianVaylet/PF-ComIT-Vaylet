@@ -45,8 +45,11 @@
         <div class="col s12 m9 l9 prueba">
             <div class="row">
 
-              <!-- BUSCADORES =============================================================================== -->
-                <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\buscar_flete.php'; ?>
+            <!-- BUSCADOR VIEWS =============================================================================== -->
+            <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\buscar_ciudad.view.php'; ?>
+
+            <!-- ORDENAR =============================================================================== -->
+            <!-- proximamente -->
 
             <!-- OPCION#2 -->
             <?php
@@ -70,12 +73,37 @@
               $monto_fletes = $row_m[4];
               $extracto = $row_m[5];
 
+              // Ayuda para ver si funca...
+              // echo 'USARIO: =========' .'<br>';
+              // echo $id . '<br>';
+              // echo $usuario . '<br>';
+              // echo $foto_perfil . '<br>';
+              // echo $ciudad . '<br>';
+              // echo $calificacion . '<br>';
+              // echo $vidas . '<br>';
+              // echo $soy_cadete . '<br>';
+              // echo $soy_flete . '<br>';
+              // echo $fecha_ingreso . '<br>';
+              // echo $am . '<br>';
+              // echo $pm . '<br>';
+              // echo $modo_monto_cadete . '<br>';
+              // echo $modo_monto_flete . '<br>';
+              // echo $monto_cadeterias . '<br>';
+              // echo $monto_fletes . '<br>';
+              // echo $extracto . '<br>';
+              // echo "=====================" . '<br>';
+
+              // Muestro la fecha de ingreso en un formato mas piola.
               $fecha_ingreso = fecha($fecha_ingreso);
 
-                //defino la url en una variable para poder pasar el id
-                $url = "http://localhost/PF-ComIT-Vaylet/contenido_cliente.php?id_del_usuario=" .$id;
+              //BUSCAR POR CIUDAD ===============================================================================
+              require 'C:\wamp64\www\PF-ComIT-Vaylet\buscar_ciudad.php';
 
-                if ($vidas > 0 and $soy_flete == 1) {
+              //defino la url en una variable para poder pasar el id por medio de la url.
+              $url = "http://localhost/PF-ComIT-Vaylet/contenido_cliente.php?id_del_usuario=" .$id;
+
+              // ELIJO QUE MOSTRAR: (DEFINO MIS CONDICIONES)
+              if ($vidas > 0 and $soy_flete == 1 and $ciudad == $ciudad_buscada ) {
             ?>
 
             <div class="row z-depth-3 box_post">

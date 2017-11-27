@@ -43,7 +43,7 @@
                                   <option value="" disabled selected></option>
                                   <option value="Por Hora">Por Hora</option>
                                   <option value="Por todo el Servicio">Por todo el Servicio</option>
-                                  <option value="Por todo el Servicio">Por Kilometro</option>
+                                  <option value="Por Kilometro">Por Kilometro</option>
                               </select>
                               <!-- ERROR -->
                               <?php if(!empty($error_modo_monto_cadete)): ?>
@@ -82,6 +82,7 @@
                                    <option value="" disabled selected></option>
                                    <option value="Por Hora">Por Hora</option>
                                    <option value="Por todo el Servicio">Por todo el Servicio</option>
+                                   <option value="Por Kilometro">Por Kilometro</option>
                                </select>
                                <!-- ERROR -->
                                <?php if(!empty($error_modo_monto_flete)): ?>

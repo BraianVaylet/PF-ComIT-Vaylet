@@ -29,7 +29,7 @@
     $capacidad = limpiarDatos(filter_var($_POST['capacidad']),FILTER_SANITIZE_STRING);
     $trabajos = limpiarDatos(filter_var($_POST['trabajos']),FILTER_SANITIZE_STRING);
 
-    // TRABAJO LOS CHECK 
+    // TRABAJO LOS CHECK
     if (isset($_POST['am'])) {$am = 1;} else {$am = 0;}
     if (isset($_POST['pm'])) {$pm = 1;} else {$pm = 0;}
     if (isset($_POST['dist_trabajo'])) {$dist_trabajo = 1;} else {$dist_trabajo = 0;}
@@ -37,6 +37,7 @@
     if (isset($_POST['carnet'])) {$carnet = 1;} else {$carnet = 0;}
 
     // VALIDACION DEL FORMULARIO
+    // COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS
     if (empty($dist_min)) {
       $error_dist_min .= 'Por favor rellena el campo DISTANCIA MÍNIMA';
       $errores = "error";
@@ -71,8 +72,6 @@
       $error_checkbox_horario .= 'Por favor rellena el campo HORARIOS';
     }
 
-
-
     // CONEXION CON LA BASE DE DATOS. (PDO)
     $conexion = conexion_pdo($BaseDatos_config);
     if (!$conexion) {
@@ -85,7 +84,7 @@
     	$error_dist_max .= 'la distancia máxima no puede ser menor a la distancia mínima ingresada';
     }
 
-    // INSERTAMOS LOS DATOS EN LA BASE DE DATOS: (PDO) 
+    // INSERTAMOS LOS DATOS EN LA BASE DE DATOS: (PDO)
     if ($errores == '') {
     		$statement2 = $conexion->prepare('INSERT INTO servicios (dni, dist_min, dist_max, dist_trabajo, peso_max, am, pm, encargos, tipo, capacidad, trabajos, carnet) VALUES ( :dni, :dist_min, :dist_max, :dist_trabajo, :peso_max, :am, :pm, :encargos, :tipo, :capacidad, :trabajos, :carnet)');
     		$statement2->execute(array(
@@ -110,9 +109,7 @@
     	}
     }
   }
+  
+  require 'views/registro.view.segundo.php';
 
-
-
-    	require 'views/registro.view.segundo.php';
-
-      ?>
+  ?>

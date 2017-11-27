@@ -29,21 +29,13 @@
         // $password = campo_seguro($password);
         // $password2 = campo_seguro($password2);
 
+
         // VALIDACION DEL FORMULARIO.
         // Password:
         if (validar_clave($password, $error_encontrado)){
           $error_password = '';
         }else{
           $error_password = $error_encontrado;
-          $errores = 'error';
-        }
-
-        //Password2:
-        if (empty($password2)) {
-          $error_password2 .= 'Por favor rellena el campo  VERIFICACION DE CORREO';
-          $errores = 'error';
-        } elseif ($password2 != $password) {
-          $error_password2 .= 'Las contraseñas no coinsiden';
           $errores = 'error';
         }
 
@@ -58,6 +50,15 @@
         }
         if (empty($telefono)) {
           $error_telefono .= 'Por favor rellena el campo TELEFONO';
+          $errores = 'error';
+        }
+
+        //Password2:
+        if (empty($password2)) {
+          $error_password2 .= 'Por favor rellena el campo  VERIFICACION DE CORREO';
+          $errores = 'error';
+        } elseif ($password2 != $password) {
+          $error_password2 .= 'Las contraseñas no coinsiden';
           $errores = 'error';
         }
 
