@@ -188,7 +188,6 @@
        }
      }
 
-
      .vidas {
        color: $color_secundario;
      }
@@ -202,9 +201,7 @@
          animation: flip 3s ease infinite;
          margin: 0.5em;
        }
-
      }
-
 
     .perfil_titulo {
       animation: border_top_color 5s ease infinite;
@@ -298,7 +295,6 @@
       padding: 0em 1em;
       .radio_btn {
         color: $color_principal_fondo;
-
         .label_radio_btn {
           font-size: 1em;
         }
@@ -312,7 +308,6 @@
     .box_compra_vistas {
       margin-top: 2em;
     }
-
 
     .boton_contacto_box {
       background: $color_oscuro_transparencia;
@@ -346,7 +341,7 @@
     }
 
     .text_modal_footer {
-      color: color_oscuro_transparencia;
+      color: $color_oscuro_transparencia;
       text-align: center;
     }
 
@@ -362,6 +357,38 @@
       &:hover {
         color: $color_secundario;
       }
+    }
+    .btn_delet_mod {
+      text-align: right;
+      margin: 2em;
+      padding: 1em;
+
+      .delet {
+        background: $color_enlace_desativado;
+        margin-left: 1em;
+        &:hover {
+          background: $color_error;
+        }
+      }
+      .mod {
+        background: $color_enlace_desativado;
+        &:hover {
+          background: $color_secundario;
+        }
+      }
+    }
+
+    /* EDITAR CONTENIDO */
+    /* ----------------------------------------------------------------------------- */
+    .ico_edit {
+      color: $color_principal_fondo;
+      &:hover {
+        color: $color_secundario;
+      }
+    }
+
+    .editar_tablas {
+      padding: 1em;
     }
 
 

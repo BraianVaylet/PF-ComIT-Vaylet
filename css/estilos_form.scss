@@ -127,7 +127,11 @@
     font-size: 1.5em;
   }
 
-
+  #correo_desactivado,
+  #dni_desactivado {
+    color: $color_enlace_desativado;
+    font-size: 1.5em;
+  }
 
     /* PLACEHOLDER COLOR */
     *::-webkit-input-placeholder {
