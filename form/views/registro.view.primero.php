@@ -5,7 +5,7 @@
 										<h1 class="titulo">Registro 1 de 3</h1>
 
 										<div class="pregunta">
-												<p class="texto_small">Bienvenido a WololoW, nos pone muy contento que quieras formar parte de nosotros!!!</p>
+												<p class="texto_small">Bienvenido a WolaloW, nos pone muy contento que quieras formar parte de nosotros!!!</p>
 												<h4 class="titulo_pregunta">A continuación, vamos a necesitar algunos datos para completar su registro</h4>
 										</div>
 

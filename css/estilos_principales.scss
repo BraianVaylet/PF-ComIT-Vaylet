@@ -226,7 +226,8 @@
       }
     }
 
-    .texto {
+    .texto,
+    .texto_desactivado {
       font-size: 1.5em;
     }
 
@@ -238,6 +239,20 @@
       padding: 0em 1em;
       .icono {
         color: $color_principal_fondo;
+      }
+    }
+
+    .flex_ico_ed {
+      display: flex;
+      flex-direction: rows;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0em 3em;
+      .icono {
+        color: $color_principal_fondo;
+      }
+      .icono_no {
+        color: $color_enlace_desativado;
       }
     }
 
@@ -389,6 +404,10 @@
 
     .editar_tablas {
       padding: 1em;
+    }
+
+    .btn_guardar {
+      margin-bottom: 2em;
     }
 
 

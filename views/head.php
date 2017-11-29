@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>wololow</title>
+    <title>WolaloW</title>
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,900|Righteous" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">

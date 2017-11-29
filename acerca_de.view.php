@@ -6,8 +6,8 @@
 
       <main>
         <div class="contenedor">
-            <h3 class="titulo">¿Quiénes forman parte de WololoW?</h3>
-            
+            <h3 class="titulo">¿Quiénes forman parte de WolaloW?</h3>
+
             <p>Soy un alumno de la Universidad Nacional del Sur que decidió buscar una solución para resolver un problema muy común para las personas en su día a día, como lo es la búsqueda de un servicio de cafeterías o de fletes en la ciudad en la que se encuentra. La idea tomo forma tras la necesidad de presentar un proyecto final en un curso de desarrollo web que me encontraba haciendo, utilizando los conocimientos aprendidos y tras muchas horas de trabajo fue como nació WololoW, el lugar donde encontraran a los cadetes y fletes que tanto estaban necesitando.</p>
 
             <div class="row">
@@ -31,7 +31,7 @@
                 </div>
 
             <div class="pregunta">
-                <p class="texto_small">¿Quieres formar parte del desarrollo de WololoW?</p>
+                <p class="texto_small">¿Quieres formar parte del desarrollo de WolaloW?</p>
                 <h4 class="titulo_pregunta">ponte en contacto!!!</h4>
             </div>
 

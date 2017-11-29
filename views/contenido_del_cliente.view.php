@@ -7,7 +7,7 @@
           <div class="row ">
             <div class="box_flex">
               <div class="col s3">
-                <h3>¿Buscas algún servicio de Cafetería?</h3>
+                <h3>¿Buscas algún servicio de Cadetería?</h3>
                 <a href="../secciones/cadeterias.php" class=""><i class="large material-icons icono_para_cliente">directions_bike</i></a>
               </div>
               <div class="col s6">

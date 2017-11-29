@@ -15,7 +15,7 @@
                   <img src="<?php echo RUTA; ?>/fotos_perfiles/<?php echo $foto_perfil; ?>" class="responsive-img circle z-depth-3 foto_perfil" alt="IMAGEN DE PERFIL">
                 </div>
                 <div class="">
-                  <p>En WololoW desde: <?php echo $fecha_ingreso; ?></p>
+                  <p>En WolaloW desde: <?php echo $fecha_ingreso; ?></p>
                 </div>
               </div>
             </div>

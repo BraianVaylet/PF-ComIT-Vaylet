@@ -5,7 +5,7 @@
       <div class="container box_redes">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">WololoW</h5>
+            <h5 class="white-text">WolaloW</h5>
             <p class="grey-text text-lighten-4">Siguenos en nuestras redes sociales</p>
           </div>
           <div class="col l4 offset-l2 s12">

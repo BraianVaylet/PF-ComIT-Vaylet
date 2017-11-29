@@ -25,7 +25,7 @@
 												<img src="<?php echo RUTA; ?>/fotos_perfiles/<?php echo $foto_perfil; ?>" class="responsive-img circle z-depth-3 foto_perfil" alt="IMAGEN DE PERFIL">
 										</div>
 										<div class="">
-												<p>en WololoW desde: <?php echo $fecha_ingreso; ?></p>
+												<p>en WolaloW desde: <?php echo $fecha_ingreso; ?></p>
 										</div>
 								</div>
 							</div>
@@ -323,7 +323,7 @@
 							<a href="#" class="btn z-depth-3 delet ">Eliminar cuenta</a>
 						</div>
 				</div>
-				
+
 				</div>
 			</div>
 			</main>

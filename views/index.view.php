@@ -5,7 +5,7 @@
           <div class="box" id="box">
               <div class="contenido_img">
                 <div class="contenido">
-                   <h1 class="titulo_principal">WololoW</h1>
+                   <h1 class="titulo_principal">WolaloW</h1>
                    <p class="texto_principal">Servicios de Cadeterías y Fletes</p>
                    <p class="texto_principal">todos en un mismo lugar</p>
                 </div>

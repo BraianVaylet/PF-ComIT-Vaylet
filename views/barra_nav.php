@@ -4,7 +4,7 @@
             <div class="navbar-fixed">
               <nav class="nav_menu">
                   <div class="nav-wrapper">
-                    <a href="<?php echo RUTA; ?>" class="brand-logo center">WololoW</a>
+                    <a href="<?php echo RUTA; ?>" class="brand-logo center">WolaloW</a>
                       <ul class="left hide-on-med-and-down">
                           <li class="nav_menu_icono"><a class="dropdown-button nav_menu_enlace" href="#!" data-activates="dropdown1"><i class="material-icons">menu</i></a>
 

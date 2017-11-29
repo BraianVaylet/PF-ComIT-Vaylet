@@ -8,8 +8,8 @@
       <div class="contenedor">
         <div class="row">
           <div class="col s12 m12 l12">
-            <h4 class="titulo_pregunta">¿Cómo funcionan WololoW?</h4>
-            <p class="texto">El objetivo de WololoW es el de poner en contacto a las personas con quienes se dedican a brindar servicios de cadetería y/o fletes en la ciudad.</p>
+            <h4 class="titulo_pregunta">¿Cómo funcionan WolaloW?</h4>
+            <p class="texto">El objetivo de WolaloW es el de poner en contacto a las personas con quienes se dedican a brindar servicios de cadetería y/o fletes en la ciudad.</p>
           </div>
         </div>
 
@@ -18,8 +18,8 @@
               <div class="pregunta">
                   <h4 class="titulo_pregunta">¿Qué son las vistas y cómo funcionan?</h4>
               </div>
-              <p class="texto">WololoW funciona con un sistema de vistas, las vistas equivalen a mostrar la información de contacto de un usuario a otro. Los usuarios registrados tienen un máximo de 10 vistas, cada vez que su información de contacto es revelada a algún potencial cliente se pierde una de ellas.</p>
-              <p class="texto">Cuando el usuario se quede sin vistas ya no estará visible en las secciones de WololoW, para recuperar las vistas necesitara ponerse en contacto con el administrador de la página.</p>
+              <p class="texto">WolaloW funciona con un sistema de vistas, las vistas equivalen a mostrar la información de contacto de un usuario a otro. Los usuarios registrados tienen un máximo de 10 vistas, cada vez que su información de contacto es revelada a algún potencial cliente se pierde una de ellas.</p>
+              <p class="texto">Cuando el usuario se quede sin vistas ya no estará visible en las secciones de WolaloW, para recuperar las vistas necesitara ponerse en contacto con el administrador de la página.</p>
             </div>
 
             <div class="col s12 m12 l6">
@@ -27,7 +27,7 @@
                   <h4 class="titulo_pregunta">¿Qué sucede si el cliente no se pone en contacto conmigo, pierdo una de las vistas?</h4>
               </div>
                 <p class="texto">Si, si algún usuario lo contacta se le revelara su información de contacto, si el servicio no se llevó a cabo porque el usuario no se contactó la vista se perderá de todas formas</p>
-                <p class="texto">De todos modos, ese no es un verdadero problema, ya que el objetivo de WololoW es que las personas tengan un método de comunicación con ustedes, nosotros les acercamos la información de contacto del usuario que ellos elijan o prefieran.</p>
+                <p class="texto">De todos modos, ese no es un verdadero problema, ya que el objetivo de WolaloW es que las personas tengan un método de comunicación con ustedes, nosotros les acercamos la información de contacto del usuario que ellos elijan o prefieran.</p>
             </div>
 
             <div class="col s12 m12 l6">
@@ -40,9 +40,9 @@
 
             <div class="col s12 m12 l6">
               <div class="pregunta">
-                  <h4 class="titulo_pregunta">Conseguí muchos clientes por medio de WololoW pero me quede sin vistas ¿Cómo consigo más de esas?</h4>
+                  <h4 class="titulo_pregunta">Conseguí muchos clientes por medio de WolaloW pero me quede sin vistas ¿Cómo consigo más de esas?</h4>
               </div>
-                <p class="texto">No hay de qué preocuparse, solo tienes que ir a tu perfil y desde el tendrás acceso a un formulario de contacto donde podrás escribirnos para recuperar las vistas q perdiste.</p>
+                <p class="texto">No hay de qué preocuparse, solo tienes que ir a tu perfil y desde el tendrás acceso a un formulario de contacto donde podrás escribirnos para recuperar las vistas que perdiste.</p>
                 <p class="texto">¡Felicitaciones por cierto!  si gastaste las 10 vistas significa que hay 10 personas que ahora poseen tu información de contacto, ellos podrán volver a solicitar tus servicios o recomendarte a alguien más. </p>
             </div>
         </div>

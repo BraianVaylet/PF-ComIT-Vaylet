@@ -7,7 +7,7 @@
         <main>
           <div class="z-depth-3 contenedor">
             <h4 class="titulo">Hola, <?php echo $usuario; ?></h4>
-            <p class="texto">Bienvenid@ a Wololow, ¡Nos alegra informarle que su registro se completó de forma exitosa y como agradecimiento ha sido recompensado con 10 vistas! ¡Así que felicitaciones!</p>
+            <p class="texto">Bienvenid@ a WolaloW, ¡Nos alegra informarle que su registro se completó de forma exitosa y como agradecimiento ha sido recompensado con 10 vistas! ¡Así que felicitaciones!</p>
             <p class="texto">Sabemos que tienes dudas, así que puedes ingresar en todo momento en la sección ayudas en la parte superior y entérate de cómo es el funcionamiento de las vistas, tu calificación y todo lo referido a la página.</p>
             </p>
 

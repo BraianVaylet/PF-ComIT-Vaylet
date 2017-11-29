@@ -376,7 +376,8 @@ footer .redes-sociales li a {
     padding: 0.1em;
     padding: 0em 10%; }
 
-.texto {
+.texto,
+.texto_desactivado {
   font-size: 1.5em; }
 
 .flex_ico {
@@ -387,6 +388,17 @@ footer .redes-sociales li a {
   padding: 0em 1em; }
   .flex_ico .icono {
     color: #2fb9a8; }
+
+.flex_ico_ed {
+  display: flex;
+  flex-direction: rows;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 3em; }
+  .flex_ico_ed .icono {
+    color: #2fb9a8; }
+  .flex_ico_ed .icono_no {
+    color: #6c6c6c; }
 
 .flex_btn {
   display: flex;
@@ -499,6 +511,9 @@ footer .redes-sociales li a {
 
 .editar_tablas {
   padding: 1em; }
+
+.btn_guardar {
+  margin-bottom: 2em; }
 
 /* ACERCA DE NOSOTROS */
 /* ----------------------------------------------------------------------------- */

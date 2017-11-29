@@ -140,6 +140,14 @@
       				$errores .= '<li>ya existe una cuenta asociada a este correo</li>';
       			}
 
+            // #CASO EN Q EXISTA EL TELEFONO
+      			$statement = $conexion->prepare('SELECT * FROM usuarios WHERE telefono = :telefono LIMIT 1');
+      			$statement->execute(array(':telefono' => $telefono));
+      			$resultado_correo = $statement->fetch();
+      			if ($resultado_correo != false) {
+      				$errores .= '<li>ya existe una cuenta asociada a este número de telefono</li>';
+      			}
+
       			// SUBIMOS LA FOTO
       			$carpeta = '../fotos_perfiles';
       			$foto = 'foto_perfil';
