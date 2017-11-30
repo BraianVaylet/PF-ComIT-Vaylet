@@ -645,10 +645,15 @@ footer .redes-sociales li a {
   font-size: 1em; }
 
 /* LABEL COLOR */
-.input-field label,
 .label_textarea {
-  color: #2fb9a8;
-  font-size: 1.5em; }
+  text-align: left;
+  font-size: 1.5em;
+  color: #2fb9a8; }
+
+.label_textarea_desactivado {
+  text-align: left;
+  font-size: 1.5em;
+  color: #6c6c6c; }
 
 #correo_desactivado,
 #dni_desactivado {

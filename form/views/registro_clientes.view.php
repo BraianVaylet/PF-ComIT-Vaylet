@@ -8,7 +8,7 @@
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formulario" name="login" id="formulario">
               <div class="row dos_campos">
                 <div class="input-field col s6 offset-s3">
-                  <label class="label_textarea" for="usuario_cliente">¿Cuál es tu nombre y apellido? *</label>
+                  <h4 class="label_textarea" for="usuario_cliente">¿Cuál es tu nombre y apellido? *</h4>
                   <input type="text" name="usuario_cliente" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese su nombre y luego separado por un espacio su apellido" id="usuario_cliente" value="<?php if(!$enviado && isset($usuario_cliente)) { echo $usuario_cliente; }?>">
                   <!-- ERROR -->
                   <?php if(!empty($error_usuario_cliente)): ?>
@@ -19,7 +19,7 @@
 
                 <div class="row dos_campos">
                   <div class="input-field col s4 offset-s2">
-                    <label for="correo" class="label_textarea" data-error="incorrecto, vuelva a intentarlo" data-success="perfecto, gracias">Ingrese su correo * </label>
+                    <h4 for="correo" class="label_textarea" data-error="incorrecto, vuelva a intentarlo" data-success="perfecto, gracias">Ingrese su correo * </h4>
                     <input type="email" name="correo" class="campo tooltipped" data-position="right" data-delay="50" data-tooltip="Ingrese su correo electrónico" id="correo" value="<?php if(!$enviado && isset($correo)) { echo $correo; }?>">
                     <!-- ERROR -->
                     <?php if(!empty($error_correo)): ?>
@@ -28,7 +28,7 @@
                   </div>
 
                   <div class="input-field col s4 ">
-                      <label class="label_textarea" for="telefono">¿Cuál es su número de teléfono? *</label>
+                      <h4 class="label_textarea" for="telefono">¿Cuál es su número de teléfono? *</h4>
                       <input type="text" name="telefono" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese su numero de teléfono para poder ser contactado por los usuarios" value="<?php if(!$enviado && isset($telefono)) { echo $telefono; }?>">
                       <!-- ERROR -->
                       <?php if(!empty($error_telefono)): ?>
@@ -39,7 +39,7 @@
 
                 <div class="row dos_campos">
                     <div class="input-field col s4 offset-s2">
-                        <label class="label_textarea" for="password">Ingrese una contraseña *</label>
+                        <h4 class="label_textarea" for="password">Ingrese una contraseña *</h4>
                         <input type="password" name="password" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese una contraseña para su cuenta" id="password">
                         <!-- ERROR -->
                         <?php if(!empty($error_password)): ?>
@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="input-field col s4 ">
-                        <label class="label_textarea" for="password2">Verificar contraseña *</label>
+                        <h4 class="label_textarea" for="password2">Verificar contraseña *</h4>
                         <input type="password" name="password2" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Solo para verificar, vuelva a ingresar la contraseña" id="password2">
                         <!-- ERROR -->
                         <?php if(!empty($error_password2)): ?>

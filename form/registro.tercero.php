@@ -45,7 +45,7 @@
       if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           $extracto = limpiarDatos(filter_var($_POST['extracto']),FILTER_SANITIZE_STRING);
           if (empty($extracto)) {
-            $error_extracto .= 'Por favor rellena el campo EXTRACTO';
+            $error_extracto .= 'Por favor complete el campo EXTRACTO';
             $errores = 'error';
           }
 
@@ -56,7 +56,7 @@
 
               // COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS ===================================================================================
               if (empty($monto_cadeterias)) {
-                $error_monto_cadeterias .= 'Por favor rellena el campo MONTO-CADETERIAS';
+                $error_monto_cadeterias .= 'Por favor complete el campo MONTO-CADETERIAS';
                 $errores = 'error';
               }
 
@@ -67,7 +67,7 @@
                     $modo_monto_cadete = $modo_monto_cadete[$i];
                 }
               } else {
-                $error_modo_monto_cadete .= 'disculpe, pero es necesario que llene el campo MODALIDAD para cadeterias';
+                $error_modo_monto_cadete .= 'disculpe, pero es necesario que complete el campo MODALIDAD para cadeterias';
                 $errores = 'error';
               }
           } else {
@@ -82,7 +82,7 @@
 
             // COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS ===================================================================================
             if (empty($monto_fletes)) {
-              $error_monto_fletes .= 'Por favor rellena el campo MONTO-FLETES';
+              $error_monto_fletes .= 'Por favor complete el campo MONTO-FLETES';
               $errores = 'error';
             }
 
@@ -93,7 +93,7 @@
                   $modo_monto_flete = $modo_monto_flete[$i];
               }
             } else {
-              $error_modo_monto_flete .= 'disculpe, pero es necesario que llene el campo MODALIDAD para fletes';
+              $error_modo_monto_flete .= 'disculpe, pero es necesario que complete el campo MODALIDAD para fletes';
               $errores = 'error';
             }
           } else {

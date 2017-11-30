@@ -10,7 +10,7 @@
                       </div>
 
                       <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formulario col" name="login" enctype="multipart/form-data" id="formulario">
-                        
+
                       <!-- MONTO ============================================================================== -->
                       <?php if ($soy_cadete == 0) { ?>
                         <div class="row tres_campos">
@@ -22,7 +22,7 @@
                       <!-- PARA CADETERIA -->
                           <div class="row tres_campos">
                             <div class="col s4 pregunta">
-                              <h4 class="titulo_monto">Si realizas servicios de Cadeterías:</h4>
+                              <h4 class="titulo_monto">Su servicio de Cadeterías:</h4>
                             </div>
                             <div class="col s4">
                               <h4 class="label_textarea">Monto en $:</h4>
@@ -61,7 +61,7 @@
                        <!-- PARA FLETES -->
                            <div class="row tres_campos">
                              <div class="col s4 pregunta">
-                               <h4 class="titulo_monto">Si realizas servicios de Fletes:</h4>
+                               <h4 class="titulo_monto">Su servicio de Fletes:</h4>
                              </div>
                              <div class="col s4">
                                <h4 class="label_textarea">Monto en $:</h4>
@@ -93,7 +93,7 @@
                       <!-- EXTRACTO ============================================================================== -->
                       <div class="row tres_campos">
                         <div class="col s8 offset-s2">
-                          <h4 class="label_textarea">Extracto sobre mí:</h4>
+                          <h4 class="label_textarea">Extracto:</h4>
                           <textarea name="extracto" class="materialize-textarea tooltipped" data-position="bottom" data-delay="50" data-tooltip="ingrese un pequeño extracto contando acerca de usted, esto será visto por todos los usuarios, sea cuidadoso al redactarlo" id="extracto$extracto" rows="8" cols="80" data-length="1500" value="<?php if(!$enviado && isset($extracto)) { echo $extracto; }?>"><?php  echo $extracto; ?></textarea>
                           <!-- ERROR -->
                           <?php if(!empty($error_extracto)): ?>

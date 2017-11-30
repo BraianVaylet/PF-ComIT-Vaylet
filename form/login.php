@@ -22,8 +22,8 @@
 						//$password = campo_seguro($password);
 
 						//VALIDO EL LOGIN.
-						if (empty($correo)) { $error_correo .= 'Por favor rellena el campo CORREO';	}
-						if (empty($password)) { $error_password .= 'Por favor rellena el campo PASSWORD';	}
+						if (empty($correo)) { $error_correo .= 'Por favor complete el campo CORREO';	}
+						if (empty($password)) { $error_password .= 'Por favor complete el campo PASSWORD';	}
 
 						// COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS.
 						if (!empty($correo) or !empty($password)) {
@@ -64,7 +64,7 @@
 									$_SESSION['correo'] = $correo; // creamos una sesion.
 									header('Location: ../contenido.php');
 								} else {
-									$errores .= '<li>Contraseña Incorrecta</li>';
+									$errores .= '<li>Contraseña Incorrecta, <a class="modal-trigger link_reg_2" href="../nuevo_password.php">¿Has olvidado tu contraseña?</a></li>';
 								}
 						}
 				 }

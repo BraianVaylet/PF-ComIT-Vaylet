@@ -1,6 +1,6 @@
 	<?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\head.php'; ?>
 	<?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\barra_nav.php'; ?>
-	
+
 			<main class="z-depth-3">
 					<div class="contenedor">
 						<h1 class="titulo">Iniciar sesión</h1>
@@ -8,7 +8,7 @@
 						<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formulario" name="login" id="formulario">
 								<div class="row">
 										<div class="col s6 offset-s3">
-												<label for="correo" class="label_textarea" data-error="incorrecto, vuelva a intentarlo" data-success="perfecto, gracias">Ingrese su correo: </label>
+												<h4 for="correo" class="label_textarea" data-error="incorrecto, vuelva a intentarlo" data-success="perfecto, gracias">Ingrese su correo: </h4>
 												<input type="email" name="correo" class="campo tooltipped" data-position="right" data-delay="50" data-tooltip="Ingrese su correo electrónico" id="correo" value="<?php if(!$enviado && isset($correo)) { echo $correo; }?>">
 												<!-- ERROR -->
 												<?php if(!empty($error_correo)): ?>
@@ -19,7 +19,7 @@
 
 								<div class="row">
 										<div class="col s6 offset-s3">
-												<label for="password" class="label_textarea" >Ingrese su contraseña: </label>
+												<h4 for="password" class="label_textarea" >Ingrese su contraseña: </h4>
 												<input type="password" name="password" class="campo tooltipped" data-position="right" data-delay="50" data-tooltip="Ingrese su contraseña" id="password">
 												<!-- ERROR -->
 												<?php if(!empty($error_password)): ?>

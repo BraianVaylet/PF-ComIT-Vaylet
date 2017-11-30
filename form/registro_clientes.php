@@ -1,4 +1,4 @@
-  <?php
+complete  <?php
 
     session_start();
     $errores = '';
@@ -41,21 +41,21 @@
 
         // COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS
         if (empty($usuario_cliente)) {
-          $error_usuario_cliente .= 'Por favor rellena el campo USUARIO';
+          $error_usuario_cliente .= 'Por favor complete el campo USUARIO';
           $errores = 'error';
         }
         if (empty($correo)) {
-          $error_correo .= 'Por favor rellena el campo CORREO';
+          $error_correo .= 'Por favor complete el campo CORREO';
           $errores = 'error';
         }
         if (empty($telefono)) {
-          $error_telefono .= 'Por favor rellena el campo TELEFONO';
+          $error_telefono .= 'Por favor complete el campo TELEFONO';
           $errores = 'error';
         }
 
         //Password2:
         if (empty($password2)) {
-          $error_password2 .= 'Por favor rellena el campo  VERIFICACION DE CORREO';
+          $error_password2 .= 'Por favor complete el campo  VERIFICACION DE CORREO';
           $errores = 'error';
         } elseif ($password2 != $password) {
           $error_password2 .= 'Las contraseñas no coinsiden';
@@ -87,6 +87,7 @@
                 $error_correo .= 'ya existe una cuenta asociada a este correo';
                 $errores = 'error';
               }
+
 
               // INSERTAMOS LOS DATOS EN LA BASE DE DATOS: (PDO)
               if ($errores == '') {

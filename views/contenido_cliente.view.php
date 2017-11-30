@@ -178,17 +178,6 @@
                       <li class="collection-item">
                         <div class="flex_ico">
                           <div class="icono">
-                            <i class="medium material-icons">view_compact</i>
-                          </div>
-                          <div class="">
-                            Capacidad:<p class="texto"><?php echo $capacidad; ?></p>
-                          </div>
-                        </div>
-                      </li>
-
-                      <li class="collection-item">
-                        <div class="flex_ico">
-                          <div class="icono">
                             <i class="medium material-icons">work</i>
                           </div>
                           <div class="">

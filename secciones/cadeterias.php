@@ -1,7 +1,7 @@
   <?php
     session_start();
     $errores = '';
-    $enviado = '';    
+    $enviado = '';
     require '../funciones.php';
 
     // CONEXION CON LA BASE DE DATOS. (PDO)
@@ -22,7 +22,7 @@
       // TABLA MONTOS:
       $res_montos = $conexion->prepare('SELECT * FROM montos');
       $res_montos->execute();
-   }
+     }
 
     require 'views/cadeterias.view.php';
    ?>

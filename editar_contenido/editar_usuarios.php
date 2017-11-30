@@ -91,7 +91,7 @@
           // VALIDACION DEL FORMULARIO
           // COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS
           if (empty($usuario)) {
-            $error_usuario .= 'Por favor rellena el campo USUARIO';
+            $error_usuario .= 'Por favor complete el campo USUARIO';
             $errores = 'error';
           }
 
@@ -101,7 +101,7 @@
           // }
 
           if (empty($password)) {
-            $error_password .= 'Por favor rellena el campo PASSWORD';
+            $error_password .= 'Por favor complete el campo PASSWORD';
             $errores = 'error';
           } else {
             // Validacion del password.
@@ -114,7 +114,7 @@
           }
 
           if (empty($password2)) {
-            $error_password2 .= 'Por favor rellena el campo  VERIFICACION DE CORREO';
+            $error_password2 .= 'Por favor complete el campo  VERIFICACION DE CORREO';
             $errores = 'error';
           } elseif ($password2 != $password) {
             $error_password2 .= 'Las contraseñas no coinsiden';
@@ -122,7 +122,7 @@
           }
 
           if (empty($telefono)) {
-            $error_telefono .= 'Por favor rellena el campo TELEFONO';
+            $error_telefono .= 'Por favor complete el campo TELEFONO';
             $errores = 'error';
           }
 
@@ -132,7 +132,7 @@
           // }
 
           if (empty($fecha_nacimiento)) {
-            $error_fecha_nacimiento .= 'Por favor rellena el campo EDAD';
+            $error_fecha_nacimiento .= 'Por favor complete el campo EDAD';
             $errores = 'error';
           }
 

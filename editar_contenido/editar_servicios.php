@@ -7,7 +7,6 @@
   $error_dist_max = '';
   $error_peso_max = '';
   $error_tipo = '';
-  $error_capacidad = '';
   $error_trabajos = '';
   $error_checkbox_horario = '';
   require '../funciones.php';
@@ -45,9 +44,8 @@
           $pm = $row[6];
           $encargos = $row[7];
           $tipo = $row[8];
-          $capacidad = $row[9];
-          $trabajos = $row[10];
-          $carnet = $row[11];
+          $trabajos = $row[9];
+          $carnet = $row[10];
       }
 
       // LEVANTO VALORES DEL FORM.
@@ -55,8 +53,6 @@
         $dist_min = limpiarDatos(filter_var($_POST['dist_min']),FILTER_SANITIZE_NUMBER_FLOAT);
         $dist_max = limpiarDatos(filter_var($_POST['dist_max']),FILTER_SANITIZE_NUMBER_FLOAT);
         $peso_max = limpiarDatos(filter_var($_POST['peso_max']),FILTER_SANITIZE_NUMBER_FLOAT);
-        $tipo = limpiarDatos(filter_var($_POST['tipo']),FILTER_SANITIZE_STRING);
-        $capacidad = limpiarDatos(filter_var($_POST['capacidad']),FILTER_SANITIZE_STRING);
         $trabajos = limpiarDatos(filter_var($_POST['trabajos']),FILTER_SANITIZE_STRING);
 
         // TRABAJO LOS CHECK
@@ -65,6 +61,18 @@
         if (isset($_POST['dist_trabajo'])) {$dist_trabajo = 1;} else {$dist_trabajo = 0;}
         if (isset($_POST['encargos'])) {$encargos = 1;} else {$encargos = 0;}
         if (isset($_POST['carnet'])) {$carnet = 1;} else {$carnet = 0;}
+
+        // TRABAJO LOS SELECT
+        if (isset($_POST['tipo'])) {
+          $tipo = $_POST['tipo'];
+          for ($i = 0; $i < count($tipo); $i++) {
+              $tipo = $tipo[$i];
+          }
+        } else {
+          //Valido campo ciudad.
+          $error_tipo .= 'Ingrese un valor para el campo ciudad';
+          $errores = 'error';
+        }
 
         // VALIDACION DEL FORMULARIO
         // COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS
@@ -85,11 +93,6 @@
 
         if (empty($tipo)) {
           $error_tipo .= 'Por favor rellena el campo ACERCA DE SU VEHICULO';
-          $errores = "error";
-        }
-
-        if (empty($capacidad)) {
-          $error_capacidad .= 'Por favor rellena el campo ACERCA DE SU CAPACIDAD';
           $errores = "error";
         }
 
@@ -118,7 +121,6 @@
                         pm = :pm,
                         encargos = :encargos,
                         tipo = :tipo,
-                        capacidad = :capacidad,
                         trabajos = :trabajos,
                         carnet = :carnet
                         WHERE dni = :dni";
@@ -133,7 +135,6 @@
         				':pm' => $pm,
         				':encargos' => $encargos,
         				':tipo' => $tipo,
-        				':capacidad' => $capacidad,
         				':trabajos' => $trabajos,
         				':carnet' => $carnet
         		));

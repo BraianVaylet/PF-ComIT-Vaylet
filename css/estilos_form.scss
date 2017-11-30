@@ -121,10 +121,16 @@
 
 
   /* LABEL COLOR */
-  .input-field label,
   .label_textarea {
-    color: $color_principal_fondo;
+    text-align: left;
     font-size: 1.5em;
+    color: $color_principal_fondo;
+  }
+
+  .label_textarea_desactivado {
+    text-align: left;
+    font-size: 1.5em;
+    color: $color_enlace_desativado;
   }
 
   #correo_desactivado,

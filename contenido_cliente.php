@@ -53,9 +53,8 @@
             $pm = $row[6];
             $encargos = $row[7];
             $tipo = $row[8];
-            $capacidad = $row[9];
-            $trabajos = $row[10];
-            $carnet = $row[11];
+            $trabajos = $row[9];
+            $carnet = $row[10];
         }
 
         // traigo todos los datos de montos.

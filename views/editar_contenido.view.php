@@ -265,18 +265,6 @@
   										</div>
   									</li>
 
-                    <!-- capacidad -->
-                    <li class="collection-item">
-                      <div class="flex_ico">
-                        <div class="icono">
-                          <p class="texto">Capacidad:</p>
-                        </div>
-                        <div class="">
-                          <p class="texto"><?php echo $capacidad; ?></p>
-                        </div>
-                      </div>
-                    </li>
-
                     <!-- trabajos -->
                     <li class="collection-item">
   										<div class="flex_ico">
