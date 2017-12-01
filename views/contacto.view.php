@@ -1,5 +1,5 @@
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\head.php'; ?>
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\barra_nav.php'; ?>
+<?php require 'views/head.php'; ?>
+<?php require 'views/barra_nav.php'; ?>
   <main>
 
     <!-- DONDE SE MUESTRA LA INFORMACION DE CONTACTO -->
@@ -47,8 +47,8 @@
   </main>
 
 
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\footer.php'; ?>
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\script.php'; ?>
+  <?php require 'views/footer.php'; ?>
+  <?php require 'views/script.php'; ?>
   <?php if (session()): ?>
   <script src="<?php echo RUTA; ?>/js/misArchivos/principal.js" charset="utf-8"></script>
   <?php endif ?>

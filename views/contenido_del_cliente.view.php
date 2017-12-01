@@ -1,5 +1,5 @@
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\head.php'; ?>
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\barra_nav.php'; ?>
+  <?php require 'views/head.php'; ?>
+  <?php require 'views/barra_nav.php'; ?>
 
     <!-- ESTE ES EL PERFIL COMPLETO DE CADA CLIENTE. -->
       <main class="z-depth-3">
@@ -48,8 +48,8 @@
       </div>
     </main>
 
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\footer.php'; ?>
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\script.php'; ?>
+  <?php require 'views/footer.php'; ?>
+  <?php require 'views/script.php'; ?>
   <?php if (session()): ?>
     <script src="<?php echo RUTA; ?>/js/misArchivos/contenido_cerrar.js" charset="utf-8"></script>
   <?php endif ?>

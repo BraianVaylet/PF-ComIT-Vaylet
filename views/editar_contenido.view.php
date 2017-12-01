@@ -1,5 +1,5 @@
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\head.php'; ?>
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\barra_nav.php'; ?>
+  <?php require 'views/head.php'; ?>
+  <?php require 'views/barra_nav.php'; ?>
 
     <!-- EDICION DE LOS DATOS DEL PERFIL DE CADA USUARIO. -->
       <main class="z-depth-3">
@@ -351,16 +351,14 @@
             </div>
             </div>
 
-
-
         </div>
         <div class="back">
             <a class="link_back" href="<?php echo RUTA; ?>/contenido.php">volver</a>
         </div>
       </main>
 
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\footer.php'; ?>
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\script.php'; ?>
+  <?php require 'views/footer.php'; ?>
+  <?php require 'views/script.php'; ?>
   <?php if (session()): ?>
     <script src="<?php echo RUTA; ?>/js/misArchivos/contenido_cerrar.js" charset="utf-8"></script>
   <?php endif ?>

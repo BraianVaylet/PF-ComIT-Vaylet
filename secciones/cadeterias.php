@@ -7,7 +7,7 @@
     // CONEXION CON LA BASE DE DATOS. (PDO)
     $conexion = conexion_pdo($BaseDatos_config);
     if (!$conexion) {
-      header('Location: error_conexion.php');
+      header('Location: ../error_conexion.php');
     }
     else {
 

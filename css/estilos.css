@@ -26,7 +26,9 @@ main,
   padding: 5em; }
 
 .contenedor {
-  padding: 2em 12em; }
+  width: 90%;
+  padding: 2em 2em;
+  margin: auto; }
 
 .mensaje_admin {
   background: rgba(47, 185, 168, 0.5);
@@ -647,12 +649,12 @@ footer .redes-sociales li a {
 /* LABEL COLOR */
 .label_textarea {
   text-align: left;
-  font-size: 1.5em;
+  font-size: 1em;
   color: #2fb9a8; }
 
 .label_textarea_desactivado {
   text-align: left;
-  font-size: 1.5em;
+  font-size: 1em;
   color: #6c6c6c; }
 
 #correo_desactivado,

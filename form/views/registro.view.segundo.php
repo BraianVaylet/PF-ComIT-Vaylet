@@ -1,5 +1,5 @@
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\head.php'; ?>
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\barra_nav.php'; ?>
+  <?php require '../views/head.php'; ?>
+  <?php require '../views/barra_nav.php'; ?>
       <main class="z-depth-3">
           <div class="contenedor">
                     <h1 class="titulo">Registro 2 de 3</h1>
@@ -139,8 +139,8 @@
                   </div>
           </div>
       </main>
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\footer.php'; ?>
-  <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\script.php'; ?>
+  <?php require '../views/footer.php'; ?>
+  <?php require '../views/script.php'; ?>
   <!-- Se hizo con PHP la validacion del registro -->
   <!-- <script src="<?php echo RUTA; ?>/js/misArchivos/registro_segundo.js" charset="utf-8"></script> -->
   <script src="<?php echo RUTA; ?>/js/misArchivos/registro_segundo_2.js" charset="utf-8"></script>

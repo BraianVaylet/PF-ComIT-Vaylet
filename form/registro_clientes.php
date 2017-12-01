@@ -1,4 +1,4 @@
-complete  <?php
+<?php
 
     session_start();
     $errores = '';
