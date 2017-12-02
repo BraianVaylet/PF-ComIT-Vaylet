@@ -1,5 +1,5 @@
-  <?php require '../views/head.php'; ?>
-  <?php require '../views/barra_nav.php'; ?>
+  <?php require(RAIZ . '/views/head.php');?>
+  <?php require(RAIZ . '/views/barra_nav.php');?>
 
       <main class="z-depth-3">
           <div class="contenedor">
@@ -67,13 +67,13 @@
                 <a class="link_reg" href="login.php">Iniciar sesión</a>
             </div>
             <div class="back">
-                <a class="link_back" href="../index.php">volver</a>
+                <a class="link_back" href="login.php">volver</a>
             </div>
           </div>
 
       </main>
-  <?php require '../views/footer.php'; ?>
-  <?php require '../views/script.php'; ?>
+  <?php require(RAIZ . '/views/footer.php');?>
+  <?php require(RAIZ . '/views/script.php');?>
   <!-- Se hizo con PHP la validacion del registro -->
   <!-- <script src="<?php echo RUTA; ?>/js/misArchivos/registro_clientes.js" charset="utf-8"></script> -->
 

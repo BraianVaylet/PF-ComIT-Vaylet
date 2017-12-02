@@ -1,5 +1,5 @@
-  <?php require '../views/head.php'; ?>
-  <?php require '../views/barra_nav.php'; ?>
+  <?php require(RAIZ . '/views/head.php');?>
+  <?php require(RAIZ . '/views/barra_nav.php');?>
 
     <div class="s12 m12 l12 titulo_top">
         <p class="texto_cadeterias">Bienvenido a nuestro servicio de</p>
@@ -45,7 +45,7 @@
             <div class="row">
 
             <!-- BUSCADOR VIEWS =============================================================================== -->
-            <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\buscar_ciudad.view.php'; ?>
+            <?php require(RAIZ . '/views/buscar_ciudad.view.php'); ?>
 
             <!-- ORDENAR =============================================================================== -->
             <!-- proximamente -->
@@ -76,7 +76,7 @@
               $fecha_ingreso = fecha($fecha_ingreso);
 
               //BUSCAR POR CIUDAD ===============================================================================
-              require 'C:\wamp64\www\PF-ComIT-Vaylet\buscar_ciudad.php';
+              require(RAIZ . '/buscar_ciudad.php');
 
               //defino la url en una variable para poder pasar el id por medio de la url.
               $url = "http://localhost/PF-ComIT-Vaylet/contenido_cliente.php?id_del_usuario=" .$id;
@@ -156,8 +156,8 @@
       </div>
 
     </main>
-    <?php require '../views/footer.php'; ?>
-    <?php require '../views/script.php'; ?>
+    <?php require(RAIZ . '/views/footer.php');?>
+    <?php require(RAIZ . '/views/script.php');?>
     <?php if (session()): ?>
       <script src="<?php echo RUTA; ?>/js/misArchivos/principal.js" charset="utf-8"></script>
     <?php endif ?>

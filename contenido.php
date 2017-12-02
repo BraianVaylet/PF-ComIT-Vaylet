@@ -81,11 +81,9 @@
 							$password = $row[3];
 							$telefono = $row[4];
 					}
-					require 'views/contenido_del_cliente.view.php';
+					require(RAIZ . '/views/contenido_del_cliente.view.php');
 				}
 			}
 		} else {
 			header('Location: form/login.php');
 		}
-
-	?>

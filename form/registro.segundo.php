@@ -89,5 +89,4 @@
       	}
       }
     }
-    require 'views/registro.view.segundo.php';
-  ?>
+    require(RAIZ . '/form/views/registro.view.segundo.php');

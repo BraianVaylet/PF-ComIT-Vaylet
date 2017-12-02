@@ -67,5 +67,4 @@
 						}
 				 }
 		 }
-			require 'views/login.view.php';
-	?>
+		 require(RAIZ . '/form/views/login.view.php');

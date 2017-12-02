@@ -32,5 +32,4 @@
     } else {
       header('Location: form/login.php');
     }
-    require 'views/contacto.view.php';
-  ?>
+    require(RAIZ . '/views/contacto.view.php');

@@ -183,5 +183,4 @@
         				}
         			}
         }
-    require 'views/registro.view.primero.php';
-  ?>
+    require(RAIZ . '/form/views/registro.view.primero.php');

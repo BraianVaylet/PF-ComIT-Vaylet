@@ -1,5 +1,5 @@
-  <?php require '../views/head.php'; ?>
-  <?php require '../views/barra_nav.php'; ?>
+  <?php require(RAIZ . '/views/head.php');?>
+  <?php require(RAIZ . '/views/barra_nav.php');?>
       <main class="z-depth-3">
           <div class="contenedor">
                     <h1 class="titulo">Registro 3:3</h1>
@@ -144,12 +144,12 @@
                     </form>
 
           <div class="back">
-            <a class="link_back" href="../contenido.tercero.php">volver</a>
+            <a class="link_back" href="registro.segundo.php">volver</a>
           </div>
       </div>
       </main>
-    <?php require '../views/footer.php'; ?>
-    <?php require '../views/script.php'; ?>
+    <?php require(RAIZ . '/views/footer.php');?>
+    <?php require(RAIZ . '/views/script.php');?>
     <script src="<?php echo RUTA; ?>/js/misArchivos/registro_tercero.js" charset="utf-8"></script>
     </body>
 </html>

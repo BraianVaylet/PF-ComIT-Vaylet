@@ -229,6 +229,8 @@ main,
     background: #141414; }
   .nav_menu .nav_menu_icono .nav_menu_enlace:hover {
     color: #2fb9a8; }
+  .nav_menu .nav_menu_icono .nav_menu_enlace:focus {
+    color: #FFAB40; }
 
 .brand-logo {
   color: #f2f2f2;
@@ -307,12 +309,14 @@ footer {
   footer .redes-sociales {
     display: flex;
     justify-content: center; }
-    footer .redes-sociales .facebook:hover {
-      color: #2fb9a8; }
-    footer .redes-sociales .instagram:hover {
-      color: #2fb9a8; }
+    footer .redes-sociales .facebook:hover,
+    footer .redes-sociales .instagram:hover,
     footer .redes-sociales .twitter:hover {
       color: #2fb9a8; }
+    footer .redes-sociales .facebook:focus,
+    footer .redes-sociales .instagram:focus,
+    footer .redes-sociales .twitter:focus {
+      color: #FFAB40; }
 
 footer .redes-sociales li a {
   text-align: center;
@@ -554,10 +558,25 @@ footer .redes-sociales li a {
 .contacto_flex_box {
   width: 80%;
   margin: 2em auto; }
+  .contacto_flex_box .texto_importante {
+    color: #2fb9a8;
+    font-size: 1.2em; }
 
 #modal_pregunta {
   height: 40%;
   padding: 1em; }
+
+.flex_ico_contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 1em;
+  font-size: 1.8em; }
+  .flex_ico_contacto .icono {
+    color: #2fb9a8; }
+  .flex_ico_contacto:hover {
+    color: #FFAB40; }
 
 /* FORM */
 /* ----------------------------------------------------------------------------- */

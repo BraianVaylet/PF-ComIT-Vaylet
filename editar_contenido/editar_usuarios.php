@@ -171,12 +171,11 @@
                       if ($filas == 0) {
                         header('Location: ../error_conexion.php');;
                       }
-                      // CREAMOS NUEVA SESION ===================================================================================
+                      // CREAMOS NUEVA SESION
                           $_SESSION['correo'] = $correo; // creamos una sesion.
                           header('Location: ../contenido.php');
                     }
                   }
                 }
           }
-    require 'views/editar_usuarios.view.php';
-  ?>
+    require(RAIZ . '/editar_contenido/views/editar_usuarios.view.php');

@@ -13,4 +13,3 @@
       } else {
         $ciudad_buscada = $ciudad;
       }
-  ?>

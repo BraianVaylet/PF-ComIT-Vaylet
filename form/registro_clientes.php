@@ -104,5 +104,4 @@
                 }
               }
         }
-    require 'views/registro_clientes.view.php';
-  ?>
+    require(RAIZ . '/form/views/registro_clientes.view.php');

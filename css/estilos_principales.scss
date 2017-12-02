@@ -11,9 +11,8 @@
         }
         .nav_menu_icono {
           .nav_menu_enlace {
-            &:hover {
-              color: $color_principal_fondo;
-            }
+            &:hover { color: $color_principal_fondo; }
+            &:focus {color: $color_secundario;}
           }
         }
       }
@@ -129,9 +128,12 @@
        .redes-sociales  {
          display: flex;
          justify-content: center;
-         .facebook:hover {color: $color_principal_fondo;}
-         .instagram:hover {color: $color_principal_fondo;}
-         .twitter:hover {color: $color_principal_fondo;}
+         .facebook,
+         .instagram,
+         .twitter {
+           &:hover {color: $color_principal_fondo;}
+           &:focus {color: $color_secundario;}
+         }
        }
      }
 
@@ -158,7 +160,6 @@
      /* CONTENIDO */
      /* ----------------------------------------------------------------------------- */
      //seccion con info del usuario.
-
      .sec1 {
        text-align: center;
        .perfil_top {
@@ -231,6 +232,7 @@
       font-size: 1.5em;
     }
 
+    //estilos con flexbox
     .flex_ico {
       display: flex;
       flex-direction: rows;
@@ -241,6 +243,8 @@
         color: $color_principal_fondo;
       }
     }
+
+
 
     .flex_ico_ed {
       display: flex;
@@ -468,9 +472,28 @@
       .contacto_flex_box {
         width: 80%;
         margin: 2em auto;
+        .texto_importante {
+          color: $color_principal_fondo;
+          font-size: 1.2em;
+        }
       }
 
       #modal_pregunta {
         height: 40%;
         padding: 1em;
+      }
+
+      .flex_ico_contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0em 1em;
+        font-size: 1.8em;
+        .icono {
+          color: $color_principal_fondo;
+        }
+        &:hover {
+          color: $color_secundario;
+        }
       }

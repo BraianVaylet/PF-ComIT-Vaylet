@@ -35,9 +35,9 @@
             <ul id="dropdown1" class="dropdown-content menu_down_principal">
                 <div class="menu_principal">
                   <li class="divider"></li>
-                  <li><a class="text_principal enlace_cadete" id="enlace_cadete" href="<?php echo RUTA; ?>secciones/cadeterias.php">Cadeterías</a></li>
+                  <li><a class="text_principal enlace_cadete" id="enlace_cadete" href="<?php echo RUTA; ?>/secciones/cadeterias.php">Cadeterías</a></li>
                   <li class="divider"></li>
-                  <li><a class="text_principal enlace_flete" id="enlaenlace_fletece_" href="<?php echo RUTA; ?>secciones/fletes.php">Fletes</a></li>
+                  <li><a class="text_principal enlace_flete" id="enlaenlace_fletece_" href="<?php echo RUTA; ?>/secciones/fletes.php">Fletes</a></li>
                 </div>
                 <div class="menu_secundario">
                   <li class="divider"></li>

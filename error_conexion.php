@@ -1,1 +1,2 @@
-<<?php  require 'views/error_conexion.view.html'; ?>
+<?php
+  require(RAIZ . '/views/error_conexion.view.html');

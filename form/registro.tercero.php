@@ -136,5 +136,4 @@
         }
       }
     }
-    require 'views/registro.view.tercero.php';
-  ?>
+    require(RAIZ . '/form/views/registro.view.tercero.php');

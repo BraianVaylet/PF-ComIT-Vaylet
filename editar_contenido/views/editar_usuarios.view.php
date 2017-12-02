@@ -1,5 +1,5 @@
-  <?php require '../views/head.php'; ?>
-  <?php require '../views/barra_nav.php'; ?>
+  <?php require(RAIZ . '/views/head.php');?>
+  <?php require(RAIZ . '/views/barra_nav.php');?>
       <main class="z-depth-3">
           <div class="contenedor">
                     <h1 class="titulo">Contenido 1/3</h1>
@@ -169,8 +169,8 @@
                   </div>
           </div>
       </main>
-  <?php require '../views/footer.php'; ?>
-  <?php require '../views/script.php'; ?>
+  <?php require(RAIZ . '/views/footer.php');?>
+  <?php require(RAIZ . '/views/script.php');?>
   <!-- Se hizo con PHP la validacion del registro -->
   <!-- <script src="<?php echo RUTA; ?>/js/misArchivos/registro_primero.js" charset="utf-8"></script> -->
   </body>

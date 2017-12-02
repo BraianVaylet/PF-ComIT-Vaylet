@@ -26,8 +26,5 @@
   					$soy_flete = $row[13];
   			}
       }
-    } else {
-      // header('Location: login.php');
     }
-    require 'views/contenido_info.view.php';
- ?>
+    require(RAIZ . '/views/contenido_info.view.php');

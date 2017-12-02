@@ -65,10 +65,8 @@
             $monto_fletes = $row[4];
             $extracto = $row[5];
         }
-        require 'views/contenido_cliente.view.php';
+        require(RAIZ . '/views/contenido_cliente.view.php');
     }
   } else {
     header('Location: form/login.php');
   }
-
-  ?>

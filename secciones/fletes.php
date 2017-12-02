@@ -10,7 +10,6 @@
       header('Location: error_conexion.php');
     }
     else {
-
       // TABLA USUARIOS:
       $res_usuarios = $conexion->prepare('SELECT * FROM usuarios');
       $res_usuarios->execute();
@@ -23,6 +22,4 @@
       $res_montos = $conexion->prepare('SELECT * FROM montos');
       $res_montos->execute();
    }
-
-    require 'views/fletes.view.php';
-   ?>
+    require(RAIZ . '/secciones/views/fletes.view.php');

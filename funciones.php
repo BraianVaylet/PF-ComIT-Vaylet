@@ -98,9 +98,3 @@
        $error_password = "";
        return true;
     }
-
-
-
-
-
-  ?>
