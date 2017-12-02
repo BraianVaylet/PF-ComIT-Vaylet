@@ -1,6 +1,5 @@
   <?php session_start(); ?>
   <?php require 'funciones.php'; ?>
-
   <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\head.php'; ?>
   <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\barra_nav.php'; ?>
 
@@ -54,6 +53,5 @@
     <?php if (session()): ?>
       <script src="<?php echo RUTA; ?>/js/misArchivos/principal.js" charset="utf-8"></script>
     <?php endif ?>
-
   </body>
   </html>

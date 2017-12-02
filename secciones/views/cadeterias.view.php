@@ -1,6 +1,5 @@
-
-    <?php require '../views/head.php'; ?>
-    <?php require '../views/barra_nav.php'; ?>
+  <?php require '../views/head.php'; ?>
+  <?php require '../views/barra_nav.php'; ?>
 
     <div class="s12 m12 l12 titulo_top">
         <p class="texto_cadeterias">Bienvenido a nuestro servicio de</p>
@@ -51,8 +50,6 @@
           <!-- ORDENAR =============================================================================== -->
           <!-- proximamente -->
 
-
-
           <?php
           while ($row_u = $res_usuarios->fetch() and $row_s = $res_servicios->fetch() and $row_m = $res_montos->fetch()) {
             $id = $row_u[0];
@@ -73,26 +70,6 @@
             $monto_cadeterias = $row_m[3];
             $monto_fletes = $row_m[4];
             $extracto = $row_m[5];
-
-            // Ayuda para ver si funca...
-            // echo 'USARIO: =========' .'<br>';
-            // echo $id . '<br>';
-            // echo $usuario . '<br>';
-            // echo $foto_perfil . '<br>';
-            // echo $ciudad . '<br>';
-            // echo $calificacion . '<br>';
-            // echo $vidas . '<br>';
-            // echo $soy_cadete . '<br>';
-            // echo $soy_flete . '<br>';
-            // echo $fecha_ingreso . '<br>';
-            // echo $am . '<br>';
-            // echo $pm . '<br>';
-            // echo $modo_monto_cadete . '<br>';
-            // echo $modo_monto_flete . '<br>';
-            // echo $monto_cadeterias . '<br>';
-            // echo $monto_fletes . '<br>';
-            // echo $extracto . '<br>';
-            // echo "=====================" . '<br>';
 
             // Muestro la fecha de ingreso en un formato mas piola.
             $fecha_ingreso = fecha($fecha_ingreso);

@@ -3,7 +3,6 @@
   <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\head.php'; ?>
   <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\views\barra_nav.php'; ?>
 
-
       <main>
         <div class="contenedor">
             <h3 class="titulo">¿Quiénes forman parte de WolaloW?</h3>

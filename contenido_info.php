@@ -1,18 +1,17 @@
+  <?php session_start(); ?>
   <?php
-    session_start();
     require 'funciones.php';
 
-    if (session()) {
+    if (session()) { // COMPROBAMOS QUE EL USUARIO TENGA UNA SESION INICIADA.
       $correo = $_SESSION['correo'];
-      // COMPROBAMOS QUE EL USUARIO TENGA UNA SESION INICIADA.
 
       // CONEXION CON LA BASE DE DATOS. (PDO)
       $conexion = conexion_pdo($BaseDatos_config);
+
       if (!$conexion) {
         header('Location: error_conexion.php');
       }
       else {
-
         // traigo todos los datos de usuarios.
         $resultados_usuarios = $conexion->prepare('SELECT * FROM usuarios WHERE correo = :correo');
   			$resultados_usuarios->execute(array(':correo' => $correo));
@@ -26,7 +25,6 @@
   					$soy_cadete = $row[12];
   					$soy_flete = $row[13];
   			}
-
       }
     } else {
       // header('Location: login.php');

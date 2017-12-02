@@ -1,6 +1,5 @@
+<?php session_start(); ?>
 <?php
-
-    session_start();
     $errores = '';
     $error_password = '';
     $error_usuario_cliente = '';
@@ -28,7 +27,6 @@
         // ENCRIPTAMOS LA CONTRASEÑA
         // $password = campo_seguro($password);
         // $password2 = campo_seguro($password2);
-
 
         // VALIDACION DEL FORMULARIO.
         // Password:
@@ -62,7 +60,6 @@
           $errores = 'error';
         }
 
-
         // CONEXION CON LA BASE DE DATOS. (PDO)
         $conexion = conexion_pdo($BaseDatos_config);
         if (!$conexion) {
@@ -87,7 +84,6 @@
                 $error_correo .= 'ya existe una cuenta asociada a este correo';
                 $errores = 'error';
               }
-
 
               // INSERTAMOS LOS DATOS EN LA BASE DE DATOS: (PDO)
               if ($errores == '') {

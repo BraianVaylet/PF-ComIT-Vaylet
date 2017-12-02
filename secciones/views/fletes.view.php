@@ -1,4 +1,3 @@
-
   <?php require '../views/head.php'; ?>
   <?php require '../views/barra_nav.php'; ?>
 
@@ -72,26 +71,6 @@
               $monto_cadeterias = $row_m[3];
               $monto_fletes = $row_m[4];
               $extracto = $row_m[5];
-
-              // Ayuda para ver si funca...
-              // echo 'USARIO: =========' .'<br>';
-              // echo $id . '<br>';
-              // echo $usuario . '<br>';
-              // echo $foto_perfil . '<br>';
-              // echo $ciudad . '<br>';
-              // echo $calificacion . '<br>';
-              // echo $vidas . '<br>';
-              // echo $soy_cadete . '<br>';
-              // echo $soy_flete . '<br>';
-              // echo $fecha_ingreso . '<br>';
-              // echo $am . '<br>';
-              // echo $pm . '<br>';
-              // echo $modo_monto_cadete . '<br>';
-              // echo $modo_monto_flete . '<br>';
-              // echo $monto_cadeterias . '<br>';
-              // echo $monto_fletes . '<br>';
-              // echo $extracto . '<br>';
-              // echo "=====================" . '<br>';
 
               // Muestro la fecha de ingreso en un formato mas piola.
               $fecha_ingreso = fecha($fecha_ingreso);

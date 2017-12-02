@@ -1,6 +1,5 @@
+	<?php session_start(); ?>
 	<?php
-
-			session_start();
 			$errores = '';
 			$enviado = '';
 			$error_correo = '';
@@ -51,7 +50,6 @@
 									$errores .= '<li>No existe usuario registrado con este correo, <a class="modal-trigger link_reg_2" href="#modal_registro">REGISTRATE AQUI</a></li>';
 								}
 
-
 								// DEL CLIENTE.
 								$statement_clientes = $conexion->prepare('SELECT * FROM clientes WHERE correo = :correo AND password = :password');
 								$statement_clientes->execute(array(
@@ -69,7 +67,5 @@
 						}
 				 }
 		 }
-
 			require 'views/login.view.php';
-
 	?>

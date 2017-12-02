@@ -1,5 +1,5 @@
+  <?php session_start(); ?>
   <?php
-  session_start();
   require 'funciones.php';
 
   //OBTENGO LA ID Q MANDE POR LA URL.
@@ -7,14 +7,12 @@
 
   // COMPROBAMOS QUE EL USUARIO TENGA UNA SESION INICIADA.
   if (session()) {
-
     // CONEXION CON LA BASE DE DATOS. (PDO)
     $conexion = conexion_pdo($BaseDatos_config);
     if (!$conexion) {
       header('Location: error_conexion.php');
     }
     else {
-
       // traigo todos los datos de usuarios.
       $resultados_usuarios = $conexion->prepare('SELECT * FROM usuarios WHERE id = :id_del_usuario');
       $resultados_usuarios->execute(array(':id_del_usuario' => $id_del_usuario));
@@ -36,7 +34,6 @@
           $soy_flete = $row[13];
           $fecha_ingreso = $row[14];
       }
-
       //devuelvo fecha en otro formato
       $fecha_ingreso = fecha($fecha_ingreso);
 
@@ -68,7 +65,6 @@
             $monto_fletes = $row[4];
             $extracto = $row[5];
         }
-
         require 'views/contenido_cliente.view.php';
     }
   } else {

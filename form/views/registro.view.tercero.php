@@ -1,5 +1,5 @@
-<?php require '../views/head.php'; ?>
-<?php require '../views/barra_nav.php'; ?>
+  <?php require '../views/head.php'; ?>
+  <?php require '../views/barra_nav.php'; ?>
       <main class="z-depth-3">
           <div class="contenedor">
                     <h1 class="titulo">Registro 3:3</h1>

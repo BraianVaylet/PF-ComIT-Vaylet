@@ -1,6 +1,6 @@
   <?php require 'views\head.php'; ?>
   <?php require  'views\barra_nav.php'; ?>
-
+  
           <!-- CONTENIDO-PAGINA PRINCIPAL-->
           <div class="box" id="box">
               <div class="contenido_img">

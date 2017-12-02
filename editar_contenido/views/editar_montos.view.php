@@ -116,7 +116,7 @@
                 <div class="back">
                     <a class="link_back" href="<?php echo RUTA; ?>/editar_contenido.php">volver</a>
                 </div>
-        </div>
+            </div>
         </main>
       <?php require '../views/footer.php'; ?>
       <?php require '../views/script.php'; ?>

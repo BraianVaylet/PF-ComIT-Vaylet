@@ -1,5 +1,5 @@
+  <?php session_start(); ?>
   <?php
-    session_start();
     $errores = '';
     $enviado = '';
     require '../funciones.php';
@@ -23,6 +23,5 @@
       $res_montos = $conexion->prepare('SELECT * FROM montos');
       $res_montos->execute();
      }
-
     require 'views/cadeterias.view.php';
    ?>
