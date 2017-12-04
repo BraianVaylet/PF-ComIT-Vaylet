@@ -1,16 +1,16 @@
-  <?php require(RAIZ . '/views/head.php');?>
-  <?php require(RAIZ . '/views/barra_nav.php');?>
+<?php require(RAIZ . '/views/head.php');
+      require(RAIZ . '/views/barra_nav.php');?>
 
     <!-- EDICION DE LOS DATOS DEL PERFIL DE CADA USUARIO. -->
       <main class="z-depth-3">
         <div class="contenedor">
 
           <div class="row">
-            <div class="col s12">
+            <div class="col s12 m12 l12">
               <p class="texto">Puedes escojer que tabla quieres modificar</p>
             </div>
             <!-- Tabla Usuarios -->
-            <div class="col s12 m6 l4">
+            <div class="col s12 m12 l4">
 
                 <div class="info z-depth-3">
   								<ul class="collection with-header">
@@ -112,7 +112,7 @@
   												<p class="texto">Foto de perfil:</p>
   											</div>
   											<div class="">
-  												<img src="<?php echo RUTA; ?>/fotos_perfiles/<?php echo $foto_perfil; ?>" class="responsive-img z-depth-3" width="100" alt="IMAGEN DE PERFIL">
+  												<img src="<?php echo RUTA; ?>/fotos_perfiles/<?php echo $foto_perfil; ?>" class="responsive-img z-depth-3" width="80" alt="IMAGEN DE PERFIL">
   											</div>
   										</div>
   									</li>
@@ -150,7 +150,7 @@
             </div>
 
             <!-- Tabla Servicios -->
-            <div class="col s12 m6 l4">
+            <div class="col s12 m12 l4">
 
                 <div class="info z-depth-3">
   								<ul class="collection with-header">
@@ -295,7 +295,7 @@
             </div>
 
             <!-- Tabla Montos -->
-            <div class="col s12 m6 l4">
+            <div class="col s12 m12 l4">
 
                 <div class="info z-depth-3">
   								<ul class="collection with-header">
@@ -355,11 +355,10 @@
         </div>
       </main>
 
-  <?php require(RAIZ . '/views/footer.php');?>
-  <?php require(RAIZ . '/views/script.php');?>
-  <?php if (session()): ?>
-    <script src="<?php echo RUTA; ?>/js/misArchivos/contenido_cerrar.js" charset="utf-8"></script>
+  <?php require(RAIZ . '/views/footer.php');
+        require(RAIZ . '/views/script.php');
+        if (session()): ?>
+          <script src="<?php echo RUTA; ?>/js/misArchivos/contenido_cerrar.js" charset="utf-8"></script>
   <?php endif ?>
-
   </body>
   </html>

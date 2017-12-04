@@ -1,5 +1,5 @@
-	<?php require(RAIZ . '/views/head.php');?>
-	<?php require(RAIZ . '/views/barra_nav.php');?>
+<?php require(RAIZ . '/views/head.php');
+			require(RAIZ . '/views/barra_nav.php');?>
 			<main class="z-depth-3">
 					<div class="contenedor">
 										<h1 class="titulo">Registro 1 de 3</h1>
@@ -79,7 +79,7 @@
 												<div class="row un_campo">
 														<div class="input-field col s12 m12 l6 offset-l3">
 																<h4 class="label_textarea">¿En qué fecha naciste? *</h4>
-																<input type="text" name="fecha_nacimiento" class="datepicker campo tooltipped" data-position="right" data-delay="50" data-tooltip="Ingrese su fecha de nacimiento" id="fecha_nacimiento" value="<?php if(!$enviado && isset($fecha_nacimiento)) { echo $fecha_nacimiento; }?>">
+																<input type="text" name="fecha_nacimiento" class="datepicker campo tooltipped" data-position="right" data-delay="50" data-tooltip="Ingrese su fecha de nacimiento en el siguiente orden: año-mes-día" id="fecha_nacimiento" value="<?php if(!$enviado && isset($fecha_nacimiento)) { echo $fecha_nacimiento; }?>">
 																<!-- ERROR -->
 																<?php if(!empty($error_fecha_nacimiento)): ?>
 						                      <p class="texto_error" id="error_fecha_nacimiento"><?php echo $error_fecha_nacimiento; ?></p>
@@ -175,9 +175,9 @@
 									</div>
 					</div>
 			</main>
-	<?php require(RAIZ . '/views/footer.php');?>
-	<?php require(RAIZ . '/views/script.php');?>
+	<?php require(RAIZ . '/views/footer.php');
+				require(RAIZ . '/views/script.php');?>
 	<!-- Se hizo con PHP la validacion del registro -->
-	<!-- <script src="<?php echo RUTA; ?>/js/misArchivos/registro_primero.js" charset="utf-8"></script> -->
+	<!-- <script src="<?php //echo RUTA; ?>/js/misArchivos/registro_primero.js" charset="utf-8"></script> -->
 	</body>
 	</html>

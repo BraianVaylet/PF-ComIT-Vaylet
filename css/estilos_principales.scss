@@ -82,9 +82,6 @@
         margin-bottom: 1.5em;
       }
 
-
-
-
      /* CONTENIDO PAGINA PRINCIPAL */
      /* ----------------------------------------------------------------------------- */
       .box {
@@ -141,7 +138,7 @@
        @extend %textoPrincipal;
        text-align: center;
        padding: 0em 3em;
-       font-size: 3em;
+       font-size: 2.5em;
      }
 
      .footer-copyright {
@@ -151,9 +148,17 @@
      }
 
      .box_footer {
+       width: 100%;
        background: $color_oscuro_transparencia;
        &:hover {
          background: $color_fuente_oscuro;
+       }
+     }
+
+     .footer_enlace {
+       color: $color_secundario;
+       &:hover {
+         text-decoration: underline;
        }
      }
 
@@ -227,6 +232,11 @@
       }
     }
 
+    .perfil_contactar2 {
+      display: none;
+    }
+
+
     .texto,
     .texto_desactivado {
       font-size: 1.5em;
@@ -241,6 +251,9 @@
       padding: 0em 1em;
       .icono {
         color: $color_principal_fondo;
+      }
+      .material-icons {
+        font-size: 80px;
       }
     }
 
@@ -349,6 +362,7 @@
     }
 
     .icono_para_cliente {
+      font-size: 100px;
       opacity: 0.8;
       color: $color_fuente_oscuro;
       padding: 1em;

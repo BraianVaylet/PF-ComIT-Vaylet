@@ -1,2 +1,3 @@
 <?php
-  require(RAIZ . '/views/error_conexion.view.html');
+  require 'funciones.php'; 
+  require(RAIZ . '/views/error_conexion.view.php');

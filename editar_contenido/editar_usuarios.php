@@ -1,7 +1,5 @@
-  <?php session_start();?>
-  <?php
+<?php session_start();
     require '../funciones.php';
-
     //inicio variables.
     $errores = '';
     $enviado = '';

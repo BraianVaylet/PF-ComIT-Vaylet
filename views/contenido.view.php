@@ -1,5 +1,5 @@
-	<?php require(RAIZ . '/views/head.php');?>
-	<?php require(RAIZ . '/views/barra_nav.php');?>
+<?php require(RAIZ . '/views/head.php');
+			require(RAIZ . '/views/barra_nav.php');?>
 
 		<!-- ESTE ES EL PERFIL COMPLETO DE CADA USUARIO. -->
 			<main class="z-depth-3">
@@ -119,7 +119,7 @@
 									<li class="collection-item">
 										<div class="flex_ico">
 											<div class="icono">
-												<i class="medium material-icons">contact_mail</i>
+												<i class="material-icons">contact_mail</i>
 											</div>
 											<div class="">
 												<p class="texto"><?php echo $correo; ?></p>
@@ -133,7 +133,7 @@
 												<?php if ($whatsapp == 1) {
 														?> <i class="fa fa-whatsapp fa-4x" aria-hidden="true"></i><?php
 												} else {
-													?> <i class="medium material-icons">contact_phone</i> <?php
+													?> <i class="material-icons">contact_phone</i> <?php
 												}?>
 											</div>
 											<div class="">
@@ -145,7 +145,7 @@
 									<li class="collection-item">
 										<div class="flex_ico">
 											<div class="icono">
-												<i class="medium material-icons">home</i>
+												<i class="material-icons">home</i>
 											</div>
 											<div class="">
 												<p class="texto">de <?php echo $ciudad; ?></p>
@@ -156,7 +156,7 @@
 									<li class="collection-item">
 										<div class="flex_ico">
 											<div class="icono">
-												<i class="medium material-icons">cake</i>
+												<i class="material-icons">cake</i>
 											</div>
 											<div class="">
 												<p class="texto"><?php echo $fecha_nacimiento; ?></p>
@@ -174,7 +174,7 @@
 												<?php
 														if ($soy_cadete == 1) { ?>
 															<div class="icono">
-																<i class="medium material-icons">directions_bike</i>
+																<i class="material-icons">directions_bike</i>
 															</div>
 															<div>
 																<p class="texto">$<?php echo $monto_cadeterias; ?></p>
@@ -189,7 +189,7 @@
 												<?php
 														if ($soy_flete == 1) { ?>
 															<div class="icono">
-																<i class="medium material-icons">local_shipping</i>
+																<i class="material-icons">local_shipping</i>
 															</div>
 															<div>
 																<p class="texto">$<?php echo $monto_fletes; ?></p>
@@ -213,7 +213,7 @@
 												<li class="collection-item">
 													<div class="flex_ico">
 														<div class="icono">
-															<i class="medium material-icons">access_time</i>
+															<i class="material-icons">access_time</i>
 														</div>
 														<div class="">
 															<?php if ($am == 1 && $pm == 0) {
@@ -238,7 +238,7 @@
 												<li class="collection-item">
 													<div class="flex_ico">
 														<div class="icono">
-															<i class="medium material-icons">directions_car</i>
+															<i class="material-icons">directions_car</i>
 														</div>
 														<div class="">
 															Sobre mi Vehículo:<p class="texto"><?php echo $tipo; ?></p>
@@ -249,7 +249,7 @@
 												<li class="collection-item">
 													<div class="flex_ico">
 														<div class="icono">
-															<i class="medium material-icons">work</i>
+															<i class="material-icons">work</i>
 														</div>
 														<div class="">
 															Algunos de mis Trabajos:<p class="texto"><?php echo $trabajos; ?></p>
@@ -317,12 +317,10 @@
 			</div>
 			</main>
 
-	<?php require(RAIZ . '/views/footer.php');?>
-	<?php require(RAIZ . '/views/script.php');?>
-	<?php if (session()): ?>
-		<script src="<?php echo RUTA; ?>/js/misArchivos/contenido_cerrar.js" charset="utf-8"></script>
+	<?php require(RAIZ . '/views/footer.php');
+				require(RAIZ . '/views/script.php');
+				if (session()): ?>
+					<script src="<?php echo RUTA; ?>/js/misArchivos/contenido_cerrar.js" charset="utf-8"></script>
 	<?php endif ?>
-
-
 	</body>
 	</html>

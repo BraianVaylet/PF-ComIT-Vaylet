@@ -1,5 +1,5 @@
-  <?php require(RAIZ . '/views/head.php');?>
-  <?php require(RAIZ . '/views/barra_nav.php');?>
+<?php require(RAIZ . '/views/head.php');
+      require(RAIZ . '/views/barra_nav.php');?>
 
     <div class="s12 m12 l12 titulo_top">
         <p class="texto_cadeterias">Bienvenido a nuestro servicio de</p>
@@ -9,18 +9,10 @@
             </div>
         </div>
     </div>
-
-    <!-- PUBLICIDAD -->
-    <!-- <div class="carousel carousel-slider z-depth-3" data-indicators="true">
-        <a class="carousel-item" href="#one!"><img src="<?php //echo RUTA; ?>/img/fondo_cadetes.jpg"></a>
-        <a class="carousel-item" href="#two!"><img src="<?php //echo RUTA; ?>/img/fondo_fletes.jpg"></a>
-    </div> -->
-
     <main>
       <div class="row">
-
         <!-- CONTENIDO LATERAL =============================================================================== -->
-        <div class="col s0 m3 l3 sec1">
+        <div class="col s12 m12 l3 sec1">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text z-depth-3">
               <span class="card-title">Importante!!!</span>
@@ -41,7 +33,7 @@
         </div>
 
         <!-- CONTENIDO PRINCIPAL =============================================================================== -->
-        <div class="col s12 m9 l9 prueba">
+        <div class="col s12 m12 l9 prueba">
 
 
           <!-- BUSCADOR VIEWS =============================================================================== -->
@@ -85,37 +77,31 @@
           ?>
 
             <div class="row z-depth-3 box_post">
-              <div class="col s12 m12 l3 foto_post">
+              <div class="col s12 m6 l3 foto_post">
                   <div class="">
                       <img src="<?php echo RUTA; ?>/fotos_perfiles/<?php echo $foto_perfil; ?>" alt="" class="responsive-img img_post">
                   </div>
 
                   <div class="servicios">
-                    <?php if ($soy_cadete == 1) { ?> <i class="small material-icons">directions_bike</i> <?php } ?>
-                    <?php if ($soy_flete == 1) { ?> <i class="small material-icons">local_shipping</i> <?php } ?>
-                  </div>
-
-                  <div class="btn_post">
-                      <!-- MANDO EL ID POR LA URL -->
-                      <a id="<?php echo $id?>" href="<?php echo $url; ?>" class="waves-effect waves-light btn">Contactar</a>
+                    <?php if ($soy_cadete == 1) { ?> <span class="icono_servicio"><i class="small material-icons">directions_bike</i></span> <?php } ?>
+                    <?php if ($soy_flete == 1) { ?> <span class="icono_servicio"><i class="small material-icons">local_shipping</i></span> <?php } ?>
                   </div>
               </div>
 
-              <div class="col s12 m12 l9 ">
+              <div class="col s12 m6 l9 ">
                 <div class="col s12 m12 l9">
-                  <h4 class="title post_titulo"><?php echo $usuario;?></h4>
-                  <div class="calificacion_post">
-                    <?php for ($i=0; $i < $calificacion; $i++) {
-                        ?><i class="small material-icons">grade</i> <?php
-                      } ?>
+                    <h4 class="title post_titulo"><?php echo $usuario;?></h4>
+                    <div class="calificacion_post">
+                      <?php for ($i=0; $i < $calificacion; $i++) {
+                          ?><i class="small material-icons">grade</i> <?php
+                        } ?>
+                    </div>
+                  </div>
+                  <div class="col s12 m12 l3 monto_post">
+                        <h4 class="text_monto_post">$<?php echo $monto_cadeterias; ?></h4>
+                        <p> <?php echo $modo_monto_cadete; ?></p>
                   </div>
                 </div>
-
-                <div class="col s12 m12 l3 monto_post">
-                      <h4 class="text_monto_post">$<?php echo $monto_cadeterias; ?></h4>
-                      <p> <?php echo $modo_monto_cadete; ?></p>
-                </div>
-
                 <div class="col s12 m12 l12">
                     <div class="info">
                       <ul class="collapsible" data-collapsible="accordion">
@@ -144,6 +130,11 @@
                       </ul>
                   </div>
                 </div>
+                <div class="col s12 m12 l12">
+                  <div class="btn_post_2">
+                      <!-- MANDO EL ID POR LA URL -->
+                      <a id="<?php echo $id?>" href="<?php echo $url; ?>" class="waves-effect waves-light btn">Contactar</a>
+                  </div>
               </div>
             </div>
         <?php
@@ -153,12 +144,11 @@
 
         </div>
       </div>
-
     </main>
-    <?php require(RAIZ . '/views/footer.php');?>
-    <?php require(RAIZ . '/views/script.php');?>
-    <?php if (session()): ?>
-      <script src="<?php echo RUTA; ?>/js/misArchivos/principal.js" charset="utf-8"></script>
+    <?php require(RAIZ . '/views/footer.php');
+          require(RAIZ . '/views/script.php');
+          if (session()): ?>
+            <script src="<?php echo RUTA; ?>/js/misArchivos/principal.js" charset="utf-8"></script>
     <?php endif ?>
     <script src="<?php echo RUTA; ?>/js/misArchivos/secc_cadeterias.js" charset="utf-8"></script>
     </body>

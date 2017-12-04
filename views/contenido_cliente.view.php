@@ -1,11 +1,11 @@
-  <?php require(RAIZ . '/views/head.php');?>
-  <?php require(RAIZ . '/views/barra_nav.php');?>
+<?php require(RAIZ . '/views/head.php');
+      require(RAIZ . '/views/barra_nav.php');?>
 
     <!-- ESTE PERFIL ES EL Q VERAN LOS CLIENTES -->
     <main class="z-depth-3">
       <div class="contenedor">
         <div class="row ">
-          <div class="col s4">
+          <div class="col s12 m12 l4">
             <div class="sec1 z-depth-3">
               <div class="perfil_top">
                 <div class="perfil_usuario">
@@ -30,6 +30,18 @@
                   </div>
                 </li>
               </ul>
+            </div>
+
+            <div class="z-depth-3 perfil_contactar2 ">
+              <!-- Modal Trigger -->
+              <div class="flex_btn">
+                <div class="icono">
+                  <i class="large material-icons">call</i>
+                </div>
+                <div class="">
+                  <a class="modal-trigger boton" href="#modal_pregunta">Contactar</a>
+                </div>
+              </div>
             </div>
 
             <div class="info z-depth-3">
@@ -66,7 +78,7 @@
                       <?php
                           if ($soy_cadete == 1) { ?>
                             <div class="icono">
-                              <i class="medium material-icons">directions_bike</i>
+                              <i class="material-icons">directions_bike</i>
                             </div>
                             <div>
                               <p class="texto">$<?php echo $monto_cadeterias; ?></p>
@@ -81,7 +93,7 @@
                       <?php
                           if ($soy_flete == 1) { ?>
                             <div class="icono">
-                              <i class="medium material-icons">local_shipping</i>
+                              <i class="material-icons">local_shipping</i>
                             </div>
                             <div>
                               <p class="texto">$<?php echo $monto_fletes; ?></p>
@@ -94,7 +106,7 @@
             </div>
           </div>
 
-          <div class="col s8">
+          <div class="col s12 m12 l8">
             <div class="sec2">
                 <div class="z-depth-3 perfil_contactar ">
                   <!-- Modal Trigger -->
@@ -111,17 +123,18 @@
                 <!-- Modal Structure -->
                 <div id="modal_pregunta" class="modal">
                   <div class="modal-content">
-                    <h4>¿Está completamente seguro de contactar a <?php  echo "</br>" . $usuario ?>?</h4>
+                    <h4 class="modal_contacto">¿Está completamente seguro de contactar a <?php  echo "</br>" . $usuario ?>?</h4>
                   </div>
                   <div class="modal-footer preguntas_enlaces">
                     <?php $url = "http://localhost/PF-ComIT-Vaylet/contacto.php?id_del_usuario=" .$id_del_usuario; ?>
 
-                    <a class="modal-trigger" href="<?php echo $url; ?>"><div class="flex_ico_pregunta">
+                    <a class="modal-trigger" href="<?php echo $url; ?>">
+                    <div class="flex_ico_pregunta">
                       <div class="icono">
                         <i class="large material-icons">call</i>
                       </div>
                       <div class="">
-                        <span class="texto_pregunta">Si, estoy seguro</span>
+                        <span class="texto_pregunta">Contactar</span>
                       </div>
                     </div></a>
 
@@ -130,7 +143,7 @@
                         <i class="large material-icons">call_end</i>
                       </div>
                       <div class="">
-                        <span class="texto_pregunta">No, prefiero seguir buscando</span>
+                        <span class="texto_pregunta">No contactar</span>
                       </div>
                     </div></a>
                   </div>
@@ -142,7 +155,7 @@
                       <li class="collection-item">
                         <div class="flex_ico">
                           <div class="icono">
-                            <i class="medium material-icons">access_time</i>
+                            <i class="material-icons">access_time</i>
                           </div>
                           <div class="">
                             <?php if ($am == 1 && $pm == 0) {
@@ -167,7 +180,7 @@
                       <li class="collection-item">
                         <div class="flex_ico">
                           <div class="icono">
-                            <i class="medium material-icons">directions_car</i>
+                            <i class="material-icons">directions_car</i>
                           </div>
                           <div class="">
                             Sobre su Vehículo:<p class="texto"><?php echo $tipo; ?></p>
@@ -178,7 +191,7 @@
                       <li class="collection-item">
                         <div class="flex_ico">
                           <div class="icono">
-                            <i class="medium material-icons">work</i>
+                            <i class="material-icons">work</i>
                           </div>
                           <div class="">
                             Algunos de sus Trabajos:<p class="texto"><?php echo $trabajos; ?></p>
@@ -237,24 +250,16 @@
                 </ul>
               </div>
           </div>
-      </div>
-
-        <div class="col s12">
-          <div class="mensaje_admin z-depth-3">
-            <p>La edición de los perfiles está en construcción, esta es una versión básica, pero funcional. Acordate que si tenés dudas, siempre podés consultarnos en el chat de abajo. ¡Disculpá las molestias!</p>
-          </div>
-        </div>
+       </div>
       </div>
     </div>
     </main>
 
 
-  <?php require(RAIZ . '/views/footer.php');?>
-  <?php require(RAIZ . '/views/script.php');?>
-  <?php if (session()): ?>
-    <script src="<?php echo RUTA; ?>/js/misArchivos/principal.js" charset="utf-8"></script>
+  <?php require(RAIZ . '/views/footer.php');
+        require(RAIZ . '/views/script.php');
+        if (session()): ?>
+            <script src="<?php echo RUTA; ?>/js/misArchivos/principal.js" charset="utf-8"></script>
   <?php endif ?>
-
-
   </body>
   </html>

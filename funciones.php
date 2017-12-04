@@ -1,6 +1,4 @@
-    <?php
-    require 'configuracion.php';
-
+<?php require 'configuracion.php';
     // CONEXION CON BASE DE DATOS. (PDO)
     function conexion_pdo($BaseDatos_config){
         try {

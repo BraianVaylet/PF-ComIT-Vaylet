@@ -1,5 +1,4 @@
-  <?php session_start(); ?>
-  <?php
+<?php session_start(); 
     //inicio variables.
     $errores = '';
     $enviado = '';

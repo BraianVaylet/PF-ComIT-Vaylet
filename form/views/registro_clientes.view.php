@@ -1,5 +1,5 @@
-  <?php require(RAIZ . '/views/head.php');?>
-  <?php require(RAIZ . '/views/barra_nav.php');?>
+  <?php require(RAIZ . '/views/head.php');
+        require(RAIZ . '/views/barra_nav.php');?>
 
       <main class="z-depth-3">
           <div class="contenedor">
@@ -7,7 +7,7 @@
 
             <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formulario" name="login" id="formulario">
               <div class="row dos_campos">
-                <div class="input-field col s6 offset-s3">
+                <div class="input-field col s12 m12 l6 offset-l3">
                   <h4 class="label_textarea" for="usuario_cliente">¿Cuál es tu nombre y apellido? *</h4>
                   <input type="text" name="usuario_cliente" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese su nombre y luego separado por un espacio su apellido" id="usuario_cliente" value="<?php if(!$enviado && isset($usuario_cliente)) { echo $usuario_cliente; }?>">
                   <!-- ERROR -->
@@ -18,7 +18,7 @@
               </div>
 
                 <div class="row dos_campos">
-                  <div class="input-field col s4 offset-s2">
+                  <div class="input-field col s12 m12 l4 offset-l2">
                     <h4 for="correo" class="label_textarea" data-error="incorrecto, vuelva a intentarlo" data-success="perfecto, gracias">Ingrese su correo * </h4>
                     <input type="email" name="correo" class="campo tooltipped" data-position="right" data-delay="50" data-tooltip="Ingrese su correo electrónico" id="correo" value="<?php if(!$enviado && isset($correo)) { echo $correo; }?>">
                     <!-- ERROR -->
@@ -27,7 +27,7 @@
                     <?php endif; ?>
                   </div>
 
-                  <div class="input-field col s4 ">
+                  <div class="input-field col s12 m12 l4">
                       <h4 class="label_textarea" for="telefono">¿Cuál es su número de teléfono? *</h4>
                       <input type="text" name="telefono" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese su numero de teléfono para poder ser contactado por los usuarios" value="<?php if(!$enviado && isset($telefono)) { echo $telefono; }?>">
                       <!-- ERROR -->
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="row dos_campos">
-                    <div class="input-field col s4 offset-s2">
+                    <div class="input-field col s12 m12 l4 offset-l2">
                         <h4 class="label_textarea" for="password">Ingrese una contraseña *</h4>
                         <input type="password" name="password" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese una contraseña para su cuenta" id="password">
                         <!-- ERROR -->
@@ -47,7 +47,7 @@
                         <?php endif; ?>
                     </div>
 
-                    <div class="input-field col s4 ">
+                    <div class="input-field col s12 m12 l4">
                         <h4 class="label_textarea" for="password2">Verificar contraseña *</h4>
                         <input type="password" name="password2" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Solo para verificar, vuelva a ingresar la contraseña" id="password2">
                         <!-- ERROR -->
@@ -72,10 +72,9 @@
           </div>
 
       </main>
-  <?php require(RAIZ . '/views/footer.php');?>
-  <?php require(RAIZ . '/views/script.php');?>
+  <?php require(RAIZ . '/views/footer.php');
+        require(RAIZ . '/views/script.php');?>
   <!-- Se hizo con PHP la validacion del registro -->
-  <!-- <script src="<?php echo RUTA; ?>/js/misArchivos/registro_clientes.js" charset="utf-8"></script> -->
-
+  <!-- <script src="<?php //echo RUTA; ?>/js/misArchivos/registro_clientes.js" charset="utf-8"></script> -->
   </body>
   </html>

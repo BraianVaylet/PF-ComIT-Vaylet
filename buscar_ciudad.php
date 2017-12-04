@@ -1,5 +1,4 @@
-  <?php
-      // BUSCADOR POR CIUDAD:
+<?php // BUSCADOR POR CIUDAD:
       if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           if (isset($_POST['ciudad'])) {
             $ciudad_buscada = $_POST['ciudad'];

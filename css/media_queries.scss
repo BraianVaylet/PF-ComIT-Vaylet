@@ -1,0 +1,170 @@
+  //ACOMODARLAS!!!
+  //CREAR CLASES EN SASS PARA HACERLO MAS PROLIJO
+
+  @media (max-width: 1250px) {
+     .contenedor {
+       width: 95%;
+       padding: 1em 1em;
+     }
+     .texto {
+       font-size: 1.3em;
+     }
+     .box_calificacion {
+       .calificacion {
+         font-size: 1.5em;
+       }
+     }
+     .flex_ico {
+     }
+     .material-icons {
+       font-size: 40px;
+     }
+   }
+
+//------------------------------------------------------------------------------
+
+   @media (max-width: 992px) {
+      .contenedor {
+        width: 100%;
+        padding: 1em 3em;
+      }
+      .contenido {
+        text-align: center;
+        .titulo_principal {
+          font-size: 7em;
+        }
+      }
+      .perfil_titulo {
+        display: none;
+      }
+      .titulo_top {
+        text-align: center;
+        .titular_cadeterias_foto,
+        .titular_fletes_foto {
+          .titular {
+            font-size: 6em;
+          }
+        }
+        .texto_cadeterias {
+          font-size: 2em;
+        }
+      }
+      .face_post,
+      .card {
+        display: none;
+      }
+      .perfil_contactar {
+        display: none;
+      }
+      .perfil_contactar2 {
+        display: block;
+        background: $color_oscuro_transparencia;
+        padding: 1em;
+        opacity: 0.8;
+        &:hover {
+          opacity: 1;
+          .boton {
+            color: $color_secundario;
+          }
+        }
+        .boton {
+          color: #fff;
+          font-size: 2.5em;
+          font-weight: 900;
+          padding: 0.1em;
+          padding: 0em 10%;
+        }
+      }
+      .modal_contacto {
+        font-size: 1.5em;
+      }
+      .flex_ico_pregunta {
+        text-align: center;
+        flex-direction: column;
+      }
+    }
+
+//------------------------------------------------------------------------------
+
+   @media (max-width: 600px) {
+     .contenedor {
+       width: 100%;
+       padding: 0.1em 0.1em;
+       margin: auto;
+     }
+     .texto {
+       font-size: 1.2em;
+     }
+     .contenido {
+       text-align: center;
+       .titulo_principal {
+         font-size: 2.5em;
+       }
+       .texto_principal {
+         font-size: 1em;
+       }
+     }
+     footer .redes-sociales li a {
+       padding: 0em 1em;
+       font-size: 2em;
+     }
+     .titulo_top {
+       text-align: center;
+       .titular_cadeterias_foto,
+       .titular_fletes_foto {
+         .titular {
+           font-size: 3em;
+         }
+       }
+     }
+     .menu_down_principal {
+       padding: 1em 0em;
+       min-width: 13em;
+       height: 11.75em;
+       .menu_principal,
+       .menu_secundario {
+         padding: 0em 0em;
+       }
+       .text_principal {
+         font-size: 3em;
+         padding: 0.5em 0em;         
+       }
+       .text_secundario {
+         font-size: 2em;         
+         }
+       }
+       .flex_ico {
+         flex-direction: column;
+         justify-content: center;
+         //align-items: center;
+         text-align: center;
+         padding: 0em 0em;
+         .material-icons {
+           font-size: 80px;
+         }
+       }
+       .btn_delet_mod {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         text-align: center;
+         a {
+           margin: 1em 0em;
+         }
+       }
+       .perfil_contactar2 {
+         display: block;
+         background: $color_oscuro_transparencia;
+         padding: 0.2em;
+         opacity: 0.8;
+         &:hover {
+           opacity: 1;
+           .boton {
+             color: $color_secundario;
+           }
+         }
+         .boton {
+           font-size: 2em;
+         }
+       }
+   }

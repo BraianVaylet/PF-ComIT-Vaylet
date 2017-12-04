@@ -19,7 +19,7 @@
   </head>
   <body>
      <div class="box">
-       <h1> ERROR DE CONEXION CON LA BASE DE DATOS :( </h1>
+       <h2> ERROR DE CONEXION CON LA BASE DE DATOS :( </h2>
      </div>
   </body>
 </html>

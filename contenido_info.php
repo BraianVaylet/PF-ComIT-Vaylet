@@ -1,5 +1,4 @@
-  <?php session_start(); ?>
-  <?php
+<?php session_start();
     require 'funciones.php';
 
     if (session()) { // COMPROBAMOS QUE EL USUARIO TENGA UNA SESION INICIADA.

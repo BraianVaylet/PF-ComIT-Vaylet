@@ -1,5 +1,4 @@
-  <?php session_start(); ?>
-  <?php
+<?php session_start(); 
   require 'funciones.php';
 
   //OBTENGO LA ID Q MANDE POR LA URL.

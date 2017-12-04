@@ -12,18 +12,14 @@ body {
 
 main,
 .div_main {
-  width: 100%;
   flex: 1 0 auto;
+  width: 100%;
   margin: 0em auto;
   padding: 1em;
   background: #fff;
   text-align: center;
   font-family: "Raleway", sans-serif;
   background: #eff4f6; }
-
-.div_main_color {
-  width: 100%;
-  padding: 5em; }
 
 .contenedor {
   width: 90%;
@@ -321,16 +317,22 @@ footer {
 footer .redes-sociales li a {
   text-align: center;
   padding: 0em 3em;
-  font-size: 3em; }
+  font-size: 2.5em; }
 
 .footer-copyright {
   display: flex;
   justify-content: space-around; }
 
 .box_footer {
+  width: 100%;
   background: rgba(19, 19, 19, 0.9); }
   .box_footer:hover {
     background: #141414; }
+
+.footer_enlace {
+  color: #FFAB40; }
+  .footer_enlace:hover {
+    text-decoration: underline; }
 
 /* CONTENIDO */
 /* ----------------------------------------------------------------------------- */
@@ -382,6 +384,9 @@ footer .redes-sociales li a {
     padding: 0.1em;
     padding: 0em 10%; }
 
+.perfil_contactar2 {
+  display: none; }
+
 .texto,
 .texto_desactivado {
   font-size: 1.5em; }
@@ -394,6 +399,8 @@ footer .redes-sociales li a {
   padding: 0em 1em; }
   .flex_ico .icono {
     color: #2fb9a8; }
+  .flex_ico .material-icons {
+    font-size: 80px; }
 
 .flex_ico_ed {
   display: flex;
@@ -472,6 +479,7 @@ footer .redes-sociales li a {
         color: #2fb9a8; }
 
 .icono_para_cliente {
+  font-size: 100px;
   opacity: 0.8;
   color: #141414;
   padding: 1em; }
@@ -760,20 +768,24 @@ footer .redes-sociales li a {
   font-size: 1.2em;
   padding: 0.5em; }
 
+.boton_buscar {
+  margin-bottom: 1em; }
+
 .box_post {
   background: #fff; }
   .box_post .foto_post .img_post {
     image-resolution: from-image;
     max-width: 150px;
-    width: 150px;
+    width: 100%;
     max-height: 150px;
-    height: 150px;
+    height: 100%;
     height: auto;
     margin: 1em;
     border-radius: 1em 0em 1em 0em; }
-  .box_post .foto_post .btn_post {
-    max-width: 100%;
-    margin: 1em 0em; }
+  .box_post .foto_post .icono_servicio {
+    margin-left: 1em; }
+  .box_post .btn_post_2 {
+    margin: 1em; }
   .box_post .monto_post {
     width: 100%;
     height: 100%;
@@ -785,5 +797,135 @@ footer .redes-sociales li a {
 .face_post {
   max-height: 500px;
   height: 650px; }
+
+@media (max-width: 1250px) {
+  .contenedor {
+    width: 95%;
+    padding: 1em 1em; }
+
+  .texto {
+    font-size: 1.3em; }
+
+  .box_calificacion .calificacion {
+    font-size: 1.5em; }
+
+  .material-icons {
+    font-size: 40px; } }
+@media (max-width: 992px) {
+  .contenedor {
+    width: 100%;
+    padding: 1em 3em; }
+
+  .contenido {
+    text-align: center; }
+    .contenido .titulo_principal {
+      font-size: 7em; }
+
+  .perfil_titulo {
+    display: none; }
+
+  .titulo_top {
+    text-align: center; }
+    .titulo_top .titular_cadeterias_foto .titular,
+    .titulo_top .titular_fletes_foto .titular {
+      font-size: 6em; }
+    .titulo_top .texto_cadeterias {
+      font-size: 2em; }
+
+  .face_post,
+  .card {
+    display: none; }
+
+  .perfil_contactar {
+    display: none; }
+
+  .perfil_contactar2 {
+    display: block;
+    background: rgba(19, 19, 19, 0.9);
+    padding: 1em;
+    opacity: 0.8; }
+    .perfil_contactar2:hover {
+      opacity: 1; }
+      .perfil_contactar2:hover .boton {
+        color: #FFAB40; }
+    .perfil_contactar2 .boton {
+      color: #fff;
+      font-size: 2.5em;
+      font-weight: 900;
+      padding: 0.1em;
+      padding: 0em 10%; }
+
+  .modal_contacto {
+    font-size: 1.5em; }
+
+  .flex_ico_pregunta {
+    text-align: center;
+    flex-direction: column; } }
+@media (max-width: 600px) {
+  .contenedor {
+    width: 100%;
+    padding: 0.1em 0.1em;
+    margin: auto; }
+
+  .texto {
+    font-size: 1.2em; }
+
+  .contenido {
+    text-align: center; }
+    .contenido .titulo_principal {
+      font-size: 2.5em; }
+    .contenido .texto_principal {
+      font-size: 1em; }
+
+  footer .redes-sociales li a {
+    padding: 0em 1em;
+    font-size: 2em; }
+
+  .titulo_top {
+    text-align: center; }
+    .titulo_top .titular_cadeterias_foto .titular,
+    .titulo_top .titular_fletes_foto .titular {
+      font-size: 3em; }
+
+  .menu_down_principal {
+    padding: 1em 0em;
+    min-width: 13em;
+    height: 11.75em; }
+    .menu_down_principal .menu_principal,
+    .menu_down_principal .menu_secundario {
+      padding: 0em 0em; }
+    .menu_down_principal .text_principal {
+      font-size: 3em;
+      padding: 0.5em 0em; }
+    .menu_down_principal .text_secundario {
+      font-size: 2em; }
+
+  .flex_ico {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0em 0em; }
+    .flex_ico .material-icons {
+      font-size: 80px; }
+
+  .btn_delet_mod {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; }
+    .btn_delet_mod a {
+      margin: 1em 0em; }
+
+  .perfil_contactar2 {
+    display: block;
+    background: rgba(19, 19, 19, 0.9);
+    padding: 0.2em;
+    opacity: 0.8; }
+    .perfil_contactar2:hover {
+      opacity: 1; }
+      .perfil_contactar2:hover .boton {
+        color: #FFAB40; }
+    .perfil_contactar2 .boton {
+      font-size: 2em; } }
 
 /*# sourceMappingURL=estilos.css.map */

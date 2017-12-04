@@ -1,5 +1,4 @@
-  <?php session_start(); ?>
-  <?php
+<?php session_start(); 
     $errores = '';
     $enviado = '';
     $error_dist_min = '';

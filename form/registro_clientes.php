@@ -1,5 +1,4 @@
-<?php session_start(); ?>
-<?php
+<?php session_start(); 
     $errores = '';
     $error_password = '';
     $error_usuario_cliente = '';

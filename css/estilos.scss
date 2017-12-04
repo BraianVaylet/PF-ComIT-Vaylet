@@ -29,19 +29,14 @@
 
    main,
    .div_main {
-     width: 100%;
      flex: 1 0 auto;
+     width: 100%;
      margin: 0em auto;
      padding: 1em;
      background: #fff;
      text-align: center;
      font-family: $font_texto;
      background: $color_fondo_claro;
-   }
-
-   .div_main_color {
-     width: 100%;
-     padding: 5em;
    }
 
    .contenedor {
@@ -61,3 +56,4 @@
   @import "estilos_principales";
   @import "estilos_form";
   @import "cadeterias";
+  @import "media_queries";

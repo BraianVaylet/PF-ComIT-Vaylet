@@ -1,9 +1,8 @@
-  <?php require(RAIZ . '/views/head.php');?>
-  <?php require(RAIZ . '/views/barra_nav.php');?>
+<?php require(RAIZ . '/views/head.php');
+      require(RAIZ . '/views/barra_nav.php');?>
       <main class="z-depth-3">
           <div class="contenedor">
                     <h1 class="titulo">Registro 3:3</h1>
-
                     <div class="pregunta">
                         <h4 class="titulo_pregunta">Ya estamos en el final!!!</h4>
                         <p class="texto_small">Solo resta los siguientes campos y listo, el registro estará completo!!!</p>
@@ -125,7 +124,7 @@
                     <!-- Modal Structure -->
                     <div id="modal_registro" class="modal modal-fixed-footer">
                         <div class="modal-content">
-                           <?php require 'C:\wamp64\www\PF-ComIT-Vaylet\tyc.php'; ?>
+                          <?php require(RAIZ . '/tyc.php'); ?>
                         </div>
                         <div class="modal-footer">
                            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Estoy de acuerdo</a>
@@ -148,8 +147,8 @@
           </div>
       </div>
       </main>
-    <?php require(RAIZ . '/views/footer.php');?>
-    <?php require(RAIZ . '/views/script.php');?>
+    <?php require(RAIZ . '/views/footer.php');
+          require(RAIZ . '/views/script.php');?>
     <script src="<?php echo RUTA; ?>/js/misArchivos/registro_tercero.js" charset="utf-8"></script>
     </body>
 </html>

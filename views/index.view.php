@@ -1,5 +1,5 @@
-  <?php require(RAIZ . '/views/head.php');?>
-  <?php require(RAIZ . '/views/barra_nav.php');?>
+<?php require(RAIZ . '/views/head.php');
+        require(RAIZ . '/views/barra_nav.php');?>
 
           <!-- CONTENIDO-PAGINA PRINCIPAL-->
           <div class="box" id="box">
@@ -12,11 +12,10 @@
               </div>
           </div>
 
-  <?php require(RAIZ . '/views/footer.php');?>
-  <?php require(RAIZ . '/views/script.php');?>
-  <?php if (session()): ?>
-    <script src="<?php echo RUTA; ?>/js/misArchivos/principal.js" charset="utf-8"></script>
-  <?php endif ?> -->
-
+  <?php require(RAIZ . '/views/footer.php');
+        require(RAIZ . '/views/script.php');
+        if (session()): ?>
+          <script src="<?php echo RUTA; ?>/js/misArchivos/principal.js" charset="utf-8"></script>
+  <?php endif ?>
   </body>
   </html>
