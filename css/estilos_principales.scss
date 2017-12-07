@@ -78,8 +78,11 @@
       }
 
       //formulario.
-      .pregunta_contac {
-        margin-bottom: 1.5em;
+      .formulario_contacto {
+        margin: 3em;
+        .btn {
+          margin: 0.5em;
+        }
       }
 
      /* CONTENIDO PAGINA PRINCIPAL */
@@ -124,10 +127,9 @@
        font-family: $font_texto;
        .redes-sociales  {
          display: flex;
+         flex-direction: column;
          justify-content: center;
-         .facebook,
-         .instagram,
-         .twitter {
+         .icono_reds {
            &:hover {color: $color_principal_fondo;}
            &:focus {color: $color_secundario;}
          }
@@ -160,6 +162,11 @@
        &:hover {
          text-decoration: underline;
        }
+     }
+
+     .texto_enlace_footer {
+       font-size: 0.35em;
+       margin-left: 1em;
      }
 
      /* CONTENIDO */
@@ -443,16 +450,17 @@
     /* ----------------------------------------------------------------------------- */
       .contenido_info {
         background-color: $color_principal_fondo;
+        color: #fff;
         .titulo {
           font-family: $font_texto;
           font-size: 3.8em;
           font-weight: 900;
+          color: #fff;
         }
         .texto {
           font-size: 1.5em;
         }
         .mostrar_vidas {
-
           .vidas {
             color: $color_secundario;
             animation: flip 3s ease infinite;
@@ -477,12 +485,13 @@
           font-weight: 900;
           color: $color_fuente_oscuro;
           &:hover {
-            color: rgb(203, 170, 29);
+            color: $color_secundario;
           }
         }
       }
 
       //CONTACTO:
+      /* ----------------------------------------------------------------------------- */
       .contacto_flex_box {
         width: 80%;
         margin: 2em auto;
@@ -511,3 +520,13 @@
           color: $color_secundario;
         }
       }
+
+  //TERMINOS Y CONDICIONES:
+  /* ----------------------------------------------------------------------------- */
+  .terminos {
+    text-align: left;
+    padding: 3em;
+    .tyc_titulo {
+      text-align: center;
+    }
+    }

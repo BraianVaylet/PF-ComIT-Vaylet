@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,900|Righteous" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
     <!-- favicon-icono -->
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo RUTA; ?>/img/ver_icono.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo RUTA; ?>/img/w_icono.ico">
     <!-- materialize -->
     <!-- Import Google Icon Font -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

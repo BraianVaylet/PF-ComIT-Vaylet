@@ -79,7 +79,7 @@
 												<div class="row un_campo">
 														<div class="input-field col s12 m12 l6 offset-l3">
 																<h4 class="label_textarea">¿En qué fecha naciste? *</h4>
-																<input type="text" name="fecha_nacimiento" class="datepicker campo tooltipped" data-position="right" data-delay="50" data-tooltip="Ingrese su fecha de nacimiento en el siguiente orden: año-mes-día" id="fecha_nacimiento" value="<?php if(!$enviado && isset($fecha_nacimiento)) { echo $fecha_nacimiento; }?>">
+																<input type="text" name="fecha_nacimiento" class="datepicker campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese su fecha de nacimiento en el siguiente orden: año-mes-día" id="fecha_nacimiento" value="<?php if(!$enviado && isset($fecha_nacimiento)) { echo $fecha_nacimiento; }?>">
 																<!-- ERROR -->
 																<?php if(!empty($error_fecha_nacimiento)): ?>
 						                      <p class="texto_error" id="error_fecha_nacimiento"><?php echo $error_fecha_nacimiento; ?></p>
@@ -93,7 +93,7 @@
 															<div class="file-field input-field">
 														      <div class="btn">
 																			<span>Foto perfil</span>
-																			<input type="file" name="foto_perfil" class="campo tooltipped" data-position="left" data-delay="50" data-tooltip="Seleccione un foto de su Ordenador o Movil" id="foto_perfil" placeholder="Seleccione una Foto de Perfil"value="<?php if(!$enviado && isset($foto_perfil)) { echo $foto_perfil; }?>">
+																			<input type="file" name="foto_perfil" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Seleccione un foto de su Ordenador o Movil" id="foto_perfil" placeholder="Seleccione una Foto de Perfil"value="<?php if(!$enviado && isset($foto_perfil)) { echo $foto_perfil; }?>">
 														      </div>
 														      <div class="file-path-wrapper">
 														        	<input class="file-path validate" type="text">
@@ -126,7 +126,7 @@
 													<div class="col s12 m12 l6">
 														<div class="mensaje_admin z-depth-3">
 															<p>Hola!, soy el Administrador...</p>
-															<p>Si la ciudad que quiere ingresar no se encuentra no se preocupe, utilice el botón de contacto en la parte superior derecha para avisarnos y poder agregarla a nuestra base de datos.</p>
+															<p>Si la ciudad que quiere ingresar no se encuentra no se preocupe, utilice el botón de contacto para avisarnos y poder agregarla a nuestra base de datos.</p>
 															<p>Muchas gracias!!!</p>
 														</div>
 													</div>

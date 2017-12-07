@@ -1,5 +1,5 @@
 
-  <h2>TÉRMINOS Y CONDICIONES DE USO</h2>
+  <h2 class="tyc_titulo">TÉRMINOS Y CONDICIONES DE USO</h2>
 
   <p>Estos términos y condiciones rigen su acceso y uso del sitio web “www.wolalow.com. Al acceder o utilizar al Sitio Web, está aceptando estas dichas condiciones. Por favor, lea las cuidadosamente los términos y condiciones del sitio web. Si no acepta la totalidad de las mencionadas condiciones, por favor no utilice el Sitio. Le recomendamos volver a esta página periódicamente para revisar las últimas versiones de los términos y condiciones de WolaloW. El acceso o uso continuo del sitio web implica la aceptación de las condiciones y términos actualizados y vigentes.</p>
 
@@ -14,7 +14,8 @@
 
   <ol>
     <li>Usted entiende que el Sitio Web no controla y no es responsable del Contenido del usuario presente en el Sitio Web, y que al utilizar el sitio usted puede estar expuesto a Contenido del usuario ofensivo, indecente, impreciso, tramposo o bien objetable por algún otro motivo. El Usuario conviene en que puede no confiar en dicho Contenido del usuario y en que ninguna circunstancia WolaloW será responsable por el Contenido del usuario o bien las pérdidas o los daños y perjuicios que el Usuario pueda sufrir como resultado del uso del Contenido del usuario publicado en el Sitio Web u otros medios. El Usuario reconoce que WolaloW no hace un análisis previo ni aprueba Contenido del usuario alguno, no obstante lo cual, WolaloW conservará el derecho (pero no la obligación) a su entera discreción para rechazar, eliminar o quitar aquel Contenido del usuario que se haya puesto a disposición de los demás en el Sitio Web y que implique una violación a la concepción del sitio o las Condiciones o por cualquier otro motivo. </li>
-    <li>2.	Usted será único responsable por todo contenido publicado, transmitido, o vinculado desde el Sitio Web y de las consecuencias de su publicación o de haberlo publicado. Con respecto al Contenido publicado, transmitido, o vinculado desde el Sitio Web por usted, usted afirma, representa y/o garantiza que usted tiene todos los derechos de propiedad sobre su Contenido. Sin embargo, al enviar, transmitir o hacer disponible el Contenido en el Sitio Web, usted le otorga a WolaloW una licencia, global, libre de regalías, no exclusiva, sublicensiable y transferible para usar, reproducir, distribuir, preparar trabajos derivados de, exhibir y exponer, en todos los casos con cualquier finalidad, formato, y dispositivo conocido o por conocerse, el Contenido en conexión con el Sitio Web, incluyendo la promoción y distribución de parte o todo el Sitio Web en cualquier formato mediático y a través de cualquier canal mediático. Usted también otorga a cada usuario del Sitio Web una licencia no exclusiva para acceder a su Contenido a través de nuestro sitio. La licencia que usted otorga expira una vez que usted remueve o borra el Contenido del sitio. </li>
+    <br>
+    <li>Usted será único responsable por todo contenido publicado, transmitido, o vinculado desde el Sitio Web y de las consecuencias de su publicación o de haberlo publicado. Con respecto al Contenido publicado, transmitido, o vinculado desde el Sitio Web por usted, usted afirma, representa y/o garantiza que usted tiene todos los derechos de propiedad sobre su Contenido. Sin embargo, al enviar, transmitir o hacer disponible el Contenido en el Sitio Web, usted le otorga a WolaloW una licencia, global, libre de regalías, no exclusiva, sublicensiable y transferible para usar, reproducir, distribuir, preparar trabajos derivados de, exhibir y exponer, en todos los casos con cualquier finalidad, formato, y dispositivo conocido o por conocerse, el Contenido en conexión con el Sitio Web, incluyendo la promoción y distribución de parte o todo el Sitio Web en cualquier formato mediático y a través de cualquier canal mediático. Usted también otorga a cada usuario del Sitio Web una licencia no exclusiva para acceder a su Contenido a través de nuestro sitio. La licencia que usted otorga expira una vez que usted remueve o borra el Contenido del sitio. </li>
   </ol>
 
   <h4>Política de privacidad</h4>
@@ -24,21 +25,21 @@
   <h4>Restricciones</h4>
 
   <p>El Usuario acepta no anunciar, enviar por email ni de cualquier otra forma poner a disposición contenido que: </p>
-  <ul>
-    <li>Sea contrario a la ley, viole una patente, marca registrada, secreto comercial, derecho de autor u otro derecho de propiedad de cualquier persona, o Contenido respecto del cual el Usuario no tiene derecho a poner a disposición del público conforme a una disposición legal, una relación contractual o fiduciaria. </li>
-    <li>Sea dañino, ilícito, amenazador, abusivo, acosador, difamatorio, contenidos para adultos, prostitución, pornográfico, pedofilia, relacionado con juegos de azar, difamatorio, que invada la privacidad de otros o que dañe a menores de cualquier forma; </li>
-    <li>Acose, degrade, intimide o sea odioso respecto a un individuo o un grupo de individuos por su religión, género, orientación sexual, raza, etnia, edad o discapacidad; </li>
-    <li>Sea falso, engañoso, de una falsa apariencia, tramposo, engañe respecto de la información o que constituya una forma de "atracción y luego se modifique lo ofrecido"; </li>
-    <li>Constituya o contiene "marketing afiliado", un "código de referencia a enlace", "mail basura", "spam", "cadenas de cartas", "esquemas de pirámides" o publicidad comercial no solicitada. </li>
-    <li>Contiene virus de software u otros códigos, archivos o programas de computación diseñados para interrumpir, destruir o limitar la funcionalidad de un software o de un hardware de computación o de un equipo de telecomunicaciones; </li>
-    <li>No "acechar" o de otra forma acosar a otros; </li>
-    <li>No recolectar datos personales sobre otros usuarios con fines comerciales o contrarios a la ley; </li>
+  <ul class="restricciones">
+    <li>#. Sea contrario a la ley, viole una patente, marca registrada, secreto comercial, derecho de autor u otro derecho de propiedad de cualquier persona, o Contenido respecto del cual el Usuario no tiene derecho a poner a disposición del público conforme a una disposición legal, una relación contractual o fiduciaria. </li><br>
+    <li>#. Sea dañino, ilícito, amenazador, abusivo, acosador, difamatorio, contenidos para adultos, prostitución, pornográfico, pedofilia, relacionado con juegos de azar, difamatorio, que invada la privacidad de otros o que dañe a menores de cualquier forma; </li><br>
+    <li>#. Acose, degrade, intimide o sea odioso respecto a un individuo o un grupo de individuos por su religión, género, orientación sexual, raza, etnia, edad o discapacidad; </li><br>
+    <li>#. Sea falso, engañoso, de una falsa apariencia, tramposo, engañe respecto de la información o que constituya una forma de "atracción y luego se modifique lo ofrecido"; </li><br>
+    <li>#. Constituya o contiene "marketing afiliado", un "código de referencia a enlace", "mail basura", "spam", "cadenas de cartas", "esquemas de pirámides" o publicidad comercial no solicitada. </li><br>
+    <li>#. Contiene virus de software u otros códigos, archivos o programas de computación diseñados para interrumpir, destruir o limitar la funcionalidad de un software o de un hardware de computación o de un equipo de telecomunicaciones; </li><br>
+    <li>#. No "acechar" o de otra forma acosar a otros; </li><br>
+    <li>#. No recolectar datos personales sobre otros usuarios con fines comerciales o contrarios a la ley; </li><br>
   </ul>
 
   <p>Sumado a ello, el Usuario afirma que: </p>
 
-  <ul>
-    <li>O es mayor de 18 años, o un menor emancipado o que posee permiso legal de sus padres y/o tutor y que esta completamente habilitado y competente para entrar en estos términos, condiciones, obligaciones, afirmaciones, representaciones, y garantías establecidas en las Condiciones y para respetar y cumplir con estas Condiciones. </li>
+  <ul class="restricciones">
+    <li>#. O es mayor de 18 años, o un menor emancipado o que posee permiso legal de sus padres y/o tutor y que esta completamente habilitado y competente para entrar en estos términos, condiciones, obligaciones, afirmaciones, representaciones, y garantías establecidas en las Condiciones y para respetar y cumplir con estas Condiciones. </li><br>
   </ul>
 
   <h4>Responsabilidad</h4>

@@ -108,6 +108,30 @@
   }
 
   .face_post {
-    max-height: 500px;
-    height: 650px;
+    height: 500px;
+  }
+
+  .twitter_post {
+    margin-top: 1em;
+  }
+
+  .servicios {
+    margin-top: 2em;
+    .activado {
+      color: $color_principal_fondo;
+    }
+    .desactivado {
+      color: $color_enlace_desativado;
+    }
+  }
+
+  .btn_contactar {
+    &:focus {
+      background: $color_secundario;
+    }
+  }
+
+  .btn_follow_twitter {
+    margin: 1em;
+    padding: 1em;
   }

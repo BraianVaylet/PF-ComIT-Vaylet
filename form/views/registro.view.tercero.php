@@ -37,7 +37,7 @@
 
                           <div class="col s4">
                             <h4 class="label_textarea">Modalidad:</h4>
-                            <div class="campo tooltipped" data-position="top" data-delay="50" data-tooltip="Seleccione la modalidad de cobro de tu servicio">
+                            <div class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Seleccione la modalidad de cobro de tu servicio">
                               <select class="icons" id="modo_monto_cadete" name="modo_monto_cadete[]">
                                   <option value="" disabled selected></option>
                                   <option value="Por Hora">Por Hora</option>
@@ -76,7 +76,7 @@
 
                            <div class="col s4">
                              <h4 class="label_textarea">Modalidad:</h4>
-                             <div class="campo tooltipped" data-position="top" data-delay="50" data-tooltip="Seleccione la modalidad de cobro de tu servicio">
+                             <div class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Seleccione la modalidad de cobro de tu servicio">
                                <select class="icons" id="modo_monto_flete" name="modo_monto_flete[]">
                                    <option value="" disabled selected></option>
                                    <option value="Por Hora">Por Hora</option>
@@ -96,7 +96,7 @@
                     <div class="row tres_campos">
                       <div class="pregunta">
                           <h4 class="titulo_pregunta">FELICITACIONES</h4>
-                          <p class="texto_small">Estamos terminando tu registro, solo nos queda pedirte que redactes un breve extracto contándonos sobre vos, ¿qué clases de persona eres?, ¿qué tipos de trabajos te gustan hacer? y ¿cómo?</p>
+                          <p class="texto_small">Estamos terminando tu registro, solo nos queda pedirte que redactes un breve extracto contándonos sobre vos y sobre tus trabajos.</p>
                           <p class="texto_small">¡Este campo es muy importante, será lo primero que verán las personas que busquen tus servicios, así que esmérate!</p>
                       </div>
                       <div class="col s8 offset-s2">

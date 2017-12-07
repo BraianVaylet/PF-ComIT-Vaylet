@@ -37,7 +37,7 @@
 
                             <div class="input-field col s12 m12 l4">
                                 <h4 class="label_textarea" for="peso_max">Peso máximo, en Kg </h4>
-                                <input type="text" name="peso_max" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese solo el número correspondiente a el Peso Máximo que Usted con el que Usted Trabaja, en [Kg]" value="<?php if(!$enviado && isset($peso_max)) { echo $peso_max; }?>">
+                                <input type="text" name="peso_max" class="campo tooltipped" data-position="bottom" data-delay="50" data-tooltip="Ingrese solo el número correspondiente a el Peso Máximo con el que Usted Trabaja, en [Kg]" value="<?php if(!$enviado && isset($peso_max)) { echo $peso_max; }?>">
                                 <!-- ERROR -->
                                 <?php if(!empty($error_peso_max)): ?>
 						                      <p class="texto_error" id="error_peso_max"><?php echo $error_peso_max; ?></p>
@@ -100,7 +100,7 @@
                                   <option value="" disabled selected></option>
                                   <option value="Bicicleta">Bicicleta</option>
                                   <option value="Moto">Moto</option>
-                                  <option value="Automovil">Automovil</option>
+                                  <option value="Automovil">Automóvil</option>
                                   <option value="Camioneta">Camioneta</option>
                                   <option value="Camión">Camión</option>
                                   <option value="Combi">Combi</option>

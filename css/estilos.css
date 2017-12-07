@@ -35,7 +35,8 @@ main,
 /* ----------------------------------------------------------------------------- */
 .box, .contenido_img, .contenido {
   height: 100vh;
-  width: 100%; }
+  width: 100%;
+  margin: 0em auto; }
 
 .contenido_img, .contenido, .titulo_top .titular_cadeterias_foto,
 .titulo_top .titular_fletes_foto, .titulo_top .titular_cadeterias_foto .titular_cadeterias_fondo,
@@ -274,8 +275,10 @@ main,
 .divider {
   animation: colores 5s ease infinite; }
 
-.pregunta_contac {
-  margin-bottom: 1.5em; }
+.formulario_contacto {
+  margin: 3em; }
+  .formulario_contacto .btn {
+    margin: 0.5em; }
 
 /* CONTENIDO PAGINA PRINCIPAL */
 /* ----------------------------------------------------------------------------- */
@@ -304,14 +307,11 @@ footer {
   font-family: "Raleway", sans-serif; }
   footer .redes-sociales {
     display: flex;
+    flex-direction: column;
     justify-content: center; }
-    footer .redes-sociales .facebook:hover,
-    footer .redes-sociales .instagram:hover,
-    footer .redes-sociales .twitter:hover {
+    footer .redes-sociales .icono_reds:hover {
       color: #2fb9a8; }
-    footer .redes-sociales .facebook:focus,
-    footer .redes-sociales .instagram:focus,
-    footer .redes-sociales .twitter:focus {
+    footer .redes-sociales .icono_reds:focus {
       color: #FFAB40; }
 
 footer .redes-sociales li a {
@@ -333,6 +333,10 @@ footer .redes-sociales li a {
   color: #FFAB40; }
   .footer_enlace:hover {
     text-decoration: underline; }
+
+.texto_enlace_footer {
+  font-size: 0.35em;
+  margin-left: 1em; }
 
 /* CONTENIDO */
 /* ----------------------------------------------------------------------------- */
@@ -359,7 +363,7 @@ footer .redes-sociales li a {
   color: #FFAB40; }
 
 .vidas_no {
-  color: #6c6c6c; }
+  color: rgba(168, 168, 168, 0.9); }
 
 .box_calificacion .calificacion {
   color: #fff;
@@ -411,7 +415,7 @@ footer .redes-sociales li a {
   .flex_ico_ed .icono {
     color: #2fb9a8; }
   .flex_ico_ed .icono_no {
-    color: #6c6c6c; }
+    color: rgba(168, 168, 168, 0.9); }
 
 .flex_btn {
   display: flex;
@@ -507,12 +511,12 @@ footer .redes-sociales li a {
   margin: 2em;
   padding: 1em; }
   .btn_delet_mod .delet {
-    background: #6c6c6c;
+    background: rgba(168, 168, 168, 0.9);
     margin-left: 1em; }
     .btn_delet_mod .delet:hover {
       background: #eb3b23; }
   .btn_delet_mod .mod {
-    background: #6c6c6c; }
+    background: rgba(168, 168, 168, 0.9); }
     .btn_delet_mod .mod:hover {
       background: #FFAB40; }
 
@@ -537,11 +541,13 @@ footer .redes-sociales li a {
 /* CONTENIDO_INFO */
 /* ----------------------------------------------------------------------------- */
 .contenido_info {
-  background-color: #2fb9a8; }
+  background-color: #2fb9a8;
+  color: #fff; }
   .contenido_info .titulo {
     font-family: "Raleway", sans-serif;
     font-size: 3.8em;
-    font-weight: 900; }
+    font-weight: 900;
+    color: #fff; }
   .contenido_info .texto {
     font-size: 1.5em; }
   .contenido_info .mostrar_vidas .vidas {
@@ -561,8 +567,9 @@ footer .redes-sociales li a {
     font-weight: 900;
     color: #141414; }
     .boton_continuar .continuar:hover {
-      color: #cbaa1d; }
+      color: #FFAB40; }
 
+/* ----------------------------------------------------------------------------- */
 .contacto_flex_box {
   width: 80%;
   margin: 2em auto; }
@@ -585,6 +592,13 @@ footer .redes-sociales li a {
     color: #2fb9a8; }
   .flex_ico_contacto:hover {
     color: #FFAB40; }
+
+/* ----------------------------------------------------------------------------- */
+.terminos {
+  text-align: left;
+  padding: 3em; }
+  .terminos .tyc_titulo {
+    text-align: center; }
 
 /* FORM */
 /* ----------------------------------------------------------------------------- */
@@ -682,12 +696,16 @@ footer .redes-sociales li a {
 .label_textarea_desactivado {
   text-align: left;
   font-size: 1em;
-  color: #6c6c6c; }
+  color: rgba(168, 168, 168, 0.9); }
 
 #correo_desactivado,
 #dni_desactivado {
-  color: #6c6c6c;
+  color: rgba(168, 168, 168, 0.9);
   font-size: 1.5em; }
+
+.texto_importante {
+  font-weight: bold;
+  color: color_principal_fondo; }
 
 /* PLACEHOLDER COLOR */
 *::-webkit-input-placeholder {
@@ -795,8 +813,24 @@ footer .redes-sociales li a {
       font-size: 2em; }
 
 .face_post {
-  max-height: 500px;
-  height: 650px; }
+  height: 500px; }
+
+.twitter_post {
+  margin-top: 1em; }
+
+.servicios {
+  margin-top: 2em; }
+  .servicios .activado {
+    color: #2fb9a8; }
+  .servicios .desactivado {
+    color: rgba(168, 168, 168, 0.9); }
+
+.btn_contactar:focus {
+  background: #FFAB40; }
+
+.btn_follow_twitter {
+  margin: 1em;
+  padding: 1em; }
 
 @media (max-width: 1250px) {
   .contenedor {
@@ -926,6 +960,41 @@ footer .redes-sociales li a {
       .perfil_contactar2:hover .boton {
         color: #FFAB40; }
     .perfil_contactar2 .boton {
-      font-size: 2em; } }
+      font-size: 2em; }
+
+  .contenido_info .titulo {
+    font-size: 1.5em; }
+  .contenido_info .texto {
+    font-size: 1em; }
+  .contenido_info .mostrar_vidas .vidas {
+    font-size: 1em;
+    animation: flip 0s ease infinite;
+    margin-left: 0.5em; }
+  .contenido_info .mostrar_calificacion .calificacion {
+    font-size: 1em;
+    animation: flip 0s ease infinite; } }
+.paginacion ul {
+  list-style: none; }
+  .paginacion ul li {
+    display: inline-block;
+    margin-right: 10px; }
+    .paginacion ul li a {
+      display: inline-block;
+      padding: 15px 25px;
+      background: rgba(19, 19, 19, 0.9);
+      color: #fff;
+      text-decoration: none; }
+      .paginacion ul li a:hover {
+        text-decoration: none;
+        background: #FFAB40; }
+  .paginacion ul .active a {
+    background: #2fb9a8; }
+  .paginacion ul .disabled {
+    background: rgba(168, 168, 168, 0.9);
+    display: inline-block;
+    padding: 15px 25px;
+    cursor: not-allowed;
+    color: #fff;
+    text-decoration: none; }
 
 /*# sourceMappingURL=estilos.css.map */

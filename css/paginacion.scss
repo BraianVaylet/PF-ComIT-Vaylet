@@ -1,0 +1,31 @@
+  .paginacion {
+    ul {
+    	list-style: none;
+      li {
+      	display: inline-block;
+      	margin-right: 10px;
+        a {
+        	display: inline-block;
+        	padding: 15px 25px;
+        	background: $color_oscuro_transparencia;
+        	color:#fff;
+        	text-decoration: none;
+          &:hover {
+          	text-decoration: none;
+          	background: $color_secundario;
+          }
+        }
+      }
+      .active a {
+      	background: $color_principal_fondo;
+      }
+      .disabled {
+      	background: $color_enlace_desativado;
+      	display: inline-block;
+      	padding: 15px 25px;
+      	cursor:not-allowed;
+      	color:#fff;
+      	text-decoration: none;
+      }
+    }
+  }

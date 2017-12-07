@@ -52,67 +52,20 @@
 									</li>
 								</ul>
 							</div>
-
 							<!-- MENU CONTACTO PARA + VISTAS: -->
-	            <!-- Modal Structure -->
-	            <div id="modal_contacto_vistas" class="modal">
-	              <div class="modal-content">
-	                <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formulario" name="contacto">
-	                  <div class="row vistas_titulo">
-											<div class="col s8 offset-s2 ">
-		                      <h4 class="titulo_pregunta">Contacto:</h4>
-													<h6>Para conseguir mas vistas complete el siguiente formulario</h6>
-		                  </div>
-	                  </div>
-
-	                  <div class="row">
-	  									<div class="col s6 offset-s3">
-	                      <label class="label_textarea" for="dni">DNI *</label>
-	                      <input type="text" name="dni" placeholder="Ingrese su numero de documento." class="campo tooltipped" data-position="right" data-delay="50" data-tooltip="Ingrese su número de documento" id="dni">
-	  									</div>
-	                  </div>
-
-	                  <div class="row">
-	    								<div class="col s6 offset-s3">
-	    										<label for="correo" class="label_textarea" data-error="incoorecto, vuelva a intentarlo" data-success="perfecto,gracias">Correo * </label>
-	    										<input type="email" name="correo" placeholder="Ingrese su correo." class="campo tooltipped" data-position="right" data-delay="50" data-tooltip="Ingresesu correo electrónico" id="correo">
-	                  </div>
-
-										<div class="row">
-	  									<div class="col s8 offset-s2">
-												<div class="registro_check">
-													<div class="row check tooltipped" data-position="bottom" data-delay="50" data-tooltip="Seleccione una de las opciones.">
-															<div class=" flex_radio">
-																	<div class="radio_btn">
-																		<input type="radio" class="radio" name="vistas" id="opc_1" />
-																		<label class="label_radio_btn" for="opc_1">5 Vistas por $75.00</label>
-																	</div>
-																	<div class="radio_btn">
-																		<input type="radio" class="radio" name="vistas" id="opc_2" />
-																		<label class="label_radio_btn" for="opc_2">10 Vistas por $150.00</label>
-																	</div>
-															</div>
-															<!-- ERROR -->
-															<p class="texto_error" id="error_checkbox"></p>
-													</div>
-												</div>
-	  									</div>
-	                  </div>
-	                </form>
-									<div class="">
-										<div class="box_compra_vistas">
-											<img src="<?php echo RUTA; ?>/img_pagina/mplogo.png" alt="imagen de mercadopago">
-										</div>
-										<div class="box_compra_vistas">
-											<h6>Recibirás a tu casilla de correos un link de mercado pago para realizar la compra</h6>
-										</div>
-										<div class="box_compra_vistas">
-											<button class="btn waves-effect waves-light" type="submit" id="submit" class="submit" name="button">Enviar<i class="material-icons right">send</i></button>
-										</div>
-									</div>
-	              </div>
-	            </div>
-	            </div>
+	 					 <!-- Modal Structure -->
+	 					 <div id="modal_contacto_vistas" class="modal">
+	 						 <div class="modal-content formulario_contacto">
+	 							 <?php require(RAIZ . 'formulario_contacto_vistas.php'); ?>
+	 						 </div>
+	 						 <div class="box_compra_vistas">
+	 							 <img src="<?php echo RUTA; ?>/img/mplogo.png" alt="imagen de mercadopago">
+	 						 </div>
+	 						 <div class="box_compra_vistas">
+	 							 <h6>Recibirás a tu casilla de correos un link de mercado pago para realizar la compra</h6>
+	 						 </div>
+							 	<img src="<?php echo RUTA; ?>/img/mini_logo.jpg" width="200" alt="imagen de wolalow.com">
+	 					 </div>
 
 							<div class="info z-depth-3">
 								<ul class="collection with-header">

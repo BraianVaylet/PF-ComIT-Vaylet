@@ -127,10 +127,10 @@
        }
        .text_principal {
          font-size: 3em;
-         padding: 0.5em 0em;         
+         padding: 0.5em 0em;
        }
        .text_secundario {
-         font-size: 2em;         
+         font-size: 2em;
          }
        }
        .flex_ico {
@@ -165,6 +165,27 @@
          }
          .boton {
            font-size: 2em;
+         }
+       }
+       .contenido_info {
+         .titulo {
+           font-size: 1.5em;
+         }
+         .texto {
+           font-size: 1em;
+         }
+         .mostrar_vidas {
+           .vidas {
+             font-size: 1em;
+             animation: flip 0s ease infinite;
+             margin-left: 0.5em;
+           }
+         }
+         .mostrar_calificacion {
+           .calificacion {
+             font-size: 1em;
+             animation: flip 0s ease infinite;
+           }
          }
        }
    }

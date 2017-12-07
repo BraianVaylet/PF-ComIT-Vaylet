@@ -11,7 +11,7 @@
   $color_fondo_claro: rgb(239, 244, 246);
   $color_fuente_claro: #f2f2f2;
 
-  $color_enlace_desativado: #6c6c6c;
+  $color_enlace_desativado: rgba(168, 168, 168, 0.9);
 
   // FUENTES:
   $font_texto: 'Raleway', sans-serif;
@@ -57,3 +57,4 @@
   @import "estilos_form";
   @import "cadeterias";
   @import "media_queries";
+  @import "paginacion";

@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
     require 'funciones.php';
 
     //OBTENGO LA ID Q MANDE POR LA URL.
@@ -23,7 +23,7 @@
             $whatsapp = $row[5];
             $vidas = $row[11];
         }
-          $vidas = $vidas - 1;
+          //$vidas = $vidas - 1;
           $resultados_vidas = $conexion->prepare('UPDATE usuarios SET vidas = :vidas WHERE id = :id_del_usuario');
           $resultados_vidas->execute(array(':vidas' => $vidas, ':id_del_usuario' => $id_del_usuario));
         }

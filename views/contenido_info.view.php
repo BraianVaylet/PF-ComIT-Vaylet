@@ -2,7 +2,7 @@
       require(RAIZ . '/views/barra_nav.php');?>
 
         <main>
-          <div class="z-depth-3 contenedor">
+          <div class="z-depth-3 contenedor contenedor_info">
             <h4 class="titulo">Hola, <?php echo $usuario; ?></h4>
             <p class="texto">Bienvenid@ a WolaloW, ¡Nos alegra informarle que su registro se completó de forma exitosa y como agradecimiento ha sido recompensado con 10 vistas! ¡Así que felicitaciones!</p>
             <p class="texto">Sabemos que tienes dudas, así que puedes ingresar en todo momento en la sección ayudas en la parte superior y entérate de cómo es el funcionamiento de las vistas, tu calificación y todo lo referido a la página.</p>
@@ -11,11 +11,11 @@
             <div class="contenido_info z-depth-3">
               <div class="row">
                 <div class="col s12 m12 l12">
-                  <div class="card blue-grey darken-1">
-                    <div class="card-content white-text">
-                      <img class="circle z-depth-3 responsive-img" width="250" height="250" src="<?php echo RUTA; ?>/fotos_perfiles/<?php echo $foto_perfil; ?>" alt="foto de perfil de <?php echo $usuario; ?>">
+                      <div class="mostrar_foto">
+                        <img class="circle z-depth-3 responsive-img" width="250" height="250" src="<?php echo RUTA; ?>/fotos_perfiles/<?php echo $foto_perfil; ?>" alt="foto de perfil de <?php echo $usuario; ?>">
+                      </div>
                       <ul class="">
-                        <h3>¡Genial! ya tienes 10 vistas</h3>
+                        <h3 class="titulo">¡Genial! ya tienes 10 vistas</h3>
                         <li class="">
                           <div class="mostrar_vidas">
                             <?php for ($i=0; $i < $vidas; $i++) {
@@ -25,7 +25,7 @@
                         </li>
                       </ul>
                       <ul>
-                        <h3>Tu calificacion actual es de</h3>
+                        <h3 class="titulo">Tu calificacion actual es de</h3>
                         <li class="mostrar_calificacion">
                           <div>
                             <?php for ($i=0; $i < $calificacion; $i++) {
@@ -40,8 +40,6 @@
                           </div>
                         </li>
                       </ul>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

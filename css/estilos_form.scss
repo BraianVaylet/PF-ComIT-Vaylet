@@ -139,6 +139,11 @@
     font-size: 1.5em;
   }
 
+  .texto_importante {
+    font-weight: bold;
+    color: color_principal_fondo;
+  }
+
     /* PLACEHOLDER COLOR */
     *::-webkit-input-placeholder {
       /* Google Chrome y Safari */
