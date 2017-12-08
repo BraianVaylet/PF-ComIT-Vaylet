@@ -126,8 +126,8 @@
                       <?php if ($soy_flete == 1) { ?> <span class="icono_servicio"><i class="medium material-icons activado">local_shipping</i></span> <?php } ?>
                     </div>
                     <div class="">
-                      <h4 class="text_monto_post">$<?php echo $monto_cadeterias; ?></h4>
-                      <p> <?php echo $modo_monto_cadete; ?></p>
+                      <h4 class="text_monto_post">$<?php echo $monto_fletes; ?></h4>
+                      <p> <?php echo $modo_monto_flete; ?></p>
                     </div>
                     <div class="btn_post_2">
                         <!-- MANDO EL ID POR LA URL -->

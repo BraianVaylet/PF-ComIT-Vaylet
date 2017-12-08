@@ -1,11 +1,10 @@
-<?php session_start(); 
+<?php session_start();
   require 'funciones.php';
 
   //OBTENGO LA ID Q MANDE POR LA URL.
   $id_del_usuario = $_GET["id_del_usuario"];
 
-  // COMPROBAMOS QUE EL USUARIO TENGA UNA SESION INICIADA.
-  if (session()) {
+
     // CONEXION CON LA BASE DE DATOS. (PDO)
     $conexion = conexion_pdo($BaseDatos_config);
     if (!$conexion) {
@@ -65,7 +64,4 @@
             $extracto = $row[5];
         }
         require(RAIZ . '/views/contenido_cliente.view.php');
-    }
-  } else {
-    header('Location: form/login.php');
-  }
+    } 

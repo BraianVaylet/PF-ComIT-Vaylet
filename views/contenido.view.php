@@ -262,8 +262,37 @@
 						</div>
 						<div class="btn_delet_mod">
 							<a href="editar_contenido.php" class="btn z-depth-3 mod ">Editar datos</a>
-							<a href="#" class="btn z-depth-3 delet ">Eliminar cuenta</a>
+							<a class="modal-trigger btn z-depth-3 delet" href="#modal_pregunta_eliminar">Eliminar cuenta</a>
 						</div>
+				</div>
+
+				<!-- Modal Structure -->
+				<div id="modal_pregunta_eliminar" class="modal">
+					<div class="modal-content">
+						<h4 class="modal_contacto">¿Está completamente seguro que quiere eliminar su cuenta de WolaloW?</h4>
+					</div>
+					<div class="modal-footer preguntas_enlaces">
+						<?php $url = "http://localhost/PF-ComIT-Vaylet/contacto.php?id_del_usuario=" .$id_del_usuario; ?>
+
+						<a class="modal-trigger" href="<?php echo $url; ?>">
+						<div class="flex_ico_pregunta">
+							<div class="icono">
+								<i class="large material-icons">call</i>
+							</div>
+							<div class="">
+								<span class="texto_pregunta">Contactar</span>
+							</div>
+						</div></a>
+
+						<a class="" href="<?php echo RUTA; ?>/index.php"><div class="flex_ico_pregunta">
+							<div class="icono_no">
+								<i class="large material-icons">call_end</i>
+							</div>
+							<div class="">
+								<span class="texto_pregunta">No contactar</span>
+							</div>
+						</div></a>
+					</div>
 				</div>
 
 				</div>

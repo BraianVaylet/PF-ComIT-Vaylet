@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
     //INICIO VARIABLES.
     $errores = '';
     $enviado = '';
@@ -41,10 +41,10 @@
         // LEVANTO VALORES DEL FORM.
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $extracto = limpiarDatos(filter_var($_POST['extracto']),FILTER_SANITIZE_STRING);
-            if (empty($extracto)) {
-              $error_extracto .= 'Por favor complete el campo EXTRACTO';
-              $errores = 'error';
-            }
+            // if (empty($extracto)) {
+            //   $error_extracto .= 'Por favor complete el campo EXTRACTO';
+            //   $errores = 'error';
+            // }
 
             //Para CADETERIAS:
             //=========================

@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
 			$errores = '';
 			$enviado = '';
 			$error_correo = '';
@@ -45,8 +45,6 @@
 								if ($resultado_usuarios !== false) {
 									$_SESSION['correo'] = $correo; // creamos una sesion.
 									header('Location: ../contenido.php');
-								} else {
-									$errores .= '<li>No existe usuario registrado con este correo, <a class="modal-trigger link_reg_2" href="#modal_registro">REGISTRATE AQUI</a></li>';
 								}
 
 								// DEL CLIENTE.
@@ -60,8 +58,11 @@
 								if ($resultado_clientes !== false) {
 									$_SESSION['correo'] = $correo; // creamos una sesion.
 									header('Location: ../contenido.php');
-								} else {
-									$errores .= '<li>Contraseña Incorrecta, <a class="modal-trigger link_reg_2" href="../nuevo_password.php">¿Has olvidado tu contraseña?</a></li>';
+								}
+
+								if ($resultado_clientes == false or $resultado_usuarios == false) {
+									$errores .= '<li>Error, ¿No estas registrado? <a class="modal-trigger link_reg_2" href="#modal_registro">REGISTRATE AQUI</a></li>';
+									$errores .= '<li>Contraseña Incorrecta</li>';
 								}
 						}
 				 }

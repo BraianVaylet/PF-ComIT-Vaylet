@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
     $errores = '';
     $error_password = '';
     $error_usuario_cliente = '';
@@ -24,8 +24,8 @@
         $telefono = limpiarDatos(filter_var($_POST['telefono']),FILTER_SANITIZE_NUMBER_FLOAT);
 
         // ENCRIPTAMOS LA CONTRASEÑA
-        // $password = campo_seguro($password);
-        // $password2 = campo_seguro($password2);
+        $password = campo_seguro($password);
+        $password2 = campo_seguro($password2);
 
         // VALIDACION DEL FORMULARIO.
         // Password:

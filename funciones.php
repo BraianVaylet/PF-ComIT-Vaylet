@@ -76,10 +76,10 @@
           $error_password = "La clave debe tener al menos 6 caracteres";
           return false;
        }
-       if(strlen($password) > 16){
-          $error_password = "La clave no puede tener más de 16 caracteres";
-          return false;
-       }
+       // if(strlen($password) > 16){
+       //    $error_password = "La clave no puede tener más de 16 caracteres";
+       //    return false;
+       // }
        if (!preg_match('`[0-9]`',$password)){
           $error_password = "La clave debe tener al menos un caracter numérico";
           return false;

@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
     //inicio variables.
     $errores = '';
     $enviado = '';
@@ -58,8 +58,8 @@
         }
 
         // ENCRIPTAMOS LA CONTRASEÑA
-        // $password = campo_seguro($password);
-        // $password2 = campo_seguro($password2);
+        $password = campo_seguro($password);
+        $password2 = campo_seguro($password2);
 
         // VALIDACION DEL FORMULARIO
         // COMPROBAMOS SI LOS CAMPOS ESTAN VACIOS

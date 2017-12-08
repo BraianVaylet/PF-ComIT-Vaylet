@@ -115,7 +115,8 @@
 																		<option value="La Plata">La Plata</option>
 																		<option value="Sierra de la Ventana">Sierra de la Ventana</option>
 																		<option value="Villa Ventana">Villa Ventana</option>
-																		<option value="Monte Hermosos">Monte Hermosos</option>
+																		<option value="Monte Hermoso">Monte Hermoso</option>
+																		<option value="Mar Del Plata">Mar Del Plata</option>
 					                      </select>
 																<!-- ERROR -->
 																<?php if(!empty($error_ciudad)): ?>
